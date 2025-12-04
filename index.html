@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日历</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+            font-size: 14px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px 2px;
+            position: relative;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .time-header {
+            font-size: 14px;
+            min-width: 60px;
+        }
+        
+        .date-cell {
+            min-width: 100px;
+        }
+        
+        .event-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            pointer-events: none;
+        }
+        
+        .event {
+            color: white;
+            border-radius: 4px;
+            padding: 2px 4px;
+            cursor: pointer;
+            font-size: 11px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: absolute;
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        
+        .event:hover {
+            opacity: 0.8;
+        }
+        
+        /* 为不同队伍分配不同颜色 */
+        .team-0 { background-color: #4CAF50; } /* 绿色 */
+        .team-1 { background-color: #2196F3; } /* 蓝色 */
+        .team-2 { background-color: #FF9800; } /* 橙色 */
+        .team-3 { background-color: #E91E63; } /* 粉色 */
+        .team-4 { background-color: #9C27B0; } /* 紫色 */
+        .team-5 { background-color: #795548; } /* 棕色 */
+        .team-6 { background-color: #607D8B; } /* 蓝灰色 */
+        .team-7 { background-color: #009688; } /* 青色 */
+        .team-8 { background-color: #FF5722; } /* 深橙色 */
+        .team-9 { background-color: #CDDC39; } /* 青绿色 */
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">日历</h2>
+    <table id="calendar">
+        <thead>
+            <tr>
+                <th>日期</th>
+                <!-- 生成10点到22点的小时列头，每小时包含4个15分钟的数据列 -->
+                <script>
+                    // 生成小时列头，每个小时占据4列（15分钟间隔）
+                    for (let hour = 10; hour <= 22; hour++) {
+                        document.write(`<th class="time-header" colspan="4">${hour}:00</th>`);
+                    }
+                </script>
+            </tr>
+        </thead>
+        <tbody id="calendar-body">
+            <!-- 日历内容将通过JavaScript动态生成 -->
+        </tbody>
+    </table>
+
+    <!-- 引入数据文件 -->
+    <script src="data.js"></script>
+    
+    <script>
+        // 页面加载完成后创建日历
+        document.addEventListener('DOMContentLoaded', () => createCalendar(eventData));
+        
+        // 创建日历并填充数据
+        function createCalendar(events) {
+            const calendarBody = document.getElementById('calendar-body');
+            
+            // 清空现有内容
+            calendarBody.innerHTML = '';
+            
+            // 为不同队伍分配颜色
+            const teamColors = assignTeamColors(events);
+            
+            // 计算数据中的日期范围
+            const { startDate, endDate } = getDateRange(events);
+            
+            // 生成从开始日期到结束日期的所有日期行
+            let currentDate = new Date(startDate);
+            while (currentDate <= endDate) {
+                // 格式化日期
+                const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+                const day = String(currentDate.getDate()).padStart(2, '0');
+                
+                // 显示的日期文本
+                const displayDate = `${month}月${day}日`;
+                
+                // 创建行
+                const row = document.createElement('tr');
+                
+                // 创建日期单元格
+                const dateCell = document.createElement('td');
+                dateCell.className = 'date-cell';
+                dateCell.textContent = displayDate;
+                row.appendChild(dateCell);
+                
+                // 为每个15分钟时间段创建单元格 (10:00 - 22:00)
+                const cellContainer = document.createElement('td');
+                cellContainer.colSpan = 53; // 10点到22点共13个小时，每小时4列，共52列，加上1个padding
+                cellContainer.style.position = 'relative';
+                cellContainer.style.height = '30px'; // 增加高度以容纳多个事件
+                
+                // 创建事件容器
+                const eventContainer = document.createElement('div');
+                eventContainer.className = 'event-container';
+                
+                // 查找当天的所有事件
+                const eventsOnDate = events.filter(event => {
+                    // 处理两种不同的日期格式
+                    let eventMonth, eventDay;
+                    if (event.time.includes("月")) {
+                        // 处理 "12月6日 14:00" 格式
+                        const datePart = event.time.split(' ')[0];
+                        [eventMonth, eventDay] = datePart.replace('月', '/').replace('日', '').split('/');
+                    } else {
+                        // 处理 "12/06 14:00" 格式
+                        const [eventDate] = event.time.split(' ');
+                        [eventMonth, eventDay] = eventDate.split('/');
+                    }
+                    return parseInt(eventMonth) === parseInt(month) && 
+                           parseInt(eventDay) === parseInt(day);
+                });
+                
+                // 按时间分组事件
+                const eventsByTime = groupEventsByTime(eventsOnDate);
+                
+                // 为每个事件创建显示元素
+                Object.keys(eventsByTime).forEach(timeKey => {
+                    const eventsAtTime = eventsByTime[timeKey];
+                    eventsAtTime.forEach((event, index) => {
+                        const eventElement = createEventElement(event, teamColors[event.team], index, eventsAtTime.length);
+                        eventElement.title = `${event.theme} (${event.team})\n${event.time}`;
+                        eventContainer.appendChild(eventElement);
+                    });
+                });
+                
+                cellContainer.appendChild(eventContainer);
+                row.appendChild(cellContainer);
+                
+                calendarBody.appendChild(row);
+                
+                // 移动到下一天
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+        }
+        
+        // 按时间分组事件
+        // 按时间段重叠关系分组事件
+        function groupEventsByTime(events) {
+            const grouped = [];
+            
+            events.forEach(event => {
+                // 解析事件时间，获取开始时间和结束时间
+                let eventHour, eventMinute;
+                if (event.time.includes("月")) {
+                    // 处理 "12月6日 14:00" 格式
+                    const [, timePart] = event.time.split(' ');
+                    [eventHour, eventMinute] = timePart.split(':').map(Number);
+                } else {
+                    // 处理 "12/06 14:00" 格式
+                    const [, timePart] = event.time.split(' ');
+                    [eventHour, eventMinute] = timePart.split(':').map(Number);
+                }
+                
+                // 假设每个事件持续3小时(180分钟)
+                const duration = 180;
+                const startTime = eventHour * 60 + eventMinute;
+                const endTime = startTime + duration;
+                
+                // 查找是否存在已有分组与当前事件时间段重叠
+                let foundGroup = false;
+                for (let group of grouped) {
+                    for (let existingEvent of group) {
+                        let existingHour, existingMinute;
+                        if (existingEvent.time.includes("月")) {
+                            const [, timePart] = existingEvent.time.split(' ');
+                            [existingHour, existingMinute] = timePart.split(':').map(Number);
+                        } else {
+                            const [, timePart] = existingEvent.time.split(' ');
+                            [existingHour, existingMinute] = timePart.split(':').map(Number);
+                        }
+                        
+                        const existingStartTime = existingHour * 60 + existingMinute;
+                        const existingEndTime = existingStartTime + duration;
+                        
+                        // 判断时间段是否重叠
+                        if (startTime < existingEndTime && endTime > existingStartTime) {
+                            // 时间段重叠，加入该分组
+                            group.push(event);
+                            foundGroup = true;
+                            break;
+                        }
+                    }
+                    if (foundGroup) break;
+                }
+                
+                // 如果没有找到重叠的分组，则新建一个分组
+                if (!foundGroup) {
+                    grouped.push([event]);
+                }
+            });
+            
+            // 将数组形式转换为原来的对象格式，方便后续处理
+            const result = {};
+            grouped.forEach((group, index) => {
+                result[`group_${index}`] = group;
+            });
+            
+            return result;
+        }
+        
+        // 创建事件元素
+        function createEventElement(event, colorIndex, index, totalCount) {
+            const eventDiv = document.createElement('div');
+            eventDiv.className = `event team-${colorIndex}`;
+            eventDiv.textContent = `${event.theme} - ${event.team}`;
+            
+            // 解析事件时间
+            let eventHour, eventMinute;
+            if (event.time.includes("月")) {
+                // 处理 "12月6日 14:00" 格式
+                const [, timePart] = event.time.split(' ');
+                [eventHour, eventMinute] = timePart.split(':').map(Number);
+            } else {
+                // 处理 "12/06 14:00" 格式
+                const [, timePart] = event.time.split(' ');
+                [eventHour, eventMinute] = timePart.split(':').map(Number);
+            }
+            
+            // 计算事件开始位置（相对于10:00）
+            const startMinutes = (eventHour - 10) * 60 + eventMinute;
+            const startPosition = (startMinutes / 15) * (100 / 52); // 52个15分钟时间段
+            
+            // 计算事件宽度（假设每个事件持续3小时=180分钟）
+            const duration = 180; // 3小时
+            const width = (duration / 15) * (100 / 52); // 12个15分钟时间段
+            
+            // 设置样式
+            eventDiv.style.left = `${startPosition}%`;
+            eventDiv.style.width = `${width}%`;
+            
+            // 如果同一时间有多个事件，垂直分割显示
+            if (totalCount > 1) {
+                const verticalMargin = 2; // 垂直间距
+                const availableHeight = 100 - (verticalMargin * (totalCount - 1));
+                const singleHeight = availableHeight / totalCount;
+                eventDiv.style.top = `${index * (singleHeight + verticalMargin)}%`;
+                eventDiv.style.height = `${singleHeight}%`;
+            } else {
+                // 单个事件居中显示
+                eventDiv.style.top = '25%';
+                eventDiv.style.height = '50%';
+            }
+            
+            return eventDiv;
+        }
+        
+        // 为不同队伍分配颜色索引
+        function assignTeamColors(events) {
+            const teams = [...new Set(events.map(event => event.team))];
+            const teamColors = {};
+            
+            teams.forEach((team, index) => {
+                teamColors[team] = index % 10; // 使用0-9的颜色类
+            });
+            
+            return teamColors;
+        }
+        
+        // 计算数据中的日期范围
+        function getDateRange(events) {
+            if (!events || events.length === 0) {
+                // 如果没有事件数据，使用当前日期
+                const today = new Date();
+                return { startDate: today, endDate: today };
+            }
+            
+            // 解析所有事件日期并找出最小值和最大值
+            let minDate = null;
+            let maxDate = null;
+            
+            events.forEach(event => {
+                let eventMonth, eventDay;
+                
+                if (event.time.includes("月")) {
+                    // 处理 "12月6日 14:00" 格式
+                    const datePart = event.time.split(' ')[0];
+                    [eventMonth, eventDay] = datePart.replace('月', '/').replace('日', '').split('/');
+                } else {
+                    // 处理 "12/06 14:00" 格式
+                    const [eventDate] = event.time.split(' ');
+                    [eventMonth, eventDay] = eventDate.split('/');
+                }
+                
+                // 创建日期对象（假设是当前年份）
+                const currentYear = new Date().getFullYear();
+                const date = new Date(currentYear, parseInt(eventMonth) - 1, parseInt(eventDay));
+                
+                if (minDate === null || date < minDate) {
+                    minDate = date;
+                }
+                
+                if (maxDate === null || date > maxDate) {
+                    maxDate = date;
+                }
+            });
+            
+            return { 
+                startDate: minDate || new Date(), 
+                endDate: maxDate || new Date() 
+            };
+        }
+    </script>
+</body>
+</html>
