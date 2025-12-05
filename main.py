@@ -211,6 +211,7 @@ def run (playwright: Playwright) -> None:
             if "retweeted_status" in mblog:
               mblogs.append(mblog["retweeted_status"])
           except Exception as e:
+            logger.debug(response.text())
             logger.error(f"解析微博详情时出错: {e}")
       except Exception as e:
         logger.error(f"handle_response函数处理响应时出错: {e}")
