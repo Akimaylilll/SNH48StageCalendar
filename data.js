@@ -89,5 +89,10 @@ const eventData = [
     "time": "12月6日 14:00",
     "theme": "SNH48偶像运动会",
     "team": "SNH48 GROUP"
+  },
+  {
+    "time": "12/6 14:00",
+    "theme": "SNH48偶像运动会",
+    "team": "SNH48 GROUP"
   }
 ];
