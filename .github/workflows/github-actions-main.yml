@@ -1,0 +1,44 @@
+# name属性用来指定这个工作流的名字
+name: DATA ACITON
+# 这个部分用来指定能够触发工作流执行的事件
+on:
+  # 当对分支main进行push操作的时候，这个工作流就被触发了
+  schedule:
+    - cron: "0 2 * * *"
+
+# 工作流是由一个或多个的jobs构成的，在jobs里来说明要交给GitHub aciton执行的任务
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      
+      - name: 显示路径
+        run: |
+          echo "工作空间: $GITHUB_WORKSPACE"
+          echo "当前目录: $(pwd)"
+          echo "仓库名称: $GITHUB_REPOSITORY"
+  
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Update Data
+        run: |
+          python main.py
+      - name: Commit
+        run: |
+          git config --global user.email 642722474@qq.com
+          git config --global user.name maylilllaction
+          git add .
+          git commit -m"action:`update data`"
+          git pull --rebase
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        
