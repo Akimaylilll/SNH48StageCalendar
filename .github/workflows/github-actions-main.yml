@@ -32,7 +32,7 @@ jobs:
       
       - name: Install Chromium
         run: |
-          python -m playwright install --force chrome
+          python -m playwright install
 
       - name: Cache dependencies
         uses: actions/cache@v4
