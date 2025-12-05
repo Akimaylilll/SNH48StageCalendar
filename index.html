@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日历</title>
+    <title>SNH48StageCalendar</title>
     <style>
         table {
             border-collapse: collapse;
@@ -64,20 +64,33 @@
         }
         
         /* 为不同队伍分配不同颜色 */
-        .team-0 { background-color: #4CAF50; } /* 绿色 */
-        .team-1 { background-color: #2196F3; } /* 蓝色 */
-        .team-2 { background-color: #FF9800; } /* 橙色 */
-        .team-3 { background-color: #E91E63; } /* 粉色 */
-        .team-4 { background-color: #9C27B0; } /* 紫色 */
-        .team-5 { background-color: #795548; } /* 棕色 */
-        .team-6 { background-color: #607D8B; } /* 蓝灰色 */
-        .team-7 { background-color: #009688; } /* 青色 */
-        .team-8 { background-color: #FF5722; } /* 深橙色 */
-        .team-9 { background-color: #CDDC39; } /* 青绿色 */
+        .team-0 { background-color: #96d2f5; }       /*"SNH": 0,       */
+        .team-1 { background-color: #a9cb05; }       /*"GNZ": 1,       */
+        .team-2 { background-color: #f82174; }       /*"BEJ": 2,       */
+        .team-3 { background-color: #f9bb0c; }       /*"CKG": 3,       */
+        .team-4 { background-color: #d11521; }       /*"CGT": 4,       */
+        .team-5 { background-color: #dd00c9; }       /*"SHY": 5,       */
+        .team-6 { background-color: #96caeb; }       /*"TEAM SII": 6,  */
+        .team-7 { background-color: #ae85bc; }       /*"TEAM NII": 7,  */
+        .team-8 { background-color: #ee980b; }       /*"TEAM HII": 8,  */
+        .team-9 { background-color: #a7cc1f; }       /*"TEAM X": 9,    */
+        .team-10 { background-color: #2bc071; }      /*"TEAM XII": 10, */
+        .team-11 { background-color: #abcb03; }      /*"TEAM G": 11,   */
+        .team-12 { background-color: #f1d11f; }      /*"TEAM NIII": 12,*/
+        .team-13 { background-color: #e5627e; }      /*"TEAM Z": 13,   */
+        .team-14 { background-color: #e0336f; }      /*"TEAM B": 14,   */
+        .team-15 { background-color: #3db7b5; }      /*"TEAM E": 15,   */
+        .team-16 { background-color: #2b70cd; }      /*"TEAM J": 16,   */
+        .team-17 { background-color: #f9bb16; }      /*"TEAM C": 17,   */
+        .team-18 { background-color: #eb5857; }      /*"TEAM K": 18,   */
+        .team-19 { background-color: #e00014; }      /*"TEAM CII": 19, */
+        .team-20 { background-color: #1e549b; }      /*"TEAM GII": 20, */
+        .team-21 { background-color: #de00cd; }      /*"TEAM SIII": 21,*/
+        .team-22 { background-color: #531571; }      /*"TEAM HIII": 22,*/
     </style>
 </head>
 <body>
-    <h2 style="text-align: center;">日历</h2>
+    <h2 style="text-align: center;">SNH48StageCalendar</h2>
     <table id="calendar">
         <thead>
             <tr>
@@ -300,9 +313,52 @@
         function assignTeamColors(events) {
             const teams = [...new Set(events.map(event => event.team))];
             const teamColors = {};
+            // 定义颜色字典，映射队伍到特定颜色索引
+            const colorDictionary = {
+                "SNH": 0,          // #96d2f5
+                "GNZ": 1,          // #a9cb05
+                "BEJ": 2,          // #f82174
+                "CKG": 3,          // #f9bb0c
+                "CGT": 4,          // #d11521
+                "SHY": 5,          // #dd00c9
+                "TEAM SII": 6,     // #96caeb
+                "TEAM NII": 7,     // #ae85bc
+                "TEAM HII": 8,     // #ee980b
+                "TEAM X": 9,       // #a7cc1f
+                "TEAM XII": 10,    // #2bc071
+                "TEAM G": 11,      // #abcb03
+                "TEAM NIII": 12,   // #f1d11f
+                "TEAM Z": 13,      // #e5627e
+                "TEAM B": 14,      // #e0336f
+                "TEAM E": 15,      // #3db7b5
+                "TEAM J": 16,      // #2b70cd
+                "TEAM C": 17,      // #f9bb16
+                "TEAM K": 18,      // #eb5857
+                "TEAM CII": 19,    // #e00014
+                "TEAM GII": 20,    // #1e549b
+                "TEAM SIII": 21,   // #de00cd
+                "TEAM HIII": 22,   // #531571
+            };
             
             teams.forEach((team, index) => {
-                teamColors[team] = index % 10; // 使用0-9的颜色类
+                // 如果在字典中定义了该队伍的精确匹配，则使用字典中的值
+                if (colorDictionary[team] !== undefined) {
+                    teamColors[team] = colorDictionary[team];
+                } else {
+                    // 模糊匹配：查找队伍名称中包含字典键的情况
+                    let matched = false;
+                    for (const key in colorDictionary) {
+                        if (team.includes(key)) {
+                            teamColors[team] = colorDictionary[key];
+                            matched = true;
+                            break;
+                        }
+                    }
+                    // 如果没有找到匹配项，则使用默认颜色
+                    if (!matched) {
+                        teamColors[team] = 0;
+                    }
+                }
             });
             
             return teamColors;
