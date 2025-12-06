@@ -228,7 +228,7 @@ def run (playwright: Playwright) -> None:
         page.goto(url)
         # 等待内容加载
         wait_for_scroll_to_bottom(page, timeout=1000 * 60 * 10)
-
+        logger.info(f"已加载{len(blog_list)}条微博")
         for item in blog_list:
           try:
             created_at = item.get('created_at', '')
