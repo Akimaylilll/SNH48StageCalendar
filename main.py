@@ -8,7 +8,7 @@ import logging
 
 load_dotenv() 
 
-log_level = os.getenv("LOG_LEVEL")
+log_level = os.getenv("LOG_LEVEL", "INFO")
 openai_api_key = os.getenv("OPENAI_API_KEY")
 openai_api_base_url = os.getenv("OPENAI_API_BASE_URL")
 openai_model = os.getenv("OPENAI_MODEL")
