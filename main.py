@@ -6,18 +6,19 @@ import json
 import os
 import logging
 
-# 配置日志
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
-
 load_dotenv() 
 
+log_level = os.getenv("LOG_LEVEL")
 openai_api_key = os.getenv("OPENAI_API_KEY")
 openai_api_base_url = os.getenv("OPENAI_API_BASE_URL")
 openai_model = os.getenv("OPENAI_MODEL")
+
+# 配置日志
+logging.basicConfig(
+    level=getattr(logging, log_level.upper(), logging.INFO),
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 weibo_urls = [
   "https://weibo.com/u/2689280541", #  snh48
@@ -161,7 +162,7 @@ def request_openai(content):
     completion = client.chat.completions.create(
       model=openai_model,
       messages=[
-        {'role': 'system', 'content': '你是一个专业的数据提取助手，专门从文本中提取演唱会或公演信息。只输出严格的JSON格式，不包含其他文字。'},
+        {'role': 'system', 'content': '你是一个专业的数据提取助手，专门从文本中提取公演、演唱会和运动会的演出时间信息。只输出严格的JSON格式，不包含其他文字。'},
         {'role': 'user', 'content': content}
       ],
       temperature=0.3,  # 降低随机性，提高一致性
@@ -211,7 +212,7 @@ def run (playwright: Playwright) -> None:
             if "retweeted_status" in mblog:
               mblogs.append(mblog["retweeted_status"])
           except Exception as e:
-            logger.debug(response.text())
+            logger.error(response.text())
             logger.error(f"解析微博详情时出错: {e}")
       except Exception as e:
         logger.error(f"handle_response函数处理响应时出错: {e}")
@@ -277,23 +278,31 @@ def run (playwright: Playwright) -> None:
     if not texts:
       logger.warning("没有收集到任何文本内容")
       return
-    
-    texts.append("""
-      帮我将上面信息中的所有购票信息整理为json格式，只包含time，theme，team三个英文属性。见面会和握手会不统计，请忽略。
-      只输出有效的JSON数组，不要包含其他文字，格式如下:
+    current_year = time.localtime(time.time()).tm_year
+    prompt = """
+      帮我将上面信息中的所有购票信息整理为json格式，只包含time，theme，team三个英文属性。
+      只关注公演、演唱会和运动会的演出时间信息，见面会和握手会等其他信息不统计，请忽略。毕业公演添加毕业人名。      
+      格式如下:
       [
         {
-          "time": "12/10 19:30",
+          "time": "2025/12/10 19:30",
           "theme": "《B•RISE 梦之门》",
           "team": "新生队"
         },
         {
-          "time": "12/11 19:30",
+          "time": "2025/12/11 19:30",
           "theme": "《赫兹共振》",
           "team": "TEAM HII"
+        },
+        {
+          "time": "2025/12/06 14:00",
+          "theme": "SNH48偶像运动会",
+          "team": "SNH48 GROUP"
         }
       ]
-    """)
+    """
+    prompt = prompt + f"\n只输出有效的JSON数组，不要包含其他文字，time格式为 2025/12/01 19:30 、2025/2/02 9:03，没有年份使用当前年份，当前为{current_year}年。"
+    texts.append(prompt)
     texts_str = '\n------------\n'.join(texts)
     logger.info(f"发送给AI的文本长度: {len(texts_str)}")
     result = request_openai(texts_str)

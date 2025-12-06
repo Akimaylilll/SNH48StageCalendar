@@ -4,7 +4,7 @@ name: DATA ACITON
 on:
   # 当对分支main进行push操作的时候，这个工作流就被触发了
   schedule:
-    - cron: "25 5,15 * * *"
+    - cron: "25 5,10,15 * * *"
   workflow_dispatch: # 手动触发
 
 # 工作流是由一个或多个的jobs构成的，在jobs里来说明要交给GitHub aciton执行的任务
@@ -59,7 +59,7 @@ jobs:
           git config --global user.email 642722474@qq.com
           git config --global user.name maylilllaction
           git add .
-          git commit -m"action:`update data`"
+          git commit -m"action:update data"
           git pull --rebase
       
       - name: Push changes

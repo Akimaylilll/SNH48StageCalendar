@@ -133,11 +133,12 @@
             let currentDate = new Date(startDate);
             while (currentDate <= endDate) {
                 // 格式化日期
+                const year = String(currentDate.getFullYear()).padStart(2, '0');
                 const month = String(currentDate.getMonth() + 1).padStart(2, '0');
                 const day = String(currentDate.getDate()).padStart(2, '0');
                 
                 // 显示的日期文本
-                const displayDate = `${month}月${day}日`;
+                const displayDate = `${year}年${month}月${day}日`;
                 
                 // 创建行
                 const row = document.createElement('tr');
@@ -161,23 +162,24 @@
                 // 查找当天的所有事件
                 const eventsOnDate = events.filter(event => {
                     // 处理两种不同的日期格式
-                    let eventMonth, eventDay;
+                    let eventYear, eventMonth, eventDay;
                     if (event.time.includes("月")) {
                         // 处理 "12月6日 14:00" 格式
                         const datePart = event.time.split(' ')[0];
-                        [eventMonth, eventDay] = datePart.replace('月', '/').replace('日', '').split('/');
+                        [eventYear, eventMonth, eventDay] = datePart.replace('月', '/').replace('日', '').split('/');
                     } else {
                         // 处理 "12/06 14:00" 格式
                         const [eventDate] = event.time.split(' ');
-                        [eventMonth, eventDay] = eventDate.split('/');
+                        [eventYear, eventMonth, eventDay] = eventDate.split('/');
                     }
-                    return parseInt(eventMonth) === parseInt(month) && 
+                    return parseInt(eventYear) === parseInt(year) &&
+                           parseInt(eventMonth) === parseInt(month) && 
                            parseInt(eventDay) === parseInt(day);
                 });
-                
+
                 // 按时间分组事件
                 const eventsByTime = groupEventsByTime(eventsOnDate);
-                
+                debugger
                 // 为每个事件创建显示元素
                 Object.keys(eventsByTime).forEach(timeKey => {
                     const eventsAtTime = eventsByTime[timeKey];
@@ -377,21 +379,20 @@
             let maxDate = null;
             
             events.forEach(event => {
-                let eventMonth, eventDay;
+                let eventYear, eventMonth, eventDay;
                 
                 if (event.time.includes("月")) {
                     // 处理 "12月6日 14:00" 格式
                     const datePart = event.time.split(' ')[0];
-                    [eventMonth, eventDay] = datePart.replace('月', '/').replace('日', '').split('/');
+                    [eventYear, eventMonth, eventDay] = datePart.replace('月', '/').replace('日', '').split('/');
                 } else {
                     // 处理 "12/06 14:00" 格式
                     const [eventDate] = event.time.split(' ');
-                    [eventMonth, eventDay] = eventDate.split('/');
+                    [eventYear, eventMonth, eventDay] = eventDate.split('/');
                 }
                 
-                // 创建日期对象（假设是当前年份）
-                const currentYear = new Date().getFullYear();
-                const date = new Date(currentYear, parseInt(eventMonth) - 1, parseInt(eventDay));
+                // 创建日期对象
+                const date = new Date(eventYear, parseInt(eventMonth) - 1, parseInt(eventDay));
                 
                 if (minDate === null || date < minDate) {
                     minDate = date;
