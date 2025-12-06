@@ -42,7 +42,6 @@ jobs:
           echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
           echo "OPENAI_API_BASE_URL=https://openrouter.ai/api/v1" >> .env
           echo "OPENAI_MODEL=tngtech/deepseek-r1t2-chimera:free" >> .env
-          echo "LOG_LEVEL=DEBUG" >> .env
 
       - name: Update Data
         run: python main.py

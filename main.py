@@ -219,7 +219,6 @@ def run (playwright: Playwright) -> None:
         logger.error(f"handle_response函数处理响应时出错: {e}")
 
     for url in weibo_urls:
-      logger.info(f"正在处理: {url}")
       try:
         blog_list = []
         page = content.new_page()
@@ -228,9 +227,10 @@ def run (playwright: Playwright) -> None:
         # 页面打开指定网址
         logger.debug(f"正在访问: {url}")
         page.goto(url)
+        page.wait_for_load_state('networkidle')
         # 等待内容加载
         wait_for_scroll_to_bottom(page, timeout=1000 * 60 * 10)
-        logger.info(f"已加载{len(blog_list)}条微博")
+
         for item in blog_list:
           try:
             created_at = item.get('created_at', '')
@@ -249,6 +249,7 @@ def run (playwright: Playwright) -> None:
               mblog_url = f"https://weibo.com/{user_idstr}/{mblogid}"
               logger.debug(f"访问微博详情: {mblog_url}")
               page.goto(mblog_url)
+              page.wait_for_load_state('networkidle')
               page.wait_for_timeout(10000)
           except Exception as e:
             logger.error(f"处理博客项时出错: {e}")
