@@ -249,9 +249,10 @@ def run (playwright: Playwright) -> None:
               mblog_url = f"https://weibo.com/{user_idstr}/{mblogid}"
               logger.debug(f"访问微博详情: {mblog_url}")
               page.goto(mblog_url)
-              page.wait_for_timeout(2000)
+              page.wait_for_timeout(10000)
           except Exception as e:
             logger.error(f"处理博客项时出错: {e}")
+          page.wait_for_timeout(5000)
         
         page.close()
 
