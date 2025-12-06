@@ -218,6 +218,7 @@ def run (playwright: Playwright) -> None:
         logger.error(f"handle_response函数处理响应时出错: {e}")
 
     for url in weibo_urls:
+      logger.info(f"正在处理: {url}")
       try:
         blog_list = []
         page = content.new_page()
