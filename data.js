@@ -109,5 +109,75 @@ const eventData = [
     "time": "2025/12/20 13:30",
     "theme": "生日公演",
     "team": "SNH48-沈小爱"
+  },
+  {
+    "time": "2025/12/20 13:30",
+    "theme": "沈小爱毕业公演",
+    "team": "SNH48星梦剧院"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "IKNOWYOUKNOW个人巡演",
+    "team": "杨冰怡"
+  },
+  {
+    "time": "2025/12/18 19:30",
+    "theme": "斗宿之诀[2.0]",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/19 19:30",
+    "theme": "没有我的世界(uN_v3rse)",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2025/12/20 14:00",
+    "theme": "斗宿之诀[2.0]",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《viva la vida》2024年度MVP定制公演",
+    "team": "张琼予"
+  },
+  {
+    "time": "2025/12/21 14:00",
+    "theme": "没有我的世界(uN_v3rse)",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2025/12/21 19:00",
+    "theme": "瑶光之迹[2.0]",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2025/12/20 14:00",
+    "theme": "《重生计划》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2025/12/21 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2025/12/20 14:00",
+    "theme": "《自定义轨迹》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2025/12/21 14:00",
+    "theme": "《自定义轨迹》",
+    "team": "TEAM GII"
   }
 ];
