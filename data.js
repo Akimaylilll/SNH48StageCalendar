@@ -179,5 +179,60 @@ const eventData = [
     "time": "2025/12/21 14:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
+  },
+  {
+    "time": "2025/12/17 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "新生队"
+  },
+  {
+    "time": "2025/12/18 19:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2025/12/19 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2025/12/20 13:30",
+    "theme": "《爱的具象化》毕业公演（沈小爱）",
+    "team": "SNH48"
+  },
+  {
+    "time": "2025/12/20 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2025/12/21 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2025/12/18 19:30",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/19 19:30",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2025/12/20 14:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/21 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2025/12/21 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
   }
 ];
