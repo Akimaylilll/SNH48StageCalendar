@@ -1,6 +1,7 @@
 from playwright.sync_api import Playwright, sync_playwright
 from openai import OpenAI
 from dotenv import load_dotenv
+from dateutil import parser
 import time
 import json
 import os
@@ -28,75 +29,40 @@ weibo_urls = [
   "https://weibo.com/u/7614913886"  #  cgt48
 ]
 
+def format_time_str_zh(time_str):
+  [d, t] = time_str.split(' ')
+  [year, month, day] = d.split('/')
+  return f"{year}年{month}月{day}日 {t}"
 
-def deduplicate_with_hashable(data):
-  seen = set()
-  unique = []
-  for item in data:
-    try:          
-      # 将字典转换为可哈希的元组
-      item_key = tuple(sorted((k, json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v) 
-        for k, v in item.items()))
-      if item_key not in seen:
-        seen.add(item_key)
-        unique.append(item)
-    except Exception as e:
-      logger.warning(f"处理项目时出错，跳过: {item}, 错误: {e}")
-  return unique
+def read_json_from_file(file_name):
+  try:
+    with open(file_name, "r", encoding="utf-8") as f:
+      content = f.read()
+      if "const eventData = " in content:
+        start = content.find("[")
+        end = content.rfind("];")
+        if start != -1 and end != -1:
+          json_str = content[start:end+1]
+          return json_str
+  except Exception as e:
+    logger.error(f"读取文件{file_name}时出错: {e}")
+    return None
 
 def write_to_file(data, file_name):
   if not data:
     logger.warning("没有数据写入文件")
     return
   
-  json_str = data
-  if "```json" in json_str:
-    json_str = json_str.split("```json")[1].split("```")[0]
-  elif "```" in json_str:
-    parts = json_str.split("```")
-    if len(parts) >= 3:
-      json_str = parts[1]
-  
   try:
-    new_event_data = json.loads(json_str)
-    
-    # 读取现有的data.js文件
-    existing_data = []
-    if os.path.exists(file_name):
-      try:
-        with open(file_name, "r", encoding="utf-8") as f:
-          content = f.read()
-          if "const eventData = " in content:
-            start = content.find("[")
-            end = content.rfind("];")
-            if start != -1 and end != -1:
-              existing_json_str = content[start:end+1]
-              try:
-                existing_data = json.loads(existing_json_str)
-              except json.JSONDecodeError:
-                logger.error(f"无法解析现有数据:\n{existing_json_str}\n，将使用空数组")
-      except Exception as e:
-        logger.error(f"读取现有文件时出错: {e}")
-
-    # 合并数据并去重
-    all_data= list(existing_data)
-    if isinstance(new_event_data, dict):
-      data.append(new_event_data)
-    elif isinstance(new_event_data, list):
-      all_data.extend(new_event_data)
-    unique_data = deduplicate_with_hashable(all_data)
-
+    new_event_data = json.loads(data)
     # 写入更新后的data.js文件
     with open(file_name, "w", encoding="utf-8") as f:
       f.write("// data.js\n")
       f.write("const eventData = ")
-      json.dump(unique_data, f, ensure_ascii=False, indent=2)
+      json.dump(new_event_data, f, ensure_ascii=False, indent=2)
       f.write(";\n")
-    
-    logger.info(f"\n数据已成功更新到data.js文件，新增{len(unique_data) - len(existing_data)}条记录")
-    logger.info(f"总共有{len(unique_data)}条记录")
   except json.JSONDecodeError as e:
-    logger.error(f"JSON解析错误: {e}\n JSON数据: \n{json_str}\n")
+    logger.error(f"JSON解析错误: {e}\n JSON数据: \n{data}\n")
   except Exception as e:
     logger.error(f"写入文件时发生错误: {e}")
 
@@ -152,7 +118,7 @@ def wait_for_scroll_to_bottom(page, timeout=30000):
   except Exception as e:
     logger.error(f"等待滚动到底部时出错: {e}")
 
-def request_openai(content):
+def request_openai(messages):
   try:
     client = OpenAI(
       api_key=openai_api_key,
@@ -161,16 +127,54 @@ def request_openai(content):
 
     completion = client.chat.completions.create(
       model=openai_model,
-      messages=[
-        {'role': 'system', 'content': '你是一个专业的数据提取助手，专门从文本中提取公演、演唱会和运动会的演出时间信息。只输出严格的JSON格式，不包含其他文字。'},
-        {'role': 'user', 'content': content}
-      ],
+      messages=messages,
       temperature=0.3,  # 降低随机性，提高一致性
     )
-    return completion.choices[0].message.content
+    json_str = completion.choices[0].message.content
+    if "```json" in json_str:
+      json_str = json_str.split("```json")[1].split("```")[0]
+    elif "```" in json_str:
+      parts = json_str.split("```")
+      if len(parts) >= 3:
+        json_str = parts[1]
+    return json_str
   except Exception as e:
     logger.error(f"OpenAI API调用失败: {e}")
     return None
+
+def update_data(result, file_path):
+  data_json = read_json_from_file(file_path)
+  if not data_json:
+    logger.warning("data.js文件为空或不存在")
+    return None
+  data_json = json.loads(data_json)
+  result_json = json.loads(result)
+  seen_times = {parser.parse(item.get('time', '')) for item in result_json}
+  data_json_clip = []
+  data_json_rest = []
+  for item in data_json:
+      time = parser.parse(item.get('time', ''))
+      if time in seen_times:
+          data_json_clip.append(item)
+      else:
+          data_json_rest.append(item)
+  result_json.extend(data_json_clip)
+  result_json = [{**item, 'time_zh': format_time_str_zh(item['time'])} 
+                  for item in result_json]
+  messages = [
+    {'role': 'system', 'content': '你是一个专业的数据提取助手，专门过滤重复信息，请忽略theme和team的少部分表达差异，在theme中都添加书名号《》后再判断是否重复，但是注意time_zh时间日期不同的相同theme不属于重复。只输出严格的JSON格式，不包含其他文字。'},
+    {'role': 'user', 'content': json.dumps(result_json, ensure_ascii=False)}
+  ]
+  filter_result_data = request_openai(messages)
+  filter_result_data_json = json.loads(filter_result_data)
+  data_json_rest.extend(filter_result_data_json)
+  data_json_all = [
+      {key: value for key, value in d.items() if key != 'time_zh'}
+      for d in data_json_rest
+  ]
+  write_to_file(json.dumps(data_json_all, ensure_ascii=False), file_path)
+  logger.info(f"\n数据已成功更新到data.js文件，新增{len(data_json) - len(data_json_rest)}条记录")
+  logger.info(f"总共有{len(data_json_rest)}条记录")
 
 # 创建浏览器
 def run (playwright: Playwright) -> None:
@@ -285,7 +289,7 @@ def run (playwright: Playwright) -> None:
     current_year = time.localtime(time.time()).tm_year
     prompt = """
       帮我将上面信息中的所有购票信息整理为json格式，只包含time，theme，team三个英文属性。
-      只关注公演、演唱会和运动会的演出时间信息，见面会和握手会等其他信息不统计，请忽略。毕业公演添加毕业人名。      
+      只关注公演、演唱会和运动会的演出时间信息，见面会和握手会等其他信息不统计，请忽略。只有毕业公演、个人演唱会和个人定制公演添加毕业人名，有TEAM名称优先考虑。      
       格式如下:
       [
         {
@@ -302,6 +306,16 @@ def run (playwright: Playwright) -> None:
           "time": "2025/12/06 14:00",
           "theme": "SNH48偶像运动会",
           "team": "SNH48 GROUP"
+        },
+        {
+          "time": "2025/12/20 19:00",
+          "theme": "《viva la vida》2024年度MVP定制公演",
+          "team": "GNZ48-张琼予"
+        },
+        {
+          "time": "2025/12/20 13:30",
+          "theme": "《爱的具象化》毕业公演",
+          "team": "SNH48-沈小爱"
         }
       ]
     """
@@ -309,11 +323,16 @@ def run (playwright: Playwright) -> None:
     texts.append(prompt)
     texts_str = '\n------------\n'.join(texts)
     logger.info(f"发送给AI的文本长度: {len(texts_str)}")
-    result = request_openai(texts_str)
-    if result:
-      write_to_file(result, "data.js")
-    else:
+    content = [
+      {'role': 'system', 'content': '你是一个专业的数据提取助手，专门从文本中提取公演、演唱会和运动会的演出时间信息。只输出严格的JSON格式，不包含其他文字。'},
+      {'role': 'user', 'content': texts_str}
+    ]
+    result = request_openai(content)
+    logger.debug(f"AI返回结果: {result}")
+    if not result:
       logger.error("未能从AI获取有效结果")
+
+    update_data(result, "data.js")
 
   except Exception as e:
     logger.error(f"运行过程中发生错误: {e}")
