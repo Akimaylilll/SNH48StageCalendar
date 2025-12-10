@@ -126,11 +126,6 @@ const eventData = [
     "team": "TEAM Z"
   },
   {
-    "time": "2025/12/20 13:30",
-    "theme": "《爱的具象化》毕业公演",
-    "team": "SNH48-沈小爱"
-  },
-  {
     "time": "2025/12/20 14:00",
     "theme": "《遗忘的国度》剧场首演",
     "team": "TEAM E"
@@ -209,5 +204,10 @@ const eventData = [
     "time": "2025/12/21 14:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
+  },
+  {
+    "time": "2025/12/20 13:30",
+    "theme": "《爱的具象化》毕业公演",
+    "team": "SNH48-沈小爱"
   }
 ];
