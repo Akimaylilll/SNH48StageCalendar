@@ -131,11 +131,6 @@ const eventData = [
     "team": "TEAM E"
   },
   {
-    "time": "2025/12/20 19:00",
-    "theme": "《B·RISE 梦之门》2025第三季度剧场MVP演出",
-    "team": "TEAM B"
-  },
-  {
     "time": "2025/12/21 14:00",
     "theme": "《遗忘的国度》剧场首演",
     "team": "TEAM E"
@@ -161,29 +156,14 @@ const eventData = [
     "team": "TEAM X"
   },
   {
-    "time": "2025/12/20 19:00",
-    "theme": "《IKNOWYOUKNOW个人巡演》",
-    "team": "杨冰怡"
-  },
-  {
     "time": "2025/12/20 14:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
   },
   {
-    "time": "2025/12/20 19:00",
-    "theme": "《viva la vida》2024年度MVP定制公演",
-    "team": "GNZ48-张琼予"
-  },
-  {
     "time": "2025/12/20 14:00",
     "theme": "《重生计划》",
     "team": "TEAM C"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "TEAM K"
   },
   {
     "time": "2025/12/21 14:00",
@@ -196,18 +176,63 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
-    "time": "2025/12/20 19:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
-  },
-  {
     "time": "2025/12/21 14:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
   },
   {
+    "time": "2025/12/20 19:00",
+    "theme": "《IKNOWYOUKNOW个人巡演》",
+    "team": "杨冰怡"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《今天就是好心情个巡》",
+    "team": "柏欣妤"
+  },
+  {
     "time": "2025/12/20 13:30",
-    "theme": "《爱的具象化》毕业公演",
+    "theme": "《爱的具象化毕业公演》",
     "team": "SNH48-沈小爱"
+  },
+  {
+    "time": "2025/12/14 18:00",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-王思文"
+  },
+  {
+    "time": "2025/12/14 19:30",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-郭依晨"
+  },
+  {
+    "time": "2025/12/14 15:00",
+    "theme": "《2025重庆城市足球超级联赛》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2025/12/14 20:00",
+    "theme": "《SNH48GROUP年度青春盛典答谢MINI LIVE》",
+    "team": "CGT48"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《B·RISE 梦之门》2025第三季度剧场MVP演出",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《viva la vida》2024年度MVP定制公演",
+    "team": "GNZ48-张琼予"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
   }
 ];
