@@ -211,11 +211,6 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2025/12/20 13:30",
-    "theme": "《爱的具象化毕业公演》",
-    "team": "SNH48-沈小爱"
-  },
-  {
     "time": "2025/12/14 18:00",
     "theme": "《LIVE FM.日落时分》",
     "team": "BEJ48-王思文"
@@ -229,5 +224,10 @@ const eventData = [
     "time": "2025/12/14 20:00",
     "theme": "《SNH48GROUP年度青春盛典答谢MINI LIVE》",
     "team": "CGT48"
+  },
+  {
+    "time": "2025/12/20 13:30",
+    "theme": "《爱的具象化》毕业公演",
+    "team": "SNH48-沈小爱"
   }
 ];
