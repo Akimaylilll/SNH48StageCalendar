@@ -238,22 +238,22 @@ const eventData = [
   {
     "time": "2025/12/20 14:00",
     "theme": "《遗忘的国度》",
-    "team": "TEAM E"
+    "team": "BEJ48 TEAM E"
   },
   {
     "time": "2025/12/21 14:00",
     "theme": "《遗忘的国度》",
-    "team": "TEAM E"
+    "team": "BEJ48 TEAM E"
   },
   {
     "time": "2025/12/27 14:00",
     "theme": "《遗忘的国度》",
-    "team": "TEAM E"
+    "team": "BEJ48 TEAM E"
   },
   {
     "time": "2025/12/28 14:00",
     "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
+    "team": "BEJ48 TEAM B"
   },
   {
     "time": "2025/12/27 14:00",
