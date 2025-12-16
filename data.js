@@ -237,22 +237,22 @@ const eventData = [
   },
   {
     "time": "2025/12/20 14:00",
-    "theme": "《遗忘的国度》",
+    "theme": "《遗忘的国度》剧场首演",
     "team": "BEJ48 TEAM E"
   },
   {
     "time": "2025/12/21 14:00",
-    "theme": "《遗忘的国度》",
+    "theme": "《遗忘的国度》剧场首演",
     "team": "BEJ48 TEAM E"
   },
   {
     "time": "2025/12/27 14:00",
-    "theme": "《遗忘的国度》",
+    "theme": "《遗忘的国度》剧场公演",
     "team": "BEJ48 TEAM E"
   },
   {
     "time": "2025/12/28 14:00",
-    "theme": "《B·RISE 梦之门》",
+    "theme": "《B·RISE 梦之门》剧场公演",
     "team": "BEJ48 TEAM B"
   },
   {
