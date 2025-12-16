@@ -29,6 +29,10 @@ weibo_urls = [
   "https://weibo.com/u/7614913886"  #  cgt48
 ]
 
+timestamp_template = "%a %b %d %H:%M:%S %z %Y" # Tue Dec 02 12:34:34 +0800 2025
+
+time_range = 60 * 60 * 12
+
 def format_time_str_zh(time_str):
   [d, t] = time_str.split(' ')
   [year, month, day] = d.split('/')
@@ -73,7 +77,7 @@ def smart_scroll_to_bottom(page, scroll_step=800, max_attempts=30, stable_thresh
   
   for i in range(max_attempts):
     page.mouse.wheel(0, scroll_step)
-    page.wait_for_timeout(1500)
+    page.wait_for_timeout(5000)
     new_height = page.evaluate("document.documentElement.scrollHeight")
     
     if new_height == last_height:
@@ -88,6 +92,21 @@ def smart_scroll_to_bottom(page, scroll_step=800, max_attempts=30, stable_thresh
     logger.debug(f"第{i+1}次滚动，页面高度: {new_height}")   
 
   logger.debug("滚动结束。")
+
+def smart_scroll_to_bottom_use_phone(page, scroll_step=800):
+  """智能滚动到底部：结合滚轮、高度判断和网络监听"""
+  last_height = page.evaluate("window.lastHight ? window.lastHight : 0")
+  new_height = page.evaluate("""() => {
+    app = document.getElementById("app");
+    first_div = app.children[0];
+    newHeight = first_div.children[0].scrollHeight
+    window.lastHight = newHeight;
+    return newHeight;            
+  }""")
+  for i in range(int((new_height - last_height)/ scroll_step)):
+    page.mouse.wheel(0, scroll_step)
+    page.wait_for_timeout(5000)
+    logger.debug(f"第{i+1}次滚动，页面高度: {new_height}")
 
 def wait_for_scroll_to_bottom(page, timeout=30000):
   try:
@@ -109,7 +128,36 @@ def wait_for_scroll_to_bottom(page, timeout=30000):
           if (framesUnchanged >= stableFrames) {
             resolve(true);
           } else {
-            setTimeout(checkHeight, 2000); // 每2s检查一次  大于page.wait_for_timeout(1500)否则报错
+            setTimeout(checkHeight, 6000); // 每2s检查一次  大于page.wait_for_timeout(5000)否则报错
+          }
+        };
+        checkHeight();
+      });
+    }""", timeout=timeout)
+  except Exception as e:
+    logger.error(f"等待滚动到底部时出错: {e}")
+
+def wait_for_scroll_to_bottom_use_phone(page, timeout=30000):
+  try:
+    page.wait_for_function("""() => {
+      const stableFrames = 10; // 连续稳定帧数
+      let lastHeight = window.lastHight;
+      let framesUnchanged = 0;
+      
+      return new Promise((resolve) => {
+        const checkHeight = () => {
+          const currentHeight = window.lastHight;
+          if (currentHeight === lastHeight) {
+            framesUnchanged++;
+          } else {
+            framesUnchanged = 0;
+            lastHeight = currentHeight;
+          }
+          
+          if (framesUnchanged >= stableFrames) {
+            resolve(true);
+          } else {
+            setTimeout(checkHeight, 6000); // 每2s检查一次  大于page.wait_for_timeout(5000)否则报错
           }
         };
         checkHeight();
@@ -176,38 +224,108 @@ def update_data(result, file_path):
   logger.info(f"\n数据已成功更新到data.js文件，新增{len(data_json) - len(data_json_rest)}条记录")
   logger.info(f"总共有{len(data_json_rest)}条记录")
 
-# 创建浏览器
-def run (playwright: Playwright) -> None:
-  try:
-    # 创建浏览器
-    browser = playwright.chromium.launch(headless=True)
-    content = browser.new_context()
+def get_weibo_mblog_by_playwright(playwright: Playwright, url: str) -> list:
+  # 创建浏览器
+  browser = playwright.chromium.launch(headless=True)
+  content = browser.new_context()
+  page = content.new_page()
 
-    timestamp_template = "%a %b %d %H:%M:%S %z %Y" # Tue Dec 02 12:34:34 +0800 2025
-    time_range = 60 * 60 * 12
-    mblogs = []
+  mymblog_statuses_flag = True
+  blog_list = []
+  def handle_response(response):
+    try:
+      # 筛选接口，例如包含"/api/data"的URL
+      if "/ajax/statuses/mymblog" in response.url:
+        logger.debug(f"捕获到响应 URL: {response.url}")
+        logger.debug(f"状态码: {response.status}")
+        if response.status != 200:
+          logger.warning(f"/ajax/statuses/mymblog 接口请求失败，状态码: {response.status}")
+          page.evaluate("() => window['mymblog_statuses_flag'] = false")
+          return
+        response_json = response.json()
+        if 'data' in response_json and 'list' in response_json['data']:
+          blog_list.extend(response_json['data']['list'])
+          if blog_list:
+            end_time_str = blog_list[-1].get('created_at', '')
+            if end_time_str.strip():
+              end_time = time.mktime(time.strptime(end_time_str, timestamp_template))
+              logger.debug(f"最新时间: {end_time_str}")
+              if end_time > time.time() - time_range:  # 7 天
+                smart_scroll_to_bottom(page)
+        else:
+          logger.error(f"响应中缺少预期的数据结构: {'data' if 'data' in response_json else 'list'}")
+    except Exception as e:
+      logger.error(f"handle_response函数处理响应时出错: {e}")
 
-    # 定义响应事件处理函数
-    def handle_response(response):
+  page.on("response", handle_response)
+  page.goto(url)
+  page.wait_for_load_state('networkidle')# 等待内容加载
+  wait_for_scroll_to_bottom(page, timeout=1000 * 60 * 10)
+  mymblog_statuses_flag = page.evaluate("window.mymblog_statuses_flag")
+  page.close()
+  content.close()
+  browser.close()
+  if mymblog_statuses_flag == False:
+    return None
+  return blog_list
+
+def get_weibo_mblog_by_playwright_use_phone(playwright: Playwright, url: str) -> list:
+  # 创建浏览器
+  iphone_12 = playwright.devices['iPhone 12']
+  browser = playwright.chromium.launch(headless=True)
+  content = browser.new_context(**iphone_12)
+  page = content.new_page()
+
+  blog_list = []
+  mymblog_statuses_flag = True
+  def handle_response(response):
+    try:
+      # 筛选接口，例如包含"/api/data"的URL
+      if "m.weibo.cn/api/container/getIndex" in response.url:
+        logger.debug(f"捕获到响应 URL: {response.url}")
+        logger.debug(f"状态码: {response.status}")
+        if response.status != 200:
+          logger.warning(f"m.weibo.cn/api/container/getIndex 接口请求失败，状态码: {response.status}")
+          page.evaluate("() => window['mymblog_statuses_flag'] = false")
+          return
+        response_json = response.json()
+        if 'data' in response_json and 'cards' in response_json['data']:
+          for card in response_json['data']['cards']:
+            if 'mblog' in card:
+              mblog = card['mblog']
+              blog_list.append(mblog)
+          if blog_list:
+            end_time_str = blog_list[-1].get('created_at', '')
+            if end_time_str.strip():
+              end_time = time.mktime(time.strptime(end_time_str, timestamp_template))
+              logger.debug(f"weibo最新时间: {end_time_str}")
+              if end_time > time.time() - time_range:  # 7 天
+                smart_scroll_to_bottom_use_phone(page)
+        else:
+          logger.error(f"响应中缺少预期的数据结构: {'data' if 'data' in response_json else 'cards'}")
+    except Exception as e:
+      logger.error(f"handle_response函数处理响应时出错: {e}")
+  
+  page.on("response", handle_response)
+  page.goto(url)
+  page.wait_for_load_state('networkidle')
+  wait_for_scroll_to_bottom_use_phone(page, timeout=1000 * 60 * 10)
+  mymblog_statuses_flag = page.evaluate("window.mymblog_statuses_flag")
+  page.close()
+  content.close()
+  browser.close()
+  if mymblog_statuses_flag == False:
+    return None
+  return blog_list
+
+def get_weibo_mblog_detail(playwright: Playwright, url: str) -> list:
+  browser = playwright.chromium.launch(headless=True)
+  content = browser.new_context()
+  page = content.new_page()
+  mblogs = []
+  def handle_response(response):
       try:
-        # 筛选接口，例如包含"/api/data"的URL
-        if "/ajax/statuses/mymblog" in response.url:
-          logger.debug(f"捕获到响应 URL: {response.url}")
-          logger.debug(f"状态码: {response.status}")
-          
-          response_json = response.json()
-          if 'data' in response_json and 'list' in response_json['data']:
-            blog_list.extend(response_json['data']['list'])
-            if blog_list:
-              end_time_str = blog_list[-1].get('created_at', '')
-              if end_time_str.strip():
-                end_time = time.mktime(time.strptime(end_time_str, timestamp_template))
-                logger.debug(f"最新时间: {end_time_str}")
-                if end_time > time.time() - time_range:  # 7 天
-                  smart_scroll_to_bottom(page)
-          else:
-            logger.error(f"响应中缺少预期的数据结构: {'data' if 'data' in response_json else 'list'}")
-        elif "/ajax/statuses/show" in response.url:
+        if "/ajax/statuses/show" in response.url:
           logger.debug(f"捕获到响应 URL: {response.url}")
           logger.debug(f"状态码: {response.status}")
           try:
@@ -221,20 +339,30 @@ def run (playwright: Playwright) -> None:
             logger.error(f"解析微博详情时出错: {e}")
       except Exception as e:
         logger.error(f"handle_response函数处理响应时出错: {e}")
-
+  page.on("response", handle_response)
+  page.goto(url)
+  page.wait_for_load_state('networkidle')
+  page.wait_for_timeout(10000)
+  page.close()
+  content.close()
+  browser.close()
+  return mblogs
+# 创建浏览器
+def run (playwright: Playwright) -> None:
+  try:
+    mblogs = []
     for url in weibo_urls:
       try:
-        blog_list = []
-        page = content.new_page()
-        # 绑定监听器到“response”事件
-        page.on("response", handle_response)
         # 页面打开指定网址
         logger.debug(f"正在访问: {url}")
-        page.goto(url)
-        page.wait_for_load_state('networkidle')
-        # 等待内容加载
-        wait_for_scroll_to_bottom(page, timeout=1000 * 60 * 10)
-
+        is_use_phone = False
+        blog_list = get_weibo_mblog_by_playwright(playwright, url)
+        if not blog_list:
+          url = url.replace("weibo.com", "m.weibo.com")
+          blog_list = get_weibo_mblog_by_playwright_use_phone(playwright, url)
+          is_use_phone = True
+          if not blog_list:
+            continue
         for item in blog_list:
           try:
             created_at = item.get('created_at', '')
@@ -244,30 +372,26 @@ def run (playwright: Playwright) -> None:
             t = time.mktime(time.strptime(created_at, timestamp_template))
             if t < time.time() - time_range: # 7 天
               continue
-
-            mblogid = item.get('mblogid', '')
-            user = item.get('user', {})
-            user_idstr = user.get('idstr', '') if user else ''
             
-            if mblogid and user_idstr:
+            mblog_url = ""
+            if is_use_phone:
+              mblogid = item.get('bid', '')
+              user = item.get('user', {})
+              user_idstr = user.get('id', '') if user else ''
               mblog_url = f"https://weibo.com/{user_idstr}/{mblogid}"
-              logger.debug(f"访问微博详情: {mblog_url}")
-              page.goto(mblog_url)
-              page.wait_for_load_state('networkidle')
-              page.wait_for_timeout(10000)
+            else:
+              mblogid = item.get('mblogid', '')
+              user = item.get('user', {})
+              user_idstr = user.get('idstr', '') if user else ''
+              mblog_url = f"https://weibo.com/{user_idstr}/{mblogid}"
+            
+            logger.debug(f"访问微博详情: {mblog_url}")
+            mblogs.extend(get_weibo_mblog_detail(playwright, mblog_url))
           except Exception as e:
             logger.error(f"处理博客项时出错: {e}")
-          page.wait_for_timeout(5000)
-        
-        page.wait_for_timeout(10000)
-        page.close()
-
       except Exception as e:
         logger.error(f"处理URL {url} 时出错: {e}")
         continue
-
-    content.close()
-    browser.close()
 
     texts = []
     for item in mblogs:
@@ -292,7 +416,7 @@ def run (playwright: Playwright) -> None:
       帮我将上面信息中的所有购票信息整理为json格式，只包含time，theme，team三个英文属性。
       只关注公演、演唱会和运动会的演出时间信息，见面会和握手会等其他信息不统计，请忽略。
       只统计SNH48、GNZ48、BEJ48、CKG48、SHY48、CGT48的票务信息，其他邀请演出不统计，例如足球赛等。
-      只有毕业公演、个人演唱会和个人定制公演添加毕业人名，有TEAM名称优先考虑。      
+      只有毕业公演、个人演唱会和个人定制公演添加毕业人名及其队伍名，有TEAM名称优先考虑。      
       格式如下:
       [
         {
