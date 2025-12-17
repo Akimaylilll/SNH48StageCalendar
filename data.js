@@ -247,8 +247,23 @@ const eventData = [
   },
   {
     "time": "2025/12/20 13:30",
-    "theme": "《爱的具象化》毕业公演",
+    "theme": "《爱的具象化毕业公演》",
     "team": "SNH48-沈小爱"
+  },
+  {
+    "time": "2025/12/20 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2025/12/21 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《viva la vida年度MVP公演》",
+    "team": "GNZ48-张琼予"
   },
   {
     "time": "2025/12/20 14:00",
@@ -259,11 +274,6 @@ const eventData = [
     "time": "2025/12/21 14:00",
     "theme": "《遗忘的国度》剧场首演",
     "team": "BEJ48 TEAM E"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《viva la vida年度MVP公演》",
-    "team": "GNZ48-张琼予"
   },
   {
     "time": "2025/12/20 19:00",
