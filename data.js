@@ -141,31 +141,6 @@ const eventData = [
     "team": "TEAM X"
   },
   {
-    "time": "2025/12/20 19:00",
-    "theme": "《IKNOWYOUKNOW个人巡演》",
-    "team": "SNH48-杨冰怡"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《B·RISE 梦之门》2025第三季度剧场MVP演出",
-    "team": "TEAM B"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《viva la vida》2024年度MVP定制公演",
-    "team": "GNZ48-张琼予"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "TEAM K"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
-  },
-  {
     "time": "2025/12/14 18:00",
     "theme": "《LIVE FM.日落时分》",
     "team": "BEJ48-王思文"
@@ -226,26 +201,6 @@ const eventData = [
     "team": "TEAM Z"
   },
   {
-    "time": "2025/12/20 13:30",
-    "theme": "《爱的具象化》毕业公演",
-    "team": "SNH48-沈小爱"
-  },
-  {
-    "time": "2025/12/27 19:00",
-    "theme": "《今天就是好心情·个人巡演》",
-    "team": "SNH48-柏欣妤"
-  },
-  {
-    "time": "2025/12/20 14:00",
-    "theme": "《遗忘的国度》剧场首演",
-    "team": "BEJ48 TEAM E"
-  },
-  {
-    "time": "2025/12/21 14:00",
-    "theme": "《遗忘的国度》剧场首演",
-    "team": "BEJ48 TEAM E"
-  },
-  {
     "time": "2025/12/27 14:00",
     "theme": "《遗忘的国度》剧场公演",
     "team": "BEJ48 TEAM E"
@@ -261,11 +216,6 @@ const eventData = [
     "team": "TEAM NIII"
   },
   {
-    "time": "2025/12/27 19:00",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
     "time": "2025/12/28 14:00",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
@@ -274,11 +224,6 @@ const eventData = [
     "time": "2025/12/27 14:00",
     "theme": "《重生计划》",
     "team": "TEAM C"
-  },
-  {
-    "time": "2025/12/27 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "TEAM K"
   },
   {
     "time": "2025/12/28 14:00",
@@ -291,14 +236,74 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2025/12/27 19:00",
-    "theme": "《自定义轨迹》",
-    "team": "TEAM GII"
-  },
-  {
     "time": "2025/12/28 14:00",
     "theme": "《未命名新途》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《今天就是好心情·个人巡演》",
+    "team": "SNH48-柏欣妤"
+  },
+  {
+    "time": "2025/12/20 13:30",
+    "theme": "《爱的具象化》毕业公演",
+    "team": "SNH48-沈小爱"
+  },
+  {
+    "time": "2025/12/20 14:00",
+    "theme": "《遗忘的国度》剧场首演",
+    "team": "BEJ48 TEAM E"
+  },
+  {
+    "time": "2025/12/21 14:00",
+    "theme": "《遗忘的国度》剧场首演",
+    "team": "BEJ48 TEAM E"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《viva la vida年度MVP公演》",
+    "team": "GNZ48-张琼予"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《B·RISE 梦之门》2025第三季度剧场MVP演出",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《viva la vida》2024年度MVP定制公演",
+    "team": "GNZ48-张琼予"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《自定义轨迹》",
+    "team": "TEAM GII"
   },
   {
     "time": "2025/12/21 14:00",
