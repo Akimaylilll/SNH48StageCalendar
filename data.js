@@ -236,6 +236,31 @@ const eventData = [
     "team": "SNH48-沈小爱"
   },
   {
+    "time": "2025/12/26 19:30",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2025/12/28 19:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/26 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2025/12/24 19:00",
+    "theme": "《电波绮遇圣诞音乐会》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《今天就是好心情·个人巡演》",
+    "team": "SNH48-柏欣妤"
+  },
+  {
     "time": "2025/12/20 14:00",
     "theme": "《遗忘的国度》",
     "team": "TEAM E"
@@ -244,6 +269,11 @@ const eventData = [
     "time": "2025/12/21 14:00",
     "theme": "《遗忘的国度》",
     "team": "TEAM E"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《viva la vida》",
+    "team": "GNZ48-张琼予"
   },
   {
     "time": "2025/12/21 14:00",
@@ -276,34 +306,14 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
-    "time": "2025/12/27 19:00",
-    "theme": "《今天就是好心情·个人巡演》",
-    "team": "SNH48-柏欣妤"
-  },
-  {
     "time": "2025/12/20 19:00",
     "theme": "《爱的具象化毕业公演》",
     "team": "SNH48-沈小爱"
   },
   {
-    "time": "2025/12/26 19:30",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
-    "time": "2025/12/28 19:00",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
     "time": "2025/12/20 19:00",
-    "theme": "《《viva la vida》年度MVP公演》",
+    "theme": "《viva la vida》年度MVP公演",
     "team": "GNZ48-张琼予"
-  },
-  {
-    "time": "2025/12/26 19:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
   },
   {
     "time": "2025/12/20 19:00",
@@ -312,7 +322,7 @@ const eventData = [
   },
   {
     "time": "2025/12/20 19:00",
-    "theme": "《《B·RISE 梦之门》2025第三季度剧场MVP演出》",
+    "theme": "《B·RISE 梦之门》2025第三季度剧场MVP演出",
     "team": "TEAM B"
   },
   {
