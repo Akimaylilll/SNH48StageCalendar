@@ -256,24 +256,29 @@ const eventData = [
     "team": "SNH48"
   },
   {
-    "time": "2025/12/27 19:00",
-    "theme": "《今天就是好心情·个人巡演》",
-    "team": "SNH48-柏欣妤"
-  },
-  {
     "time": "2025/12/20 14:00",
     "theme": "《遗忘的国度》",
-    "team": "TEAM E"
+    "team": "BEJ48 TEAM E"
   },
   {
     "time": "2025/12/21 14:00",
     "theme": "《遗忘的国度》",
-    "team": "TEAM E"
+    "team": "BEJ48 TEAM E"
   },
   {
     "time": "2025/12/20 19:00",
-    "theme": "《viva la vida》",
+    "theme": "《viva la vida》年度MVP公演",
     "team": "GNZ48-张琼予"
+  },
+  {
+    "time": "2025/12/20 19:00",
+    "theme": "《爱的具象化》毕业公演",
+    "team": "SNH48-沈小爱"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《今天就是好心情·个人巡演》",
+    "team": "SNH48-柏欣妤"
   },
   {
     "time": "2025/12/21 14:00",
@@ -304,16 +309,6 @@ const eventData = [
     "time": "2025/12/21 14:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《爱的具象化毕业公演》",
-    "team": "SNH48-沈小爱"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《viva la vida》年度MVP公演",
-    "team": "GNZ48-张琼予"
   },
   {
     "time": "2025/12/20 19:00",
