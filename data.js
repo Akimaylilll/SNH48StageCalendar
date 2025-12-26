@@ -356,11 +356,6 @@ const eventData = [
     "team": "GNZ48"
   },
   {
-    "time": "2026/01/01 19:00",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
     "time": "2026/01/02 19:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
@@ -376,11 +371,6 @@ const eventData = [
     "team": "CKG48"
   },
   {
-    "time": "2026/01/01 19:00",
-    "theme": "《重生计划》",
-    "team": "TEAM C"
-  },
-  {
     "time": "2026/01/02 19:00",
     "theme": "《奇幻加冕礼》",
     "team": "TEAM K"
@@ -394,11 +384,6 @@ const eventData = [
     "time": "2026/01/01 14:00",
     "theme": "《自定义轨迹》睡衣派对主题公演",
     "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/01 19:00",
-    "theme": "《未命名新途》睡衣派对主题公演",
-    "team": "TEAM CII"
   },
   {
     "time": "2026/01/02 19:00",
@@ -421,19 +406,9 @@ const eventData = [
     "team": "SNH48 GROUP预备生-曾雨思"
   },
   {
-    "time": "2026/01/02 14:00",
-    "theme": "《B·RISE 梦之门》剧场公演",
-    "team": "TEAM B"
-  },
-  {
     "time": "2026/01/03 14:00",
     "theme": "《遗忘的国度》剧场公演",
     "team": "TEAM E"
-  },
-  {
-    "time": "2026/01/02 14:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
   },
   {
     "time": "2026/01/03 14:00",
@@ -441,19 +416,9 @@ const eventData = [
     "team": "TEAM G"
   },
   {
-    "time": "2026/01/02 14:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
     "time": "2026/01/03 14:00",
     "theme": "《K·48HZ》",
     "team": "TEAM K"
-  },
-  {
-    "time": "2026/01/02 14:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
   },
   {
     "time": "2026/01/03 14:00",
@@ -471,9 +436,54 @@ const eventData = [
     "team": "SNH48"
   },
   {
+    "time": "2025/12/27 19:00",
+    "theme": "《今天就是好心情》个人巡演",
+    "team": "SNH48-柏欣妤"
+  },
+  {
     "time": "2025/12/31 20:48",
-    "theme": "《2025-2026跨年联合特别公演》",
+    "theme": "2025-2026跨年联合特别公演",
     "team": "BEJ48"
+  },
+  {
+    "time": "2026/01/02 14:00",
+    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/01/01 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/01/01 19:00",
+    "theme": "《重生计划》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/01 19:00",
+    "theme": "《未命名新途》睡衣派对主题公演",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/02 14:00",
+    "theme": "《B·RISE 梦之门》剧场公演",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/01/02 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/01/02 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/02 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
   },
   {
     "time": "2025/12/31 20:48",
