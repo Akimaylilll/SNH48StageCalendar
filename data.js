@@ -442,18 +442,18 @@ const eventData = [
   },
   {
     "time": "2025/12/31 20:48",
-    "theme": "2025-2026跨年联合特别公演",
+    "theme": "《2025-2026跨年联合特别公演》",
     "team": "BEJ48"
-  },
-  {
-    "time": "2026/01/02 14:00",
-    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
   },
   {
     "time": "2026/01/01 19:00",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
+  },
+  {
+    "time": "2026/01/02 14:00",
+    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
   },
   {
     "time": "2026/01/01 19:00",
@@ -472,28 +472,8 @@ const eventData = [
   },
   {
     "time": "2026/01/02 14:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
-  },
-  {
-    "time": "2026/01/02 14:00",
     "theme": "《Shining·C》",
     "team": "TEAM C"
-  },
-  {
-    "time": "2026/01/02 14:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2025/12/31 20:48",
-    "theme": "《跨年联合特别公演》",
-    "team": "BEJ48"
-  },
-  {
-    "time": "2025/12/27 19:00",
-    "theme": "《今天就是好心情·个巡》",
-    "team": "SNH48-柏欣妤"
   },
   {
     "time": "2025/12/27 19:00",
