@@ -436,11 +436,6 @@ const eventData = [
     "team": "SNH48"
   },
   {
-    "time": "2025/12/31 20:48",
-    "theme": "《2025-2026跨年联合特别公演》",
-    "team": "BEJ48"
-  },
-  {
     "time": "2026/01/01 19:00",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
@@ -476,6 +471,11 @@ const eventData = [
     "team": "SNH48-柏欣妤"
   },
   {
+    "time": "2025/12/31 20:48",
+    "theme": "《2025-2026跨年联合特别公演》",
+    "team": "BEJ48"
+  },
+  {
     "time": "2026/1/10 19:00",
     "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
     "team": "SNH48-杨冰怡"
@@ -489,6 +489,11 @@ const eventData = [
     "time": "2026/1/11 19:00",
     "theme": "《手牵手》——全新复刻公演",
     "team": "CGT48TeamGII"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《幻镜》",
+    "team": "CGT48TeamCII"
   },
   {
     "time": "2026/1/10 19:00",
