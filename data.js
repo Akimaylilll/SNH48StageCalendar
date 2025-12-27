@@ -466,9 +466,29 @@ const eventData = [
     "team": "TEAM C"
   },
   {
+    "time": "2026/1/11 19:00",
+    "theme": "《手牵手》——全新复刻公演",
+    "team": "CGT48TeamGII"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《幻镜》",
+    "team": "CGT48TeamCII"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《幻镜》——全新复刻公演",
+    "team": "CGT48TeamCII"
+  },
+  {
     "time": "2025/12/27 19:00",
     "theme": "《今天就是好心情·个巡》",
     "team": "SNH48-柏欣妤"
+  },
+  {
+    "time": "2025/12/28 14:30",
+    "theme": "《无畏契约全国大赛年度总决赛》",
+    "team": "SNH48 GROUP"
   },
   {
     "time": "2025/12/31 20:48",
@@ -486,22 +506,7 @@ const eventData = [
     "team": "CGT48TeamGII"
   },
   {
-    "time": "2026/1/11 19:00",
-    "theme": "《手牵手》——全新复刻公演",
-    "team": "CGT48TeamGII"
-  },
-  {
-    "time": "2026/1/11 19:00",
-    "theme": "《幻镜》",
-    "team": "CGT48TeamCII"
-  },
-  {
     "time": "2026/1/10 19:00",
-    "theme": "《幻镜》——全新复刻公演",
-    "team": "CGT48TeamCII"
-  },
-  {
-    "time": "2026/1/11 19:00",
     "theme": "《幻镜》——全新复刻公演",
     "team": "CGT48TeamCII"
   },
