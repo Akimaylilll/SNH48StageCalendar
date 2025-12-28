@@ -516,21 +516,6 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
-    "time": "2026/1/11 14:00",
-    "theme": "《年度潜力新人TOP16答谢公演·重庆站》",
-    "team": "CKG48"
-  },
-  {
-    "time": "2025/12/31 20:48",
-    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
-    "team": "BEJ48"
-  },
-  {
-    "time": "2025/12/31 21:30",
-    "theme": "CKG48《Run to 2026》跨年联合公演",
-    "team": "CKG48"
-  },
-  {
     "time": "2026/1/10 17:00",
     "theme": "TEAM CII《幻镜》",
     "team": "TEAM CII"
@@ -544,5 +529,20 @@ const eventData = [
     "time": "2026/1/10 14:00",
     "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
     "team": "SNH48-杨冰怡"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《年度潜力新人TOP16答谢公演·重庆站》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2025/12/31 20:48",
+    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
+    "team": "BEJ48"
+  },
+  {
+    "time": "2025/12/31 21:30",
+    "theme": "《Run to 2026》",
+    "team": "CKG48"
   }
 ];
