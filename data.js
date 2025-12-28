@@ -366,11 +366,6 @@ const eventData = [
     "team": "TEAM NIII"
   },
   {
-    "time": "2025/12/31 21:30",
-    "theme": "《Run to 2026》跨年联合特殊公演",
-    "team": "CKG48"
-  },
-  {
     "time": "2026/01/02 19:00",
     "theme": "《奇幻加冕礼》",
     "team": "TEAM K"
@@ -491,11 +486,6 @@ const eventData = [
     "team": "SNH48 GROUP"
   },
   {
-    "time": "2025/12/31 20:48",
-    "theme": "《2025-2026跨年联合特别公演》",
-    "team": "BEJ48"
-  },
-  {
     "time": "2026/1/10 19:00",
     "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
     "team": "SNH48-杨冰怡"
@@ -524,5 +514,35 @@ const eventData = [
     "time": "2025/12/27 19:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《年度潜力新人TOP16答谢公演·重庆站》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2025/12/31 20:48",
+    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
+    "team": "BEJ48"
+  },
+  {
+    "time": "2025/12/31 21:30",
+    "theme": "CKG48《Run to 2026》跨年联合公演",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/10 17:00",
+    "theme": "TEAM CII《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/1/11 17:00",
+    "theme": "TEAM CII《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/1/10 14:00",
+    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
   }
 ];
