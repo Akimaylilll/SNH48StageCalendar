@@ -501,6 +501,71 @@ const eventData = [
     "team": "BEJ48"
   },
   {
+    "time": "2025/12/31 21:30",
+    "theme": "《Run to 2026跨年联合特殊公演》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2025/12/31 21:30",
+    "theme": "《Run to 2026》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/9 19:30",
+    "theme": "《TEAM G瑶光之迹[2.0]·第一百一十七场》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/1/10 14:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]·第一百一十七场》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《TEAM NIII没有我的世界(uN_v3rse)·第四十四场》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]·第一百一十八场》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/1/10 14:00",
+    "theme": "《CKG48 TEAM K·48HZ·第十七场》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《CKG48 TEAM C Shining·C·第十场》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/10 14:00",
+    "theme": "《CGT48 TEAM CII幻镜·首演第一场》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《CGT48 TEAM GII手牵手·首演第一场》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《CGT48 TEAM GII手牵手·首演第二场》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《CGT48 TEAM CII幻镜·首演第二场》",
+    "team": "TEAM CII"
+  },
+  {
     "time": "2026/1/9 19:30",
     "theme": "《TEAM G瑶光之迹[2.0]》",
     "team": "GNZ48 TEAM G"
@@ -533,11 +598,6 @@ const eventData = [
   {
     "time": "2026/1/11 14:00",
     "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
-    "team": "CKG48"
-  },
-  {
-    "time": "2025/12/31 21:30",
-    "theme": "《Run to 2026跨年联合特殊公演》",
     "team": "CKG48"
   },
   {
@@ -589,10 +649,5 @@ const eventData = [
     "time": "2026/1/10 14:00",
     "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
     "team": "SNH48-杨冰怡"
-  },
-  {
-    "time": "2025/12/31 21:30",
-    "theme": "《Run to 2026》",
-    "team": "CKG48"
   }
 ];
