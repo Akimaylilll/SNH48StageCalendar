@@ -461,21 +461,6 @@ const eventData = [
     "team": "TEAM C"
   },
   {
-    "time": "2026/1/11 19:00",
-    "theme": "《手牵手》——全新复刻公演",
-    "team": "CGT48TeamGII"
-  },
-  {
-    "time": "2026/1/11 19:00",
-    "theme": "《幻镜》",
-    "team": "CGT48TeamCII"
-  },
-  {
-    "time": "2026/1/11 19:00",
-    "theme": "《幻镜》——全新复刻公演",
-    "team": "CGT48TeamCII"
-  },
-  {
     "time": "2025/12/27 19:00",
     "theme": "《今天就是好心情·个巡》",
     "team": "SNH48-柏欣妤"
@@ -484,21 +469,6 @@ const eventData = [
     "time": "2025/12/28 14:30",
     "theme": "《无畏契约全国大赛年度总决赛》",
     "team": "SNH48 GROUP"
-  },
-  {
-    "time": "2026/1/10 19:00",
-    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
-    "team": "SNH48-杨冰怡"
-  },
-  {
-    "time": "2026/1/10 19:00",
-    "theme": "《手牵手》——全新复刻公演",
-    "team": "CGT48TeamGII"
-  },
-  {
-    "time": "2026/1/10 19:00",
-    "theme": "《幻镜》——全新复刻公演",
-    "team": "CGT48TeamCII"
   },
   {
     "time": "2025/12/27 19:00",
@@ -526,19 +496,99 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
+    "time": "2025/12/31 20:48",
+    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
+    "team": "BEJ48"
+  },
+  {
+    "time": "2026/1/9 19:30",
+    "theme": "《TEAM G瑶光之迹[2.0]》",
+    "team": "GNZ48 TEAM G"
+  },
+  {
     "time": "2026/1/10 14:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]》",
+    "team": "GNZ48 TEAM Z"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
+    "team": "GNZ48 TEAM NIII"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]》",
+    "team": "GNZ48 TEAM Z"
+  },
+  {
+    "time": "2026/1/10 14:00",
+    "theme": "《CKG48 TEAM K·48HZ》",
+    "team": "CKG48 TEAM K"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《CKG48 TEAM C Shining·C》",
+    "team": "CKG48 TEAM C"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2025/12/31 21:30",
+    "theme": "《Run to 2026跨年联合特殊公演》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/10 14:00",
+    "theme": "《CGT48 TEAM CII幻镜》",
+    "team": "CGT48 TEAM CII"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《CGT48 TEAM GII手牵手》",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《CGT48 TEAM GII手牵手》",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《CGT48 TEAM CII幻镜》",
+    "team": "CGT48 TEAM CII"
+  },
+  {
+    "time": "2026/1/10 19:00",
     "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
     "team": "SNH48-杨冰怡"
   },
   {
-    "time": "2026/01/11 14:00",
-    "theme": "《年度潜力新人TOP16答谢公演·重庆站》",
-    "team": "CKG48"
+    "time": "2026/1/11 19:00",
+    "theme": "《手牵手——全新复刻公演》",
+    "team": "CGT48TeamGII"
   },
   {
-    "time": "2025/12/31 20:48",
-    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
-    "team": "BEJ48"
+    "time": "2026/1/11 19:00",
+    "theme": "《幻镜》",
+    "team": "CGT48TeamCII"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《手牵手——全新复刻公演》",
+    "team": "CGT48TeamGII"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《幻镜——全新复刻公演》",
+    "team": "CGT48TeamCII"
+  },
+  {
+    "time": "2026/1/10 14:00",
+    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
   },
   {
     "time": "2025/12/31 21:30",
