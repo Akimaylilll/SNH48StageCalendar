@@ -536,11 +536,6 @@ const eventData = [
     "team": "TEAM X"
   },
   {
-    "time": "2025/12/31 20:48",
-    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
-    "team": "BEJ48"
-  },
-  {
     "time": "2026/1/9 19:30",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
@@ -724,5 +719,40 @@ const eventData = [
     "time": "2026/1/10 14:00",
     "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
     "team": "SNH48-杨冰怡"
+  },
+  {
+    "time": "2025/1/07 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "新生队"
+  },
+  {
+    "time": "2025/1/08 19:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2025/1/09 19:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2025/1/10 13:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2025/1/11 13:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2025/1/11 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2025/12/31 20:48",
+    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
+    "team": "BEJ48"
   }
 ];
