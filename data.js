@@ -546,11 +546,6 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
-    "time": "2026/1/10 18:30",
-    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
-    "team": "SNH48-杨冰怡"
-  },
-  {
     "time": "2026/1/9 19:30",
     "theme": "《TEAM G瑶光之迹[2.0]·第一百一十七场》",
     "team": "TEAM G"
@@ -814,5 +809,15 @@ const eventData = [
     "time": "2026/1/11 19:30",
     "theme": "《幻镜》",
     "team": "CGT48 TEAM CII"
+  },
+  {
+    "time": "2026/01/10 18:30",
+    "theme": "《平安喜乐》年度MVP全场定制公演",
+    "team": "SNH48-韩家乐-"
+  },
+  {
+    "time": "2026/1/10 18:30",
+    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
   }
 ];
