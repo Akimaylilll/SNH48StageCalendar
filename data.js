@@ -744,5 +744,75 @@ const eventData = [
     "time": "2025/12/31 21:00",
     "theme": "《捌765肆321》",
     "team": "GNZ48"
+  },
+  {
+    "time": "2026/1/10 19:30",
+    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
+  },
+  {
+    "time": "2026/1/23 19:30",
+    "theme": "《2025年度乐曜曲全阵容LIVE HOUSE》",
+    "team": "SNH48 GROUP"
+  },
+  {
+    "time": "2026/3/8 19:30",
+    "theme": "《温室出逃（HEY）》",
+    "team": "GNZ48 TEAM G"
+  },
+  {
+    "time": "2026/4/19 19:30",
+    "theme": "《冰镇告白》",
+    "team": "CKG48 TEAM C"
+  },
+  {
+    "time": "2026/5/18 19:30",
+    "theme": "《非正式告别》",
+    "team": "GNZ48 TEAM NIII"
+  },
+  {
+    "time": "2026/6/1 19:30",
+    "theme": "《续集》",
+    "team": "GNZ48 TEAM NIII"
+  },
+  {
+    "time": "2026/6/27 19:30",
+    "theme": "《反击计划》",
+    "team": "SNH48 TEAM SII"
+  },
+  {
+    "time": "2026/7/26 19:30",
+    "theme": "《世界末日也没关系》",
+    "team": "GNZ48 TEAM G"
+  },
+  {
+    "time": "2026/10/7 19:30",
+    "theme": "《乐曜日》",
+    "team": "SNH48 TEAM NII"
+  },
+  {
+    "time": "2026/11/1 19:30",
+    "theme": "《换下制服之前》",
+    "team": "SNH48 TEAM SII"
+  },
+  {
+    "time": "2026/11/22 19:30",
+    "theme": "《女孩》",
+    "team": "SNH48 TEAM SII"
+  },
+  {
+    "time": "2026/12/31 19:30",
+    "theme": "《圣诞倒计时》",
+    "team": "CKG48 TEAM C"
+  },
+  {
+    "time": "2026/1/10 19:30",
+    "theme": "《手牵手》",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/1/11 19:30",
+    "theme": "《幻镜》",
+    "team": "CGT48 TEAM CII"
   }
 ];
