@@ -416,11 +416,6 @@ const eventData = [
     "team": "SNH48"
   },
   {
-    "time": "2026/1/3 18:30",
-    "theme": "《声动星河》匿声唱将专场公演",
-    "team": "SNH48"
-  },
-  {
     "time": "2026/01/01 19:00",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
@@ -741,11 +736,6 @@ const eventData = [
     "team": "GNZ48"
   },
   {
-    "time": "2026/1/10 19:30",
-    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
-    "team": "SNH48-杨冰怡"
-  },
-  {
     "time": "2026/1/23 19:30",
     "theme": "《2025年度乐曜曲全阵容LIVE HOUSE》",
     "team": "SNH48 GROUP"
@@ -801,16 +791,6 @@ const eventData = [
     "team": "CKG48 TEAM C"
   },
   {
-    "time": "2026/1/10 19:30",
-    "theme": "《手牵手》",
-    "team": "CGT48 TEAM GII"
-  },
-  {
-    "time": "2026/1/11 19:30",
-    "theme": "《幻镜》",
-    "team": "CGT48 TEAM CII"
-  },
-  {
     "time": "2026/01/10 18:30",
     "theme": "《平安喜乐》年度MVP全场定制公演",
     "team": "SNH48-韩家乐"
@@ -819,5 +799,35 @@ const eventData = [
     "time": "2026/1/10 18:30",
     "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
     "team": "SNH48-杨冰怡"
+  },
+  {
+    "time": "2026/01/03 18:30",
+    "theme": "《匿声唱将专场公演》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/01/10 19:30",
+    "theme": "《幻镜》公演首演",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/11 19:30",
+    "theme": "《幻镜》公演首演",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/1/10 19:30",
+    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
+  },
+  {
+    "time": "2026/1/10 19:30",
+    "theme": "《手牵手》",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/1/11 19:30",
+    "theme": "《幻镜》",
+    "team": "CGT48 TEAM CII"
   }
 ];
