@@ -556,16 +556,6 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2026/01/17 19:00",
-    "theme": "《奇幻加冕礼》巡演·北京站",
-    "team": "CKG48 TEAM K"
-  },
-  {
-    "time": "2026/01/17 19:00",
-    "theme": "《NEXT STATION》毕业公演",
-    "team": "GNZ48-龙亦瑞"
-  },
-  {
     "time": "2026/01/10 19:00",
     "theme": "《手牵手》全新复刻公演",
     "team": "CGT48 TEAM GII"
@@ -599,5 +589,15 @@ const eventData = [
     "time": "2026/1/11 19:00",
     "theme": "《幻镜》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/17 19:00",
+    "theme": "《奇幻加冕礼》巡演·北京站",
+    "team": "CKG48 TEAM K"
+  },
+  {
+    "time": "2026/01/17 19:00",
+    "theme": "《NEXT STATION》毕业公演",
+    "team": "GNZ48-龙亦瑞"
   }
 ];
