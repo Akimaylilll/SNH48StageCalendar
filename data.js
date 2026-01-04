@@ -521,39 +521,9 @@ const eventData = [
     "team": "CKG48"
   },
   {
-    "time": "2026/1/10 19:00",
-    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
-    "team": "SNH48-杨冰怡"
-  },
-  {
     "time": "2025/12/31 21:00",
     "theme": "《2026，和我一起芭》",
     "team": "CGT48"
-  },
-  {
-    "time": "2026/1/10 19:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
-  },
-  {
-    "time": "2026/1/11 19:00",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2026/1/10 19:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/1/10 19:00",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/1/11 19:00",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
   },
   {
     "time": "2025/12/31 21:00",
@@ -583,6 +553,51 @@ const eventData = [
   {
     "time": "2026/1/11 19:30",
     "theme": "《幻镜》全新复刻公演",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/17 19:00",
+    "theme": "《奇幻加冕礼》巡演·北京站",
+    "team": "CKG48 TEAM K"
+  },
+  {
+    "time": "2026/01/17 19:00",
+    "theme": "《NEXT STATION》毕业公演",
+    "team": "GNZ48-龙亦瑞"
+  },
+  {
+    "time": "2026/01/10 19:00",
+    "theme": "《手牵手》全新复刻公演",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/01/11 19:00",
+    "theme": "《手牵手》全新复刻公演",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/1/10 19:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/1/11 19:00",
+    "theme": "《幻镜》",
     "team": "TEAM CII"
   }
 ];
