@@ -571,9 +571,39 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2026/01/10 19:00",
-    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
-    "team": "SNH48-杨冰怡"
+    "time": "2026/01/14 19:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/01/15 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "新生队"
+  },
+  {
+    "time": "2026/01/16 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/01/17 13:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2026/01/17 18:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/01/18 13:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/01/18 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
   },
   {
     "time": "2026/01/17 19:00",
@@ -624,6 +654,11 @@ const eventData = [
     "time": "2026/01/18 14:00",
     "theme": "《未命名新途》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/10 19:00",
+    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
   },
   {
     "time": "2026/01/10 19:00",
