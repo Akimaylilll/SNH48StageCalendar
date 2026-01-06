@@ -626,14 +626,34 @@ const eventData = [
     "team": "TEAM NII"
   },
   {
-    "time": "2026/1/17 19:00",
-    "theme": "《NEXT STATION》毕业公演",
-    "team": "GNZ48-龙亦瑞"
-  },
-  {
     "time": "2026/1/16 19:30",
     "theme": "《没有我的世界》",
     "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/1/18 19:00",
+    "theme": "《斗宿之诀》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/1/17 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "BEJ48 TEAM B"
+  },
+  {
+    "time": "2026/1/17 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "CKG48 TEAM K"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "BEJ48 TEAM E"
+  },
+  {
+    "time": "2026/1/17 19:00",
+    "theme": "《NEXT STATION》毕业公演",
+    "team": "GNZ48-龙亦瑞"
   },
   {
     "time": "2026/1/17 14:00",
@@ -644,11 +664,6 @@ const eventData = [
     "time": "2026/1/18 14:00",
     "theme": "《没有我的世界》",
     "team": "TEAM NIII"
-  },
-  {
-    "time": "2026/1/18 19:00",
-    "theme": "《斗宿之诀》",
-    "team": "TEAM Z"
   },
   {
     "time": "2026/1/17 19:00",
@@ -674,10 +689,5 @@ const eventData = [
     "time": "2026/1/18 14:00",
     "theme": "《未命名新途》",
     "team": "TEAM CII"
-  },
-  {
-    "time": "2026/01/17 19:00",
-    "theme": "《奇幻加冕礼》巡演·北京站",
-    "team": "CKG48 TEAM K"
   }
 ];
