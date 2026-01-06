@@ -3,34 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNH48StageCalendar</title>
+    <title>SNH48公演日历</title>
     <style>
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            background-image: radial-gradient(#ffebf3 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            margin: 0 0 20px 0;
+            text-shadow: 0 2px 4px rgba(255, 150, 150, 0.3);
+            letter-spacing: 2px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1::before, h1::after {
+            content: "🌸";
+            margin: 0 15px;
+            font-size: 1.8rem;
+        }
+        
+        h1::before {
+            animation: floatLeft 3s ease-in-out infinite;
+        }
+        
+        h1::after {
+            animation: floatRight 3s ease-in-out infinite;
+        }
+        
+        @keyframes floatLeft {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes floatRight {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        
         table {
-            border-collapse: collapse;
             width: 100%;
-            margin: 20px auto;
-            font-size: 14px;
+            border-collapse: collapse;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 0 auto;
         }
         
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #e0e0e0;
             text-align: center;
             padding: 8px 2px;
             position: relative;
         }
         
+        /* 移除最右边的边框（针对24:00列的右边框） */
+        th:last-child,
+        td:last-child {
+            border-right: none;
+        }
+        
         th {
-            background-color: #f2f2f2;
-            font-weight: bold;
+            background: linear-gradient(120deg, #ffc2d6 0%, #ffeef5 100%);
+            color: #5a5a5a;
+            font-weight: 600;
+            height: 40px;
         }
         
         .time-header {
-            font-size: 14px;
+            font-size: 12px;
             min-width: 60px;
         }
         
         .date-cell {
             min-width: 100px;
+            font-weight: bold;
+            background-color: #fdf2f6;
         }
         
         .event-container {
@@ -39,28 +101,39 @@
             bottom: 0;
             left: 0;
             right: 0;
-            pointer-events: none;
+            pointer-events: none; /* 允许点击穿透到子元素 */
+            height: 100%; /* 确保容器高度为100% */
+            overflow: visible; /* 允许内容溢出显示，防止裁剪事件元素 */
         }
         
         .event {
             color: white;
-            border-radius: 4px;
-            padding: 2px 4px;
+            border-radius: 6px;
+            padding: 2px 4px; /* 减小内边距 */
             cursor: pointer;
-            font-size: 11px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: 10px; /* 减小字体大小 */
+            white-space: nowrap; /* 禁止文本换行 */
+            overflow: hidden; /* 隐藏超出部分 */
+            text-overflow: ellipsis; /* 超出部分显示省略号 */
             position: absolute;
-            pointer-events: auto;
-            display: flex;
+            pointer-events: auto; /* 确保事件元素可以响应鼠标事件 */
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             box-sizing: border-box;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15); /* 减小阴影 */
+            transition: all 0.3s ease;
+            z-index: 10;
+            min-width: 239px; /* 修正错误的属性值，设置最小宽度为239px */
+            width: max-content; /* 宽度根据内容自适应 */
+            max-width: 30%; /* 设置最大宽度为容器的30%，防止过长 */
+            line-height: 1.2; /* 设置行高，减少文字上下间隔 */
         }
         
         .event:hover {
-            opacity: 0.8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 20;
         }
         
         /* 为不同队伍分配不同颜色 */
@@ -87,34 +160,99 @@
         .team-20 { background-color: #1e549b; }      /*"TEAM GII": 20, */
         .team-21 { background-color: #de00cd; }      /*"TEAM SIII": 21,*/
         .team-22 { background-color: #531571; }      /*"TEAM HIII": 22,*/
+        
+        .today-row {
+            background-color: #fffde7 !important;
+        }
+        
+        .today-label {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <h2 style="text-align: center;">SNH48StageCalendar</h2>
-    <table id="calendar">
-        <thead>
-            <tr>
-                <th>日期</th>
-                <!-- 生成10点到22点的小时列头，每小时包含4个15分钟的数据列 -->
-                <script>
-                    // 生成小时列头，每个小时占据4列（15分钟间隔）
-                    for (let hour = 10; hour <= 24; hour++) {
-                        document.write(`<th class="time-header" colspan="4">${hour}:00</th>`);
-                    }
-                </script>
-            </tr>
-        </thead>
-        <tbody id="calendar-body">
-            <!-- 日历内容将通过JavaScript动态生成 -->
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="header">
+            <h1>SNH48公演日历</h1>
+        </div>
+        
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th class="date-cell">日期</th>
+                    <!-- 生成10点到24点的小时列头，每小时包含4个15分钟的数据列 -->
+                    <script>
+                        // 生成小时列头，每个小时占据4列（15分钟间隔）
+                        for (let hour = 10; hour <= 24; hour++) {
+                            // 为最后一个小时（24:00）添加特殊标识
+                            if(hour === 24) {
+                                document.write(`<th class="time-header last-hour" colspan="4">${hour}:00</th>`);
+                            } else {
+                                document.write(`<th class="time-header" colspan="4">${hour}:00</th>`);
+                            }
+                        }
+                    </script>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                <!-- 日历内容将通过JavaScript动态生成 -->
+            </tbody>
+        </table>
+    </div>
 
     <!-- 引入数据文件 -->
     <script src="data.js"></script>
     
     <script>
         // 页面加载完成后创建日历
-        document.addEventListener('DOMContentLoaded', () => createCalendar(eventData));
+        document.addEventListener('DOMContentLoaded', () => {
+            createCalendar(eventData);
+            scrollToToday();
+        });
+        
+        // 滚动到今天的函数
+        function scrollToToday() {
+            // 等待日历完全渲染后再执行滚动
+            setTimeout(() => {
+                // 查找包含 today-label 类的元素
+                const todayElement = document.querySelector('.today-label');
+                if (todayElement) {
+                    // 获取包含今天日期的行
+                    const todayRow = todayElement.closest('tr');
+                    if (todayRow) {
+                        // 滚动到今天行的位置
+                        todayRow.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                        
+                        // 添加一个视觉提示效果
+                        todayRow.style.transition = 'background-color 0.5s ease';
+                        todayRow.style.backgroundColor = '#ffeaa7';
+                        
+                        // 2秒后恢复原始背景色
+                        setTimeout(() => {
+                            if(todayRow.classList.contains('today-row')) {
+                                todayRow.style.backgroundColor = '#fffde7';
+                            } else {
+                                todayRow.style.backgroundColor = '';
+                            }
+                        }, 2000);
+                    }
+                }
+            }, 100); // 延迟100毫秒确保DOM完全渲染
+        }
         
         // 创建日历并填充数据
         function createCalendar(events) {
@@ -138,7 +276,7 @@
                 const day = String(currentDate.getDate()).padStart(2, '0');
                 
                 // 显示的日期文本
-                const displayDate = `${year}年${month}月${day}日`;
+                const displayDate = `${year}/${month}/${day}`;
                 
                 // 创建行
                 const row = document.createElement('tr');
@@ -146,26 +284,33 @@
                 // 创建日期单元格
                 const dateCell = document.createElement('td');
                 dateCell.className = 'date-cell';
-                dateCell.textContent = displayDate;
+                
+                // 计算星期几（0是周日，1是周一...6是周六）
+                const dayOfWeek = currentDate.getDay();
+                const dayNames = ['日', '一', '二', '三', '四', '五', '六'];
+                const dayName = dayNames[dayOfWeek];
                 
                 // 检查是否为今天
                 const today = new Date();
                 const isToday = parseInt(year) === today.getFullYear() &&
                                 parseInt(month) === (today.getMonth() + 1) &&
                                 parseInt(day) === today.getDate();
-                // 如果是今天，添加背景色
+                                
+                // 如果是今天，添加特殊标识
                 if (isToday) {
-                    dateCell.textContent = displayDate + '（今日）';
-                    row.style.backgroundColor = '#f8c9c9'; // 淡灰色背景
+                    dateCell.innerHTML = `<span class="today-label">${displayDate}（${dayName} 今日）</span>`;
+                    row.classList.add('today-row');
+                } else {
+                    dateCell.textContent = `${displayDate}（${dayName}）`;
                 }
 
                 row.appendChild(dateCell);
 
-                // 为每个15分钟时间段创建单元格 (10:00 - 22:00)
+                // 为每个15分钟时间段创建单元格 (10:00 - 24:00)
                 const cellContainer = document.createElement('td');
-                cellContainer.colSpan = 61; // 10点到22点共13个小时，每小时4列，共52列，加上1个padding
+                cellContainer.colSpan = 60; // 从10:00到24:00，共15小时，每小时4列 = 60列
                 cellContainer.style.position = 'relative';
-                cellContainer.style.height = '50px'; // 增加高度以容纳多个事件
+                cellContainer.style.height = '60px'; // 保持原始高度60px
                 
                 // 创建事件容器
                 const eventContainer = document.createElement('div');
@@ -196,7 +341,9 @@
                     const eventsAtTime = eventsByTime[timeKey];
                     eventsAtTime.forEach((event, index) => {
                         const eventElement = createEventElement(event, teamColors[event.team], index, eventsAtTime.length);
-                        eventElement.title = `${event.theme} (${event.team})\n${event.time}`;
+                        // 使用原生title属性
+                        eventElement.title = `${event.theme}\n${event.team}\n${event.time}`;
+                        
                         eventContainer.appendChild(eventElement);
                     });
                 });
@@ -211,7 +358,6 @@
             }
         }
         
-        // 按时间分组事件
         // 按时间段重叠关系分组事件
         function groupEventsByTime(events) {
             const grouped = [];
@@ -295,30 +441,34 @@
             }
             
             // 计算事件开始位置（相对于10:00）
-            const startMinutes = (eventHour - 10) * 60 + eventMinute;
-            const startPosition = (startMinutes / 15) * (100 / 60); // 52个15分钟时间段
-            
-            // 计算事件宽度（假设每个事件持续3小时=180分钟）
-            const duration = 180; // 3小时
-            const width = (duration / 15) * (100 / 60); // 12个15分钟时间段
+            // 从10:00开始计算分钟数，然后转换为百分比
+            const startMinutesFromDay = eventHour * 60 + eventMinute;
+            const startMinutesFromBase = startMinutesFromDay - (10 * 60); // 从10:00开始的分钟数
+            const totalAvailableMinutes = (24 - 10) * 60; // 从10:00到24:00的总分钟数 (840分钟)
+            const startPosition = (startMinutesFromBase / totalAvailableMinutes) * 100;
             
             // 设置样式
             eventDiv.style.left = `${startPosition}%`;
-            eventDiv.style.width = `${width}%`;
             
             // 如果同一时间有多个事件，垂直分割显示
             if (totalCount > 1) {
-                const verticalMargin = 3; // 垂直间距
-                const availableHeight = 92 - (verticalMargin * (totalCount - 1));
-                const singleHeight = availableHeight / totalCount;
-                eventDiv.style.top = `${index * (singleHeight + verticalMargin) + 4}%`;
+                // 使用参数化布局策略确保稳定性和可读性
+                const availableHeight = 96; // 可用垂直空间96%
+                const baseTop = 2; // 起始偏移2%
+                
+                // 根据经验记忆中提到的策略，使用固定比例间距
+                const singleHeight = (availableHeight / totalCount) * 0.9; // 每个事件高度为(可用高度/总数)*0.9
+                const topPosition = baseTop + index * (availableHeight / totalCount); // 顶部位置基于均分高度计算
+                
+                eventDiv.style.top = `${topPosition}%`;
                 eventDiv.style.height = `${singleHeight}%`;
-                eventDiv.style.maxHeight = '30px';
+                
+                eventDiv.style.maxHeight = 'none';
             } else {
                 // 单个事件居中显示
                 eventDiv.style.top = '25%';
                 eventDiv.style.height = '50%';
-                eventDiv.style.maxHeight = '30px';
+                eventDiv.style.maxHeight = 'none';
             }
             
             return eventDiv;
