@@ -638,17 +638,22 @@ const eventData = [
   {
     "time": "2026/1/17 14:00",
     "theme": "《B·RISE 梦之门》",
-    "team": "BEJ48 TEAM B"
+    "team": "TEAM B"
   },
   {
     "time": "2026/1/17 19:00",
-    "theme": "《奇幻加冕礼》",
+    "theme": "《奇幻加冕礼》巡演·北京站",
     "team": "CKG48 TEAM K"
   },
   {
     "time": "2026/1/18 14:00",
     "theme": "《遗忘的国度》",
-    "team": "BEJ48 TEAM E"
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/1/17 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "CKG48 TEAM K"
   },
   {
     "time": "2026/1/17 19:00",
