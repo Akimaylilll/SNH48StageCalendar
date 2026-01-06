@@ -546,21 +546,6 @@ const eventData = [
     "team": "SNH48"
   },
   {
-    "time": "2026/1/10 19:30",
-    "theme": "《幻镜》全新复刻公演",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2026/1/11 19:30",
-    "theme": "《幻镜》全新复刻公演",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2026/01/11 19:00",
-    "theme": "《手牵手》全新复刻公演",
-    "team": "CGT48 TEAM GII"
-  },
-  {
     "time": "2026/1/11 19:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
@@ -577,8 +562,8 @@ const eventData = [
   },
   {
     "time": "2026/01/10 19:00",
-    "theme": "《手牵手》全新复刻公演",
-    "team": "CGT48 TEAM GII"
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
   },
   {
     "time": "2026/1/10 19:00",
@@ -694,5 +679,15 @@ const eventData = [
     "time": "2026/1/18 14:00",
     "theme": "《未命名新途》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/10 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
   }
 ];
