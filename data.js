@@ -626,24 +626,9 @@ const eventData = [
     "team": "TEAM B"
   },
   {
-    "time": "2026/1/17 19:00",
-    "theme": "《奇幻加冕礼》巡演·北京站",
-    "team": "CKG48 TEAM K"
-  },
-  {
     "time": "2026/1/18 14:00",
     "theme": "《遗忘的国度》",
     "team": "TEAM E"
-  },
-  {
-    "time": "2026/1/17 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "CKG48 TEAM K"
-  },
-  {
-    "time": "2026/1/17 19:00",
-    "theme": "《NEXT STATION》毕业公演",
-    "team": "GNZ48-龙亦瑞"
   },
   {
     "time": "2026/1/17 14:00",
@@ -656,11 +641,6 @@ const eventData = [
     "team": "TEAM NIII"
   },
   {
-    "time": "2026/1/17 19:00",
-    "theme": "《重生计划》",
-    "team": "TEAM C"
-  },
-  {
     "time": "2026/1/18 14:00",
     "theme": "《Shining·C》",
     "team": "TEAM C"
@@ -669,11 +649,6 @@ const eventData = [
     "time": "2026/1/17 14:00",
     "theme": "《手牵手》",
     "team": "TEAM GII"
-  },
-  {
-    "time": "2026/1/17 19:00",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
   },
   {
     "time": "2026/1/18 14:00",
@@ -689,5 +664,60 @@ const eventData = [
     "time": "2026/01/11 14:00",
     "theme": "《B·RISE 梦之门》",
     "team": "TEAM B"
+  },
+  {
+    "time": "2026/1/17 19:30",
+    "theme": "《重生计划》千秋乐公演",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/18 19:30",
+    "theme": "《重生计划》千秋乐公演",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/10 19:30",
+    "theme": "《幻镜》公演首演",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/1/11 19:30",
+    "theme": "《幻镜》公演首演",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/1/10 19:30",
+    "theme": "《手牵手》公演首演",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/1/11 19:30",
+    "theme": "《手牵手》公演首演",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/1/17 19:00",
+    "theme": "《NEXT STATION》毕业公演",
+    "team": "GNZ48-龙亦瑞"
+  },
+  {
+    "time": "2026/1/17 19:00",
+    "theme": "《奇幻加冕礼》巡演·北京站",
+    "team": "CKG48 TEAM K"
+  },
+  {
+    "time": "2026/1/17 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "CKG48 TEAM K"
+  },
+  {
+    "time": "2026/1/17 19:00",
+    "theme": "《重生计划》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/1/17 19:00",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
   }
 ];
