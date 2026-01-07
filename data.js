@@ -707,11 +707,6 @@ const eventData = [
   },
   {
     "time": "2026/1/17 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "CKG48 TEAM K"
-  },
-  {
-    "time": "2026/1/17 19:00",
     "theme": "《重生计划》",
     "team": "TEAM C"
   },
