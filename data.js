@@ -501,16 +501,6 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2026/1/11 14:00",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/1/11 14:00",
-    "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
-    "team": "CKG48"
-  },
-  {
     "time": "2025/12/31 20:48",
     "theme": "《BEJ48 2025-2026跨年联合特别公演》",
     "team": "BEJ48"
@@ -596,49 +586,9 @@ const eventData = [
     "team": "TEAM Z"
   },
   {
-    "time": "2026/1/17 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
-  },
-  {
-    "time": "2026/1/18 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "TEAM E"
-  },
-  {
-    "time": "2026/1/17 14:00",
-    "theme": "《瑶光之迹》",
-    "team": "TEAM G"
-  },
-  {
-    "time": "2026/1/18 14:00",
-    "theme": "《没有我的世界》",
-    "team": "TEAM NIII"
-  },
-  {
-    "time": "2026/1/18 14:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/1/17 14:00",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/1/18 14:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
-  },
-  {
     "time": "2026/01/10 14:00",
     "theme": "《遗忘的国度》",
     "team": "TEAM E"
-  },
-  {
-    "time": "2026/01/11 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
   },
   {
     "time": "2026/1/17 19:30",
@@ -676,11 +626,6 @@ const eventData = [
     "team": "SNH48-韩家乐"
   },
   {
-    "time": "2026/1/17 19:00",
-    "theme": "《NEXT STATION》毕业公演",
-    "team": "GNZ48-龙亦瑞"
-  },
-  {
     "time": "2026/1/10 19:30",
     "theme": "《手牵手》公演首演",
     "team": "TEAM GII"
@@ -699,6 +644,86 @@ const eventData = [
     "time": "2026/01/11 19:30",
     "theme": "《幻镜》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/23 19:00",
+    "theme": "《乐曜曲全阵容LIVE》",
+    "team": "SNH48 GROUP"
+  },
+  {
+    "time": "2026/01/17 14:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/01/18 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/01/24 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/01/17 19:00",
+    "theme": "《NEXT STATION》毕业公演",
+    "team": "GNZ48-龙亦瑞"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《2025年度潜力新人TOP16答谢公演》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/17 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/1/17 14:00",
+    "theme": "《瑶光之迹》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《没有我的世界》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/1/17 14:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
   },
   {
     "time": "2026/1/17 19:00",
