@@ -6,6 +6,8 @@ import time
 import json
 import os
 import logging
+import requests
+from datetime import datetime
 
 load_dotenv() 
 
@@ -13,6 +15,9 @@ log_level = os.getenv("LOG_LEVEL", "INFO")
 openai_api_key = os.getenv("OPENAI_API_KEY")
 openai_api_base_url = os.getenv("OPENAI_API_BASE_URL")
 openai_model = os.getenv("OPENAI_MODEL")
+feishu_webhook_id = os.getenv("FEISHU_WEBHOOK_ID", "")
+required_keywords_str = os.getenv("REQUIRED_KEYWORDS", "")
+required_keywords = [keyword.strip() for keyword in required_keywords_str.split(",")] if required_keywords_str else []
 
 # 配置日志
 logging.basicConfig(
@@ -347,6 +352,67 @@ def get_weibo_mblog_detail(playwright: Playwright, url: str) -> list:
   content.close()
   browser.close()
   return mblogs
+
+def send_feishu_message(data, webhook_id):
+  try: 
+    url = f"https://open.feishu.cn/open-apis/bot/v2/hook/{webhook_id}"
+    # 设置请求头
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    
+    # 发送POST请求
+    response = requests.post(url, json=data, headers=headers)
+    
+    # 检查响应状态
+    if response.status_code == 200:
+      logger.info(f"飞书消息发送成功: {response.json()}")
+    else:
+      logger.error(f"飞书消息发送失败，状态码: {response.status_code}, 响应: {response.text}")
+  except Exception as e:
+    logger.error(f"飞书消息发送失败: {e}")
+
+def send_feishu_card_content(json_data):
+  if not feishu_webhook_id:
+    return
+  card_fields = []
+  for item in json_data:
+    time = item["time"]
+    theme = item["theme"]
+    team = item["team"]
+    if required_keywords and not any(keyword in team for keyword in required_keywords):
+      continue
+    card_fields.append({
+      "is_short": True, # True为半宽，False为全宽。通过组合可模拟行。
+      "text": {
+        "tag": "lark_md",
+        "content": "**📅**" + time + "\n**📝**" + theme + "\n**👥**" + team
+      }
+    })
+    card_fields.append({
+      "tag": "hr"
+    })
+  if not card_fields:
+    return
+  card_content = {
+    "msg_type": "interactive", # 消息类型为交互式卡片
+    "card": {
+      "elements": [{
+        "tag": "div",
+        "fields": card_fields[:len(card_fields) - 1]
+      }],
+      "header": { # 可选的卡片标题
+        "template": "blue",
+        "title": {
+          "tag": "plain_text",
+          "content": "演出日程提醒"
+        }
+      }
+    }
+  }
+
+  send_feishu_message(card_content, feishu_webhook_id)
+
 # 创建浏览器
 def run (playwright: Playwright) -> None:
   try:
@@ -412,41 +478,48 @@ def run (playwright: Playwright) -> None:
       logger.warning("没有收集到任何文本内容")
       return
     current_year = time.localtime(time.time()).tm_year
+    current_month = time.localtime(time.time()).tm_mon
     prompt = """
       帮我将上面信息中的所有购票信息整理为json格式，只包含time，theme，team三个英文属性。
       只关注公演、演唱会和运动会的演出时间信息，见面会和握手会等其他信息不统计，请忽略。
-      只统计SNH48、GNZ48、BEJ48、CKG48、SHY48、CGT48的票务信息，其他邀请演出不统计，例如足球赛等。
-      只有毕业公演、个人演唱会和个人定制公演添加毕业人名及其队伍名，有TEAM名称优先考虑。      
-      格式如下:
+      只统计SNH48、GNZ48、BEJ48、CKG48、SHY48、CGT48的票务信息，其他邀请演出不统计，例如足球赛，线上直播等。
+      只有毕业公演、个人演唱会和个人定制公演添加毕业人名及其队伍名，有TEAM名称优先考虑。 
+      例如信息：
+      1/7（三）19:30《B•RISE 梦之门》新生公演
+      1/8（四）19:30 TEAM X焕新公演《Fire X》
+      1/9（五）19:30 TEAM SII全新原创公演《INTO THE LIGHT》
+      1/10（六）13:30 TEAM HII焕新公演《赫兹共振》
+      1/10（六）18:30 @SNH48-韩家乐- 《平安喜乐》年度MVP全场定制公演
+      从上面信息中提取格式如下:
       [
         {
-          "time": "2025/12/10 19:30",
+          "time": "2026/01/07 19:30",
           "theme": "《B•RISE 梦之门》",
-          "team": "新生队"
+          "team": "SNH48-新生队"
         },
         {
-          "time": "2025/12/11 19:30",
+          "time": "2026/01/08 19:30",
+          "theme": "《Fire X》",
+          "team": "TEAM X"
+        },
+        {
+          "time": "2026/01/09 19:30",
+          "theme": "《INTO THE LIGHT》",
+          "team": "TEAM SII"
+        },
+        {
+          "time": "2026/01/10 13:30",
           "theme": "《赫兹共振》",
           "team": "TEAM HII"
         },
         {
-          "time": "2025/12/06 14:00",
-          "theme": "SNH48偶像运动会",
-          "team": "SNH48 GROUP"
-        },
-        {
-          "time": "2025/12/20 19:00",
-          "theme": "《viva la vida》2024年度MVP定制公演",
-          "team": "GNZ48-张琼予"
-        },
-        {
-          "time": "2025/12/20 13:30",
-          "theme": "《爱的具象化》毕业公演",
-          "team": "SNH48-沈小爱"
+          "time": "2026/01/10 18:30",
+          "theme": "《赫兹共振》",
+          "team": "SNH48-韩家乐"
         }
       ]
     """
-    prompt = prompt + f"\n只输出有效的JSON数组，不要包含其他文字，time格式为 2025/12/01 19:30 、2025/2/02 9:03，没有年份使用当前年份，当前为{current_year}年。"
+    prompt = prompt + f"\n只输出有效的JSON数组，不要包含其他文字，time格式为 2025/12/01 19:30 、2025/2/02 9:03，没有年份使用当前年份，当前为{current_year}年，但如果当前时间的月份为{current_month + 1}月是12月时，time为01/01，01/10等时间为需要将年份加一，即为{current_year + 1}年。"
     texts.append(prompt)
     texts_str = '\n------------\n'.join(texts)
     logger.info(f"发送给AI的文本长度: {len(texts_str)}")
@@ -460,6 +533,10 @@ def run (playwright: Playwright) -> None:
       logger.error("未能从AI获取有效结果")
 
     update_data(result, "data.js")
+    
+    result_json = json.loads(result)
+    result_json.sort(key=lambda x: datetime.strptime(x['time'], '%Y/%m/%d %H:%M'))
+    send_feishu_card_content(result_json)
 
   except Exception as e:
     logger.error(f"运行过程中发生错误: {e}")
