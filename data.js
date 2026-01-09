@@ -656,16 +656,6 @@ const eventData = [
     "team": "SNH48-杨冰怡"
   },
   {
-    "time": "2026/01/10 19:30",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2026/01/11 19:30",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
-  },
-  {
     "time": "2026/01/10 19:00",
     "theme": "《手牵手》",
     "team": "TEAM GII"
@@ -681,26 +671,6 @@ const eventData = [
     "team": "TEAM C"
   },
   {
-    "time": "2026/1/10 19:30",
-    "theme": "《幻镜》公演首演",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2026/1/11 19:30",
-    "theme": "《幻镜》公演首演",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2026/1/10 19:30",
-    "theme": "《手牵手》公演首演",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/1/11 19:30",
-    "theme": "《手牵手》公演首演",
-    "team": "TEAM GII"
-  },
-  {
     "time": "2026/1/10 18:30",
     "theme": "《平安喜乐》年度MVP全场定制公演",
     "team": "SNH48-韩家乐"
@@ -709,6 +679,26 @@ const eventData = [
     "time": "2026/1/17 19:00",
     "theme": "《NEXT STATION》毕业公演",
     "team": "GNZ48-龙亦瑞"
+  },
+  {
+    "time": "2026/1/10 19:30",
+    "theme": "《手牵手》公演首演",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/1/11 19:30",
+    "theme": "《手牵手》公演首演",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/10 19:30",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/11 19:30",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
   },
   {
     "time": "2026/1/17 19:00",
