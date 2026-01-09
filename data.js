@@ -626,26 +626,6 @@ const eventData = [
     "team": "SNH48-韩家乐"
   },
   {
-    "time": "2026/1/10 19:30",
-    "theme": "《手牵手》公演首演",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/1/11 19:30",
-    "theme": "《手牵手》公演首演",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/10 19:30",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2026/01/11 19:30",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
-  },
-  {
     "time": "2026/01/23 19:00",
     "theme": "《乐曜曲2025全阵容LIVE》",
     "team": "SNH48 GROUP"
@@ -667,8 +647,33 @@ const eventData = [
   },
   {
     "time": "2026/01/17 19:00",
-    "theme": "《NEXT STATION》毕业公演",
+    "theme": "《NEXT STATION》",
     "team": "GNZ48-龙亦瑞"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《2025年度潜力新人TOP16答谢公演》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/01/10 19:30",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/11 19:30",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/10 19:30",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/11 19:30",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
   },
   {
     "time": "2026/01/11 14:00",
@@ -712,7 +717,7 @@ const eventData = [
   },
   {
     "time": "2026/1/17 19:00",
-    "theme": "《奇幻加冕礼》巡演·北京站",
+    "theme": "《奇幻加冕礼》",
     "team": "CKG48 TEAM K"
   },
   {
