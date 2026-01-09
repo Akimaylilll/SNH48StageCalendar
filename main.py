@@ -36,7 +36,7 @@ weibo_urls = [
 
 timestamp_template = "%a %b %d %H:%M:%S %z %Y" # Tue Dec 02 12:34:34 +0800 2025
 
-time_range = 60 * 60 * 12
+time_range = 60 * 60 * 8
 
 def format_time_str_zh(time_str):
   [d, t] = time_str.split(' ')
