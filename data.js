@@ -646,41 +646,6 @@ const eventData = [
     "team": "TEAM NIII"
   },
   {
-    "time": "2026/01/11 14:00",
-    "theme": "《2025年度潜力新人TOP16答谢公演》",
-    "team": "CKG48"
-  },
-  {
-    "time": "2026/01/10 19:30",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/11 19:30",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/10 19:30",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2026/01/11 19:30",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2026/01/11 14:00",
-    "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
-    "team": "CKG48"
-  },
-  {
-    "time": "2026/1/11 14:00",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
     "time": "2026/1/17 14:00",
     "theme": "《B·RISE 梦之门》",
     "team": "TEAM B"
@@ -707,13 +672,48 @@ const eventData = [
   },
   {
     "time": "2026/01/11 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
+    "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
+    "team": "CKG48"
   },
   {
     "time": "2026/01/17 19:00",
     "theme": "《NEXT STATION》",
     "team": "GNZ48-龙亦瑞"
+  },
+  {
+    "time": "2026/01/10 19:30",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/11 19:30",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/10 19:30",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/11 19:30",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《2025年度潜力新人TOP16答谢公演》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
   },
   {
     "time": "2026/1/17 19:00",
