@@ -701,6 +701,11 @@ const eventData = [
     "team": "TEAM B"
   },
   {
+    "time": "2026/01/17 19:00",
+    "theme": "《NEXT STATION》",
+    "team": "GNZ48-龙亦瑞"
+  },
+  {
     "time": "2026/01/23 19:30",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
@@ -724,11 +729,6 @@ const eventData = [
     "time": "2026/01/25 19:00",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
-  },
-  {
-    "time": "2026/01/17 19:00",
-    "theme": "《NEXT STATION》",
-    "team": "GNZ48-龙亦瑞"
   },
   {
     "time": "2026/01/24 14:00",
