@@ -701,6 +701,76 @@ const eventData = [
     "team": "TEAM B"
   },
   {
+    "time": "2026/01/24 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/01/25 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/01/24 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/01/24 19:00",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/21 19:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/01/22 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "SNH48-新生队"
+  },
+  {
+    "time": "2026/01/23 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/01/24 13:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/01/24 18:30",
+    "theme": "《赫兹共振》",
+    "team": "SNH48-蒋舒婷"
+  },
+  {
+    "time": "2026/01/25 13:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "SNH48-芦馨怡"
+  },
+  {
+    "time": "2026/01/25 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2026/01/24 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/01/24 19:30",
+    "theme": "《BEJ48版·金曲B20》",
+    "team": "BEJ48"
+  },
+  {
+    "time": "2026/01/25 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
     "time": "2026/01/17 19:00",
     "theme": "《NEXT STATION》",
     "team": "GNZ48-龙亦瑞"
@@ -716,29 +786,14 @@ const eventData = [
     "team": "TEAM NIII"
   },
   {
-    "time": "2026/01/24 19:00",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
     "time": "2026/01/25 14:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
   },
   {
-    "time": "2026/01/25 19:00",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
     "time": "2026/01/24 14:00",
     "theme": "《我的初见计划》",
     "team": "CKG48×CGT48"
-  },
-  {
-    "time": "2026/01/24 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "TEAM K"
   },
   {
     "time": "2026/01/25 14:00",
@@ -749,11 +804,6 @@ const eventData = [
     "time": "2026/01/24 14:00",
     "theme": "《手牵手》",
     "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/24 19:00",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
   },
   {
     "time": "2026/01/25 14:00",
