@@ -721,6 +721,11 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
+    "time": "2026/01/24 19:30",
+    "theme": "《BEJ48版·金曲B20》",
+    "team": "BEJ48"
+  },
+  {
     "time": "2026/01/21 19:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII"
@@ -759,11 +764,6 @@ const eventData = [
     "time": "2026/01/24 14:00",
     "theme": "《遗忘的国度》",
     "team": "TEAM E"
-  },
-  {
-    "time": "2026/01/24 19:30",
-    "theme": "《BEJ48版·金曲B20》",
-    "team": "BEJ48"
   },
   {
     "time": "2026/01/25 14:00",
