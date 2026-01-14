@@ -621,11 +621,6 @@ const eventData = [
     "team": "SNH48-韩家乐"
   },
   {
-    "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲2025全阵容LIVE》",
-    "team": "SNH48 GROUP"
-  },
-  {
     "time": "2026/01/17 14:00",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
@@ -808,6 +803,11 @@ const eventData = [
   {
     "time": "2026/1/23 19:30",
     "theme": "《2025年度乐曜曲全阵容LIVE HOUSE》",
+    "team": "SNH48 GROUP"
+  },
+  {
+    "time": "2026/01/23 19:00",
+    "theme": "《乐曜曲全阵容LIVE HOUSE》",
     "team": "SNH48 GROUP"
   },
   {
