@@ -771,11 +771,6 @@ const eventData = [
     "team": "TEAM B"
   },
   {
-    "time": "2026/01/17 19:00",
-    "theme": "《NEXT STATION》",
-    "team": "GNZ48-龙亦瑞"
-  },
-  {
     "time": "2026/01/23 19:30",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
@@ -814,6 +809,21 @@ const eventData = [
     "time": "2026/1/23 19:30",
     "theme": "《2025年度乐曜曲全阵容LIVE HOUSE》",
     "team": "SNH48 GROUP"
+  },
+  {
+    "time": "2026/01/25 18:00",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-王佳琪"
+  },
+  {
+    "time": "2026/01/25 19:30",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-朱玥彤"
+  },
+  {
+    "time": "2026/01/17 19:00",
+    "theme": "《NEXT STATION》",
+    "team": "GNZ48-龙亦瑞"
   },
   {
     "time": "2026/1/17 19:00",
