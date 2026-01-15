@@ -816,6 +816,16 @@ const eventData = [
     "team": "BEJ48-朱玥彤"
   },
   {
+    "time": "2026/01/17 18:30",
+    "theme": "《回响（Calling when I’m gone）》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/1/17 18:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
     "time": "2026/01/17 19:00",
     "theme": "《NEXT STATION》",
     "team": "GNZ48-龙亦瑞"
@@ -834,15 +844,5 @@ const eventData = [
     "time": "2026/1/17 19:00",
     "theme": "《幻镜》",
     "team": "TEAM CII"
-  },
-  {
-    "time": "2026/01/17 18:30",
-    "theme": "《回响（Calling when I’m gone）》",
-    "team": "SNH48"
-  },
-  {
-    "time": "2026/1/17 18:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "TEAM SII"
   }
 ];
