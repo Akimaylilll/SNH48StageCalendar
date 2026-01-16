@@ -782,13 +782,33 @@ const eventData = [
   },
   {
     "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲2025全阵容LIVE》",
+    "theme": "《乐曜曲全阵容LIVE》",
     "team": "SNH48 GROUP"
   },
   {
     "time": "2026/01/17 19:00",
     "theme": "《NEXT STATION》",
     "team": "GNZ48-龙亦瑞"
+  },
+  {
+    "time": "2026/01/17 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "CKG48-TEAM K"
+  },
+  {
+    "time": "2026/01/25 14:00",
+    "theme": "《Shining·C》",
+    "team": "CKG48-TEAM C"
+  },
+  {
+    "time": "2026/01/18 14:00",
+    "theme": "《Shining·C》",
+    "team": "CKG48-TEAM C"
+  },
+  {
+    "time": "2026/01/23 19:00",
+    "theme": "《乐曜曲2025全阵容LIVE》",
+    "team": "SNH48 GROUP"
   },
   {
     "time": "2026/01/25 14:00",
@@ -834,11 +854,6 @@ const eventData = [
     "time": "2026/01/23 19:00",
     "theme": "《乐曜曲全阵容LIVE HOUSE》",
     "team": "SNH48 GROUP"
-  },
-  {
-    "time": "2026/1/17 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "CKG48 TEAM K"
   },
   {
     "time": "2026/1/17 19:00",
