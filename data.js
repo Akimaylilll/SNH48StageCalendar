@@ -621,34 +621,14 @@ const eventData = [
     "team": "TEAM G"
   },
   {
-    "time": "2026/01/18 14:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
-    "team": "TEAM Z"
-  },
-  {
     "time": "2026/1/17 14:00",
     "theme": "《B·RISE 梦之门》",
     "team": "TEAM B"
   },
   {
-    "time": "2026/1/18 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "TEAM E"
-  },
-  {
-    "time": "2026/1/18 14:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
     "time": "2026/1/17 14:00",
     "theme": "《手牵手》",
     "team": "TEAM GII"
-  },
-  {
-    "time": "2026/1/18 14:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
   },
   {
     "time": "2026/01/11 14:00",
@@ -756,11 +736,6 @@ const eventData = [
     "team": "TEAM E"
   },
   {
-    "time": "2026/01/25 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
-  },
-  {
     "time": "2026/01/23 19:30",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
@@ -771,19 +746,9 @@ const eventData = [
     "team": "TEAM NIII"
   },
   {
-    "time": "2026/01/25 14:00",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
     "time": "2026/01/24 14:00",
     "theme": "《我的初见计划》",
     "team": "CKG48×CGT48"
-  },
-  {
-    "time": "2026/01/25 14:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
   },
   {
     "time": "2026/01/24 14:00",
@@ -791,18 +756,8 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
-    "time": "2026/01/25 14:00",
-    "theme": "《自定义轨迹》",
-    "team": "TEAM GII"
-  },
-  {
     "time": "2026/1/23 19:30",
     "theme": "《2025年度乐曜曲全阵容LIVE HOUSE》",
-    "team": "SNH48 GROUP"
-  },
-  {
-    "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲全阵容LIVE HOUSE》",
     "team": "SNH48 GROUP"
   },
   {
@@ -826,9 +781,59 @@ const eventData = [
     "team": "TEAM SII"
   },
   {
+    "time": "2026/01/23 19:00",
+    "theme": "《乐曜曲2025全阵容LIVE》",
+    "team": "SNH48 GROUP"
+  },
+  {
     "time": "2026/01/17 19:00",
     "theme": "《NEXT STATION》",
     "team": "GNZ48-龙亦瑞"
+  },
+  {
+    "time": "2026/01/25 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/18 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/18 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/25 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/01/25 14:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/01/25 14:00",
+    "theme": "《自定义轨迹》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/23 19:00",
+    "theme": "《乐曜曲全阵容LIVE HOUSE》",
+    "team": "SNH48 GROUP"
   },
   {
     "time": "2026/1/17 19:00",
