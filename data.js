@@ -864,5 +864,15 @@ const eventData = [
     "time": "2026/1/17 19:00",
     "theme": "《幻镜》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/31 19:30",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/02/01 19:30",
+    "theme": "《我的太阳》",
+    "team": "TEAM K"
   }
 ];
