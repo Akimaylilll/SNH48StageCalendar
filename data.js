@@ -874,5 +874,95 @@ const eventData = [
     "time": "2026/02/01 19:30",
     "theme": "《我的太阳》",
     "team": "TEAM K"
+  },
+  {
+    "time": "2026/01/28 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "SNH48-新生队"
+  },
+  {
+    "time": "2026/01/29 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/01/30 19:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/01/31 13:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/01/31 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2026/02/01 13:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/02/01 18:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/01/30 19:30",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/01/31 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/01/31 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/02/01 14:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/02/01 19:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/01/31 14:00",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/31 19:00",
+    "theme": "《我的太阳》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/02/01 14:00",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/31 14:00",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/01/31 19:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/02/01 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
   }
 ];
