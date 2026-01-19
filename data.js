@@ -906,11 +906,6 @@ const eventData = [
     "team": "TEAM X"
   },
   {
-    "time": "2026/02/01 18:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
-  },
-  {
     "time": "2026/01/30 19:30",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
@@ -923,7 +918,7 @@ const eventData = [
   {
     "time": "2026/01/31 19:00",
     "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
+    "team": "GNZ48-黄宣绮"
   },
   {
     "time": "2026/02/01 14:00",
@@ -964,5 +959,15 @@ const eventData = [
     "time": "2026/02/01 14:00",
     "theme": "《未命名新途》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/02/01 18:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/01/31 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
   }
 ];
