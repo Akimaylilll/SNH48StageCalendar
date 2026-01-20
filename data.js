@@ -941,16 +941,6 @@ const eventData = [
     "team": "TEAM G"
   },
   {
-    "time": "2026/01/31 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "TEAM E"
-  },
-  {
-    "time": "2026/02/01 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "BEJ48-金宛莹"
-  },
-  {
     "time": "2026/01/31 17:00",
     "theme": "《第一人称》",
     "team": "TEAM C"
@@ -959,6 +949,16 @@ const eventData = [
     "time": "2026/02/01 17:00",
     "theme": "《第一人称》",
     "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/31 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/02/01 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "BEJ48-金宛莹"
   },
   {
     "time": "2026/01/31 14:00",
