@@ -866,16 +866,6 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2026/01/31 19:30",
-    "theme": "《第一人称》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/02/01 19:30",
-    "theme": "《我的太阳》",
-    "team": "TEAM K"
-  },
-  {
     "time": "2026/01/28 19:30",
     "theme": "《B•RISE 梦之门》",
     "team": "SNH48-新生队"
@@ -989,5 +979,35 @@ const eventData = [
     "time": "2026/02/01 14:00",
     "theme": "《未命名新途》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/02/01 18:00",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-郑照暄"
+  },
+  {
+    "time": "2026/02/01 19:30",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-马欣宇, BEJ48-吴睿莎Ailsa"
+  },
+  {
+    "time": "2026/01/31 18:00",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-朱虹蓉, BEJ48-张梦慧"
+  },
+  {
+    "time": "2026/01/31 19:30",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-周湘"
+  },
+  {
+    "time": "2026/01/31 19:30",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/02/01 19:30",
+    "theme": "《我的太阳》",
+    "team": "TEAM K"
   }
 ];
