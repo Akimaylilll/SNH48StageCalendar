@@ -988,17 +988,22 @@ const eventData = [
   {
     "time": "2026/02/01 19:30",
     "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-马欣宇, BEJ48-吴睿莎Ailsa"
+    "team": "BEJ48-马欣宇,BEJ48-吴睿莎Ailsa"
   },
   {
     "time": "2026/01/31 18:00",
     "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-朱虹蓉, BEJ48-张梦慧"
+    "team": "BEJ48-朱虹蓉,BEJ48-张梦慧"
   },
   {
     "time": "2026/01/31 19:30",
     "theme": "《LIVE FM.日落时分》",
     "team": "BEJ48-周湘"
+  },
+  {
+    "time": "2026/01/31 19:30",
+    "theme": "《我的太阳》",
+    "team": "TEAM K"
   },
   {
     "time": "2026/01/31 19:30",
