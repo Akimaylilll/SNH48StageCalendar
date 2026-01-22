@@ -977,7 +977,7 @@ const eventData = [
   },
   {
     "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲全阵容LIVE HOUSE • 上海站》",
+    "theme": "《乐曜曲全阵容LIVE》",
     "team": "SNH48"
   },
   {
@@ -989,6 +989,11 @@ const eventData = [
     "time": "2026/02/01 19:30",
     "theme": "《第一人称》",
     "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/23 19:00",
+    "theme": "《乐曜曲全阵容LIVE HOUSE • 上海站》",
+    "team": "SNH48"
   },
   {
     "time": "2026/02/01 19:30",
