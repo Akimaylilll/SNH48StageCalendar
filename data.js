@@ -781,11 +781,6 @@ const eventData = [
     "team": "TEAM SII"
   },
   {
-    "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲全阵容LIVE》",
-    "team": "SNH48 GROUP"
-  },
-  {
     "time": "2026/01/17 19:00",
     "theme": "《NEXT STATION》",
     "team": "GNZ48-龙亦瑞"
@@ -804,11 +799,6 @@ const eventData = [
     "time": "2026/01/18 14:00",
     "theme": "《Shining·C》",
     "team": "CKG48-TEAM C"
-  },
-  {
-    "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲2025全阵容LIVE》",
-    "team": "SNH48 GROUP"
   },
   {
     "time": "2026/01/25 14:00",
@@ -849,11 +839,6 @@ const eventData = [
     "time": "2026/01/25 14:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲全阵容LIVE HOUSE》",
-    "team": "SNH48 GROUP"
   },
   {
     "time": "2026/1/17 19:00",
@@ -986,14 +971,29 @@ const eventData = [
     "team": "BEJ48-郑照暄"
   },
   {
-    "time": "2026/02/01 19:30",
-    "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-马欣宇,BEJ48-吴睿莎Ailsa"
-  },
-  {
     "time": "2026/01/31 18:00",
     "theme": "《LIVE FM.日落时分》",
     "team": "BEJ48-朱虹蓉,BEJ48-张梦慧"
+  },
+  {
+    "time": "2026/01/23 19:00",
+    "theme": "《乐曜曲全阵容LIVE HOUSE • 上海站》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/01/31 19:30",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/02/01 19:30",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/02/01 19:30",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-马欣宇,BEJ48-吴睿莎Ailsa"
   },
   {
     "time": "2026/01/31 19:30",
@@ -1004,11 +1004,6 @@ const eventData = [
     "time": "2026/01/31 19:30",
     "theme": "《我的太阳》",
     "team": "TEAM K"
-  },
-  {
-    "time": "2026/01/31 19:30",
-    "theme": "《第一人称》",
-    "team": "TEAM C"
   },
   {
     "time": "2026/02/01 19:30",
