@@ -1031,11 +1031,6 @@ const eventData = [
     "team": "TEAM Z"
   },
   {
-    "time": "2026/02/07 14:00",
-    "theme": "《TEAM G瑶光之迹[2.0]·第一百二十三场》",
-    "team": "TEAM G"
-  },
-  {
     "time": "2026/02/07 19:00",
     "theme": "《今天也请穗穗念~》特殊公演",
     "team": "TEAM NIII"
@@ -1059,5 +1054,20 @@ const eventData = [
     "time": "2026/02/07 19:00",
     "theme": "《2026，马上见面芭》全团联合特殊公演",
     "team": "CGT48全团"
+  },
+  {
+    "time": "2026/02/07 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/02/08 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/02/07 14:00",
+    "theme": "《TEAM G瑶光之迹[2.0]·第一百二十三场》",
+    "team": "TEAM G"
   }
 ];
