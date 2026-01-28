@@ -1069,5 +1069,10 @@ const eventData = [
     "time": "2026/02/07 14:00",
     "theme": "《TEAM G瑶光之迹[2.0]·第一百二十三场》",
     "team": "TEAM G"
+  },
+  {
+    "time": "2026/02/07 19:30",
+    "theme": "《“LIVE FM.日落时分”》",
+    "team": "BEJ48-黄宣绮"
   }
 ];
