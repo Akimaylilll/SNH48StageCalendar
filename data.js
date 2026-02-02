@@ -1084,5 +1084,30 @@ const eventData = [
     "time": "2026/02/07 19:00",
     "theme": "《2026，马上见面芭》全团联合特殊公演",
     "team": "CGT48全团"
+  },
+  {
+    "time": "2026/02/26 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "新生队"
+  },
+  {
+    "time": "2026/02/27 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/03/01 13:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/03/01 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2026/02/28 19:30",
+    "theme": "《声动星河》“双声闪耀”双人合作舞台专场演出",
+    "team": "SNH48"
   }
 ];
