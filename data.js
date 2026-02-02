@@ -1088,7 +1088,7 @@ const eventData = [
   {
     "time": "2026/02/26 19:30",
     "theme": "《B•RISE 梦之门》",
-    "team": "新生队"
+    "team": "SNH48-新生队"
   },
   {
     "time": "2026/02/27 19:30",
