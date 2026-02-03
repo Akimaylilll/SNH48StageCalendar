@@ -222,6 +222,7 @@ def request_openai(messages):
       model=openai_model,
       messages=messages,
       temperature=0.3,  # 降低随机性，提高一致性
+      response_format={"type": "json_object"}  # 确保响应为JSON格式
     )
     json_str = completion.choices[0].message.content
     if "```json" in json_str:
@@ -255,8 +256,40 @@ def update_data(result, file_path):
   result_json = [{**item, 'time_zh': format_time_str_zh(item['time'])} 
                   for item in result_json]
   messages = [
-    {'role': 'system', 'content': '你是一个专业的数据提取助手，专门过滤重复信息，请忽略theme和team的少部分表达差异，在theme中都添加书名号《》后再判断是否重复，但是注意time_zh时间日期不同的相同theme不属于重复。只输出严格的JSON格式，不包含其他文字。'},
-    {'role': 'user', 'content': json.dumps(result_json, ensure_ascii=False)}
+    {
+      "role": "system",
+      "content": """你是一个专业的数据去重助手，专门对演出信息进行智能去重处理。请严格按照以下规则处理输入数据，并只输出严格的JSON格式，不包含任何其他文字。\n\n
+                  **去重规则：**\n
+                    1. **主题规范化**：对所有`theme`字段进行标准化处理：\n
+                      - 如果主题不包含书名号《》，则自动添加《》\n 
+                      - 如果主题已包含书名号，保持原样\n
+                      - 示例：\"B•RISE 梦之门\" → \"《B•RISE 梦之门》\"，\"《Fire X》\"保持不变\n\n
+                    2. **场次划分规则**（用于判断是否同一场次）：\n
+                      - **午场**：12:00 至 17:00 之间的演出（包含12:00，不包含17:00）\n
+                      - **晚场**：17:00 至 22:00 之间的演出（包含17:00，不包含22:00）\n
+                      - **其他场次**：不在上述时间段内的演出，按实际时间单独计算场次\n\n
+                    3. **重复判断标准**：两条记录被视为重复需同时满足以下条件：\n
+                      a) **日期相同**：从`time`字段提取的日期部分（YYYY/MM/DD）相同\n
+                      b) **场次相同**：根据上述场次划分规则，两条记录属于同一场次\n
+                      c) **标准化主题相同**：经过上述规范化处理后的`theme`相同\n
+                      d) **团队相同**：`team`字段内容相同（忽略大小写差异）\n\n
+                    4. **非重复情况**：以下情况不视为重复，应全部保留：\n
+                      - 日期不同的相同主题（如2025/01/07和2025/01/08都有《同一主题》）\n
+                      - 主题相同但团队不同（如《同一主题》由TEAM SII和TEAM NII分别演出）\n
+                      - 团队相同但主题不同\n\n
+                    5. **去重处理逻辑**：\n
+                      - 按输入顺序遍历所有记录\n
+                      - 当发现重复记录时，保留首次出现的记录，移除后续重复记录\n
+                      - 保持非重复记录的原始顺序\n\n
+                  **输出要求：**\n- 输出必须是有效的JSON数组格式\n
+                    - 包含去重后的所有记录，保持原始结构\n- 每条记录保持原始的`time`、`theme`、`team`三个字段\n
+                    - `theme`字段保持规范化后的形式（带书名号）\n
+                    - 不包含任何解释性文字、注释或格式标记"""
+    },
+    {
+      "role": "user",
+      "content": f"请对以下演出信息进行去重处理，严格遵守上述规则，只输出去重后的JSON数组：\n\n { json.dumps(result_json, ensure_ascii=False) }"
+    }
   ]
   filter_result_data = request_openai(messages)
   filter_result_data_json = json.loads(filter_result_data)
@@ -519,59 +552,57 @@ def run (playwright: Playwright) -> None:
       logger.warning("没有收集到任何文本内容")
       return
     current_year = time.localtime(time.time()).tm_year
-    current_month = time.localtime(time.time()).tm_mon
-    prompt = """
-      帮我将上面信息中的所有购票信息整理为json格式，只包含time，theme，team三个英文属性。
-      只关注公演、演唱会和运动会的演出时间信息，见面会和握手会等其他信息不统计，请忽略。
-      只统计SNH48、GNZ48、BEJ48、CKG48、SHY48、CGT48的票务信息，其他邀请演出不统计，例如足球赛，线上直播等。
-      只有毕业公演、个人演唱会和个人定制公演添加毕业人名及其队伍名，有TEAM名称优先考虑。 
-      例如信息：
-      1/7（三）19:30《B•RISE 梦之门》新生公演
-      1/8（四）19:30 TEAM X焕新公演《Fire X》
-      1/9（五）19:30 TEAM SII全新原创公演《INTO THE LIGHT》
-      1/10（六）13:30 TEAM HII焕新公演《赫兹共振》
-      1/10（六）18:30 @SNH48-韩家乐- 《平安喜乐》年度MVP全场定制公演
-      从上面信息中提取格式如下:
-      [
-        {
-          "time": "2026/01/07 19:30",
-          "theme": "《B•RISE 梦之门》",
-          "team": "SNH48-新生队"
-        },
-        {
-          "time": "2026/01/08 19:30",
-          "theme": "《Fire X》",
-          "team": "TEAM X"
-        },
-        {
-          "time": "2026/01/09 19:30",
-          "theme": "《INTO THE LIGHT》",
-          "team": "TEAM SII"
-        },
-        {
-          "time": "2026/01/10 13:30",
-          "theme": "《赫兹共振》",
-          "team": "TEAM HII"
-        },
-        {
-          "time": "2026/01/10 18:30",
-          "theme": "《赫兹共振》",
-          "team": "SNH48-韩家乐"
-        }
-      ]
-    """
-    prompt = prompt + f"\n只输出有效的JSON数组，不要包含其他文字，time格式为 2025/12/01 19:30 、2025/2/02 9:03，没有年份使用当前年份，当前为{current_year}年，但如果当前时间的月份为{current_month + 1}月是12月时，time为01/01，01/10等时间为需要将年份加一，即为{current_year + 1}年。"
-    texts.append(prompt)
-    texts_str = '\n------------\n'.join(texts)
-    logger.info(f"发送给AI的文本长度: {len(texts_str)}")
+    current_month = time.localtime(time.time()).tm_mon + 1
+
     content = [
-      {'role': 'system', 'content': '你是一个专业的数据提取助手，专门从文本中提取公演、演唱会和运动会的演出时间信息。只输出严格的JSON格式，不包含其他文字。'},
-      {'role': 'user', 'content': texts_str}
+      {
+        "role": "system",
+        "content": """你是一个专业的数据提取助手，专门从文本中提取SNH48及其姐妹团体（GNZ48、BEJ48、CKG48、SHY48、CGT48）的公演、演唱会和运动会的时间信息。
+                    你的唯一任务是输出严格的JSON数组格式，不包含任何其他文字、解释或格式标记。"""
+      },
+      {
+        "role": "user",
+        "content": f"""请从以下文本中提取所有购票信息，并整理为严格的JSON数组格式。\n\n
+                    **提取规则：**\n1. **范围限制**：仅提取**公演、演唱会、运动会**的信息。见面会、握手会、足球赛、线上直播等其他活动一律忽略。\n
+                    2. **团体限制**：仅处理以下团体：SNH48、GNZ48、BEJ48、CKG48、SHY48、CGT48。其他任何邀请演出均不统计。\n
+                    3. **输出格式**：输出必须是一个JSON数组，每个对象包含且仅包含三个字段：`time`、`theme`、`team`。\n
+                    4. **字段规范**：\n   - `time`：格式必须为 **`YYYY/MM/DD HH:MM`**。\n
+                      - `theme`：提取完整的演出主题名称，需保留书名号（如《XXX》）。\n
+                      - `team`：按以下优先级确定：\n
+                        a) 若原文有明确的`TEAM`名称（如`TEAM SII`），则直接使用。\n
+                        b) 若为**毕业公演、个人演唱会、个人定制公演**，且原文提及成员姓名（如`@SNH48-韩家乐`），则格式为 **`团体名-成员名`**（例如：`SNH48-韩家乐`）。\n
+                        c) 否则，根据上下文推断为 **`团体名-描述`**（例如：`SNH48-新生队`）。\n
+                    5. **时间处理逻辑**：\n   - 年份：默认使用**{ current_year }年**。\n
+                      - **跨年规则**：如果当前月份是**12月**，且解析到的时间是**1月**（如`01/01`、`01/10`），则年份调整为**{ current_year + 1 }年**。当前月份为：{ current_month }月\n
+                      - 格式：月份和日期需补零为两位（如`1/7` → `01/07`），时间需保持24小时制，小时和分钟补零为两位（如`19:30`、`09:03`）。\n\n
+                    ** 示例输入：
+                      1/7（三）19:30《B•RISE 梦之门》新生公演
+                      1/8（四）19:30 TEAM X焕新公演《Fire X》
+
+                      ## 示例输出：
+                      [
+                        {{
+                          "time": "2026/01/07 19:30",
+                          "theme": "《B•RISE 梦之门》",
+                          "team": "SNH48-新生队"
+                        }},
+                        {{
+                          "time": "2026/01/08 19:30",
+                          "theme": "《Fire X》",
+                          "team": "TEAM X"
+                        }}
+                      ]
+                    **待处理文本：**\n 
+                    { texts }\n\n
+                    请根据上述规则提取并输出JSON数组。"""
+      }
     ]
+    logger.info(f"发送给AI的文本长度: {len(json.dumps(content, ensure_ascii=False))}")
     result = request_openai(content)
     logger.debug(f"AI返回结果: {result}")
-    if not result:
+    if not result or len(json.loads(result)) == 0:
       logger.error("未能从AI获取有效结果")
+      return
 
     update_data(result, "data.js")
     
