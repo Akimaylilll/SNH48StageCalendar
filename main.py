@@ -8,6 +8,7 @@ import os
 import logging
 import requests
 from datetime import datetime
+from functools import cmp_to_key
 
 load_dotenv() 
 
@@ -37,6 +38,45 @@ weibo_urls = [
 timestamp_template = "%a %b %d %H:%M:%S %z %Y" # Tue Dec 02 12:34:34 +0800 2025
 
 time_range = 60 * 60 * 8
+
+def get_team_index(team_str, sort_indexs):
+  """通过模糊匹配获取team在排序列表中的索引"""
+  team_upper = team_str.upper()
+  for i, index_item in enumerate(sort_indexs):
+    index = team_upper.find(index_item)
+    if index != -1:  # 如果找到了匹配
+      # 检查是否为完整的单词边界匹配
+      start_ok = (index == 0) or (not team_upper[index - 1].isalnum())  # 前面不是字母数字
+      end_ok = (index + len(index_item) == len(team_upper)) or (not team_upper[index + len(index_item)].isalnum())  # 后面不是字母数字
+      if start_ok and end_ok:
+          return i
+  for i, index_item in enumerate(sort_indexs):
+    index = team_upper.find(index_item)
+    if index != -1:  # 如果找到了匹配
+      return i
+  return len(sort_indexs)  # 如果没找到，放到最后
+
+def sort_custom_key(item1, item2):
+  #判断是否有time字段
+  if "time" not in item1 or "time" not in item2:
+    return 0
+  t1 = datetime.strptime(item1['time'], '%Y/%m/%d %H:%M')
+  t2 = datetime.strptime(item2['time'], '%Y/%m/%d %H:%M')
+  if t1 > t2:
+    return 1
+  elif t1 < t2:
+    return -1
+  else:
+    if "team" in item1 and "team" in item2:
+      sort_indexs = ['SII', 'NII', 'HII', 'X', 'XII', 'G', 'NIII', 'Z', 'B', 'E', 'J', 'C', 'K', 'CII', 'GII', 'SIII', 'HIII',
+                     'SNH48', 'SNH', 'GNZ48', 'GNZ', 'BEJ48', 'BEJ', 'CKG48', 'CKG', 'CGT48', 'CGT', 'SHY48', 'SHY']
+      team_index1 = get_team_index(item1['team'], sort_indexs)
+      team_index2 = get_team_index(item2['team'], sort_indexs)
+      if team_index1 > team_index2:
+        return 1
+      elif team_index1 < team_index2:
+        return -1
+    return 0
 
 def format_time_str_zh(time_str):
   [d, t] = time_str.split(' ')
@@ -221,6 +261,7 @@ def update_data(result, file_path):
   filter_result_data = request_openai(messages)
   filter_result_data_json = json.loads(filter_result_data)
   data_json_rest.extend(filter_result_data_json)
+  data_json_rest.sort(key=cmp_to_key(sort_custom_key))
   data_json_all = [
       {key: value for key, value in d.items() if key != 'time_zh'}
       for d in data_json_rest

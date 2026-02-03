@@ -1,74 +1,9 @@
 // data.js
 const eventData = [
   {
-    "time": "2025/12/13 14:00",
+    "time": "2025/12/05 19:30",
     "theme": "《瑶光之迹》",
     "team": "TEAM G"
-  },
-  {
-    "time": "2025/12/13 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
-  },
-  {
-    "time": "2025/12/13 19:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2025/12/13 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "TEAM K"
-  },
-  {
-    "time": "2025/12/14 14:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2025/12/14 14:00",
-    "theme": "《怦然心动》",
-    "team": "TEAM E"
-  },
-  {
-    "time": "2025/12/14 14:00",
-    "theme": "《K·48HZ》",
-    "team": "TEAM K"
-  },
-  {
-    "time": "2025/12/14 14:00",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2025/12/10 19:30",
-    "theme": "《B•RISE 梦之门》",
-    "team": "新生队"
-  },
-  {
-    "time": "2025/12/11 19:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
-  },
-  {
-    "time": "2025/12/13 13:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
-  },
-  {
-    "time": "2025/12/13 18:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
-    "time": "2025/12/14 13:30",
-    "theme": "《12°Neo》",
-    "team": "TEAM NII"
-  },
-  {
-    "time": "2025/12/14 18:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "TEAM SII"
   },
   {
     "time": "2025/12/05 19:30",
@@ -76,9 +11,9 @@ const eventData = [
     "team": "新生队"
   },
   {
-    "time": "2025/12/05 19:30",
-    "theme": "《瑶光之迹》",
-    "team": "TEAM G"
+    "time": "2025/12/06 13:30",
+    "theme": "《没有我的世界》",
+    "team": "TEAM NIII"
   },
   {
     "time": "2025/12/06 13:30",
@@ -86,9 +21,14 @@ const eventData = [
     "team": "BEJ"
   },
   {
-    "time": "2025/12/06 13:30",
-    "theme": "《没有我的世界》",
-    "team": "TEAM NIII"
+    "time": "2025/12/06 14:00",
+    "theme": "SNH48偶像运动会",
+    "team": "SNH48 GROUP"
+  },
+  {
+    "time": "2025/12/06 18:30",
+    "theme": "《瑶光之迹》",
+    "team": "TEAM G"
   },
   {
     "time": "2025/12/06 18:30",
@@ -99,11 +39,6 @@ const eventData = [
     "time": "2025/12/06 18:30",
     "theme": "《偶像，接招吧！》",
     "team": "CGT"
-  },
-  {
-    "time": "2025/12/06 18:30",
-    "theme": "《瑶光之迹》",
-    "team": "TEAM G"
   },
   {
     "time": "2025/12/07 13:30",
@@ -121,19 +56,89 @@ const eventData = [
     "team": "SNH"
   },
   {
-    "time": "2025/12/06 14:00",
-    "theme": "SNH48偶像运动会",
-    "team": "SNH48 GROUP"
+    "time": "2025/12/10 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "新生队"
   },
   {
-    "time": "2025/12/19 19:30",
-    "theme": "没有我的世界(uN_v3rse)",
-    "team": "TEAM NIII"
+    "time": "2025/12/11 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
   },
   {
-    "time": "2025/12/21 19:00",
-    "theme": "瑶光之迹[2.0]",
+    "time": "2025/12/12 19:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2025/12/12 19:30",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/13 13:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2025/12/13 14:00",
+    "theme": "《瑶光之迹》",
     "team": "TEAM G"
+  },
+  {
+    "time": "2025/12/13 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2025/12/13 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2025/12/13 19:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2025/12/13 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2025/12/14 13:30",
+    "theme": "《12°Neo》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2025/12/14 14:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/14 14:00",
+    "theme": "《怦然心动》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2025/12/14 14:00",
+    "theme": "《K·48HZ》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2025/12/14 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2025/12/14 18:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2025/12/14 19:00",
+    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
   },
   {
     "time": "2025/12/17 19:30",
@@ -146,109 +151,19 @@ const eventData = [
     "team": "TEAM NII"
   },
   {
-    "time": "2025/12/19 19:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
-  },
-  {
-    "time": "2025/12/20 18:30",
-    "theme": "《Nice to meet you II》",
-    "team": "TEAM NII"
-  },
-  {
-    "time": "2025/12/21 18:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
     "time": "2025/12/18 19:30",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
   },
   {
-    "time": "2025/12/12 19:30",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2025/12/14 19:00",
-    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
-  },
-  {
-    "time": "2025/12/12 19:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
-    "time": "2025/12/24 19:30",
-    "theme": "《B•RISE 梦之门》",
-    "team": "新生队"
-  },
-  {
-    "time": "2025/12/25 19:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "TEAM SII"
-  },
-  {
-    "time": "2025/12/27 13:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
-    "time": "2025/12/27 18:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "SNH48-田姝丽"
-  },
-  {
-    "time": "2025/12/28 13:30",
+    "time": "2025/12/19 19:30",
     "theme": "《赫兹共振》",
     "team": "TEAM HII"
   },
   {
-    "time": "2025/12/28 18:30",
-    "theme": "《Nice to meet you II》",
-    "team": "TEAM NII"
-  },
-  {
-    "time": "2025/12/27 14:00",
-    "theme": "《遗忘的国度》剧场公演",
-    "team": "BEJ48 TEAM E"
-  },
-  {
-    "time": "2025/12/28 14:00",
-    "theme": "《B·RISE 梦之门》剧场公演",
-    "team": "BEJ48 TEAM B"
-  },
-  {
-    "time": "2025/12/27 14:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
+    "time": "2025/12/19 19:30",
+    "theme": "没有我的世界(uN_v3rse)",
     "team": "TEAM NIII"
-  },
-  {
-    "time": "2025/12/28 14:00",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
-    "time": "2025/12/27 14:00",
-    "theme": "《重生计划》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2025/12/28 14:00",
-    "theme": "《K·48HZ》",
-    "team": "TEAM K"
-  },
-  {
-    "time": "2025/12/27 14:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
-  },
-  {
-    "time": "2025/12/28 14:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
   },
   {
     "time": "2025/12/20 13:30",
@@ -256,41 +171,6 @@ const eventData = [
     "team": "SNH48-沈小爱"
   },
   {
-    "time": "2025/12/26 19:30",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
-    "time": "2025/12/28 19:00",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2025/12/26 19:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
-  },
-  {
-    "time": "2025/12/20 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "BEJ48 TEAM E"
-  },
-  {
-    "time": "2025/12/21 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "BEJ48 TEAM E"
-  },
-  {
-    "time": "2025/12/20 19:00",
-    "theme": "《viva la vida》年度MVP公演",
-    "team": "GNZ48-张琼予"
-  },
-  {
-    "time": "2025/12/21 14:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
-  },
-  {
     "time": "2025/12/20 14:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
@@ -301,24 +181,19 @@ const eventData = [
     "team": "TEAM C"
   },
   {
-    "time": "2025/12/21 14:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
     "time": "2025/12/20 14:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
   },
   {
-    "time": "2025/12/21 14:00",
-    "theme": "《自定义轨迹》",
-    "team": "TEAM GII"
+    "time": "2025/12/20 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "BEJ48 TEAM E"
   },
   {
-    "time": "2025/12/20 19:00",
-    "theme": "《IKNOWYOUKNOW个人巡演》",
-    "team": "SNH48-杨冰怡"
+    "time": "2025/12/20 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
   },
   {
     "time": "2025/12/20 19:00",
@@ -336,64 +211,149 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2026/01/01 18:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "TEAM SII"
+    "time": "2025/12/20 19:00",
+    "theme": "《IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
   },
   {
-    "time": "2026/01/02 13:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
+    "time": "2025/12/20 19:00",
+    "theme": "《viva la vida》年度MVP公演",
+    "team": "GNZ48-张琼予"
   },
   {
-    "time": "2026/01/02 18:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
-    "time": "2026/01/02 19:00",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2026/01/03 19:00",
+    "time": "2025/12/21 14:00",
     "theme": "《没有我的世界(uN_v3rse)》",
     "team": "TEAM NIII"
   },
   {
-    "time": "2026/01/02 19:00",
-    "theme": "《奇幻加冕礼》",
-    "team": "TEAM K"
+    "time": "2025/12/21 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
   },
   {
-    "time": "2026/01/01 14:00",
-    "theme": "《自定义轨迹》睡衣派对主题公演",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/02 19:00",
+    "time": "2025/12/21 14:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
   },
   {
-    "time": "2026/01/03 14:00",
-    "theme": "《遗忘的国度》剧场公演",
-    "team": "TEAM E"
+    "time": "2025/12/21 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "BEJ48 TEAM E"
   },
   {
-    "time": "2026/01/03 14:00",
+    "time": "2025/12/21 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2025/12/21 19:00",
+    "theme": "瑶光之迹[2.0]",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2025/12/24 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "新生队"
+  },
+  {
+    "time": "2025/12/25 19:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2025/12/26 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2025/12/26 19:30",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
   },
   {
-    "time": "2026/01/03 14:00",
+    "time": "2025/12/27 13:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2025/12/27 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2025/12/27 14:00",
+    "theme": "《重生计划》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2025/12/27 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2025/12/27 14:00",
+    "theme": "《遗忘的国度》剧场公演",
+    "team": "BEJ48 TEAM E"
+  },
+  {
+    "time": "2025/12/27 18:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "SNH48-田姝丽"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《奇幻加冕礼》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《自定义轨迹》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2025/12/27 19:00",
+    "theme": "《今天就是好心情·个巡》",
+    "team": "SNH48-柏欣妤"
+  },
+  {
+    "time": "2025/12/28 13:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2025/12/28 14:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2025/12/28 14:00",
     "theme": "《K·48HZ》",
     "team": "TEAM K"
   },
   {
-    "time": "2026/01/03 14:00",
-    "theme": "《自定义轨迹》",
-    "team": "TEAM GII"
+    "time": "2025/12/28 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2025/12/28 14:00",
+    "theme": "《B·RISE 梦之门》剧场公演",
+    "team": "BEJ48 TEAM B"
+  },
+  {
+    "time": "2025/12/28 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2025/12/28 19:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
   },
   {
     "time": "2025/12/31 19:30",
@@ -401,14 +361,39 @@ const eventData = [
     "team": "SNH48"
   },
   {
+    "time": "2025/12/31 20:48",
+    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
+    "team": "BEJ48"
+  },
+  {
+    "time": "2025/12/31 21:00",
+    "theme": "《捌765肆321》",
+    "team": "GNZ48"
+  },
+  {
+    "time": "2025/12/31 21:00",
+    "theme": "《2026，和我一起芭》",
+    "team": "CGT48"
+  },
+  {
+    "time": "2025/12/31 21:30",
+    "theme": "《Run to 2026》跨年联合特殊公演",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/01/01 14:00",
+    "theme": "《自定义轨迹》睡衣派对主题公演",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/01 18:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
     "time": "2026/01/01 19:00",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
-  },
-  {
-    "time": "2026/01/02 14:00",
-    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
   },
   {
     "time": "2026/01/01 19:00",
@@ -421,6 +406,16 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
+    "time": "2026/01/02 13:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/01/02 14:00",
+    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
     "time": "2026/01/02 14:00",
     "theme": "《B·RISE 梦之门》剧场公演",
     "team": "TEAM B"
@@ -431,24 +426,59 @@ const eventData = [
     "team": "TEAM C"
   },
   {
-    "time": "2025/12/27 19:00",
-    "theme": "《今天就是好心情·个巡》",
-    "team": "SNH48-柏欣妤"
+    "time": "2026/01/02 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
   },
   {
-    "time": "2025/12/27 19:00",
+    "time": "2026/01/02 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/01/02 19:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
   },
   {
-    "time": "2025/12/27 19:00",
+    "time": "2026/01/02 19:00",
     "theme": "《奇幻加冕礼》",
     "team": "TEAM K"
   },
   {
-    "time": "2025/12/27 19:00",
+    "time": "2026/01/02 19:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/03 14:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/01/03 14:00",
+    "theme": "《遗忘的国度》剧场公演",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/01/03 14:00",
+    "theme": "《K·48HZ》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/01/03 14:00",
+    "theme": "《自定义轨迹》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/03 18:30",
+    "theme": "《匿声唱将专场公演》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/01/03 19:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
   },
   {
     "time": "2026/1/7 19:30",
@@ -466,29 +496,24 @@ const eventData = [
     "team": "TEAM SII"
   },
   {
-    "time": "2026/1/10 13:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
-  },
-  {
-    "time": "2026/1/11 13:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "TEAM SII"
-  },
-  {
-    "time": "2026/1/11 18:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
     "time": "2026/1/9 19:30",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
   },
   {
+    "time": "2026/1/10 13:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
     "time": "2026/1/10 14:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
+  },
+  {
+    "time": "2026/01/10 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
   },
   {
     "time": "2026/1/10 14:00",
@@ -501,29 +526,54 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2025/12/31 20:48",
-    "theme": "《BEJ48 2025-2026跨年联合特别公演》",
-    "team": "BEJ48"
+    "time": "2026/1/10 18:30",
+    "theme": "《平安喜乐》年度MVP全场定制公演",
+    "team": "SNH48-韩家乐"
   },
   {
-    "time": "2025/12/31 21:30",
-    "theme": "《Run to 2026》跨年联合特殊公演",
-    "team": "CKG48"
+    "time": "2026/1/10 19:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
   },
   {
-    "time": "2025/12/31 21:00",
-    "theme": "《2026，和我一起芭》",
-    "team": "CGT48"
+    "time": "2026/1/10 19:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
   },
   {
-    "time": "2025/12/31 21:00",
-    "theme": "《捌765肆321》",
-    "team": "GNZ48"
+    "time": "2026/01/10 19:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
   },
   {
-    "time": "2026/01/03 18:30",
-    "theme": "《匿声唱将专场公演》",
+    "time": "2026/01/10 19:00",
+    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
+    "team": "SNH48-杨冰怡"
+  },
+  {
+    "time": "2026/1/11 13:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/1/11 14:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/01/11 14:00",
+    "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
     "team": "SNH48"
+  },
+  {
+    "time": "2026/1/11 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
   },
   {
     "time": "2026/1/11 19:00",
@@ -551,69 +601,14 @@ const eventData = [
     "team": "TEAM HII"
   },
   {
-    "time": "2026/1/17 13:30",
-    "theme": "《Nice to meet you II》",
-    "team": "TEAM NII"
-  },
-  {
-    "time": "2026/1/18 13:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
-    "time": "2026/1/18 18:30",
-    "theme": "《Nice to meet you II》",
-    "team": "TEAM NII"
-  },
-  {
     "time": "2026/1/16 19:30",
     "theme": "《没有我的世界》",
     "team": "TEAM NIII"
   },
   {
-    "time": "2026/1/18 19:00",
-    "theme": "《斗宿之诀》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2026/01/10 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "TEAM E"
-  },
-  {
-    "time": "2026/1/17 19:30",
-    "theme": "《重生计划》千秋乐公演",
-    "team": "CKG48"
-  },
-  {
-    "time": "2026/1/18 19:30",
-    "theme": "《重生计划》千秋乐公演",
-    "team": "CKG48"
-  },
-  {
-    "time": "2026/01/10 19:00",
-    "theme": "《杨冰怡IKNOWYOUKNOW个人巡演》",
-    "team": "SNH48-杨冰怡"
-  },
-  {
-    "time": "2026/01/10 19:00",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/1/10 19:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
-  },
-  {
-    "time": "2026/1/10 19:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/1/10 18:30",
-    "theme": "《平安喜乐》年度MVP全场定制公演",
-    "team": "SNH48-韩家乐"
+    "time": "2026/1/17 13:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
   },
   {
     "time": "2026/01/17 14:00",
@@ -631,69 +626,64 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
-    "time": "2026/01/11 14:00",
-    "theme": "《2025年度潜力新人TOP16答谢公演·重庆站》",
-    "team": "CKG48"
+    "time": "2026/1/17 18:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
   },
   {
-    "time": "2026/01/10 19:30",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/11 19:30",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/10 19:30",
+    "time": "2026/1/17 19:00",
     "theme": "《幻镜》",
     "team": "TEAM CII"
   },
   {
-    "time": "2026/01/11 19:30",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
+    "time": "2026/01/17 19:00",
+    "theme": "《NEXT STATION》",
+    "team": "GNZ48-龙亦瑞"
   },
   {
-    "time": "2026/01/11 14:00",
-    "theme": "《2025年度潜力新人TOP16答谢公演》",
-    "team": "CKG48"
-  },
-  {
-    "time": "2026/1/11 14:00",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/01/11 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
-  },
-  {
-    "time": "2026/01/24 19:00",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
-    "time": "2026/01/25 19:00",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
-    "time": "2026/01/24 19:00",
+    "time": "2026/01/17 19:00",
     "theme": "《奇幻加冕礼》",
-    "team": "TEAM K"
+    "team": "CKG48-TEAM K"
   },
   {
-    "time": "2026/01/24 19:00",
-    "theme": "《幻镜》",
+    "time": "2026/1/17 19:30",
+    "theme": "《重生计划》千秋乐公演",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/1/18 13:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/01/18 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/01/18 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/1/18 14:00",
+    "theme": "《未命名新途》",
     "team": "TEAM CII"
   },
   {
-    "time": "2026/01/24 19:30",
-    "theme": "《BEJ48版·金曲B20》",
-    "team": "BEJ48"
+    "time": "2026/1/18 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2026/1/18 19:00",
+    "theme": "《斗宿之诀》",
+    "team": "TEAM Z"
   },
   {
     "time": "2026/01/21 19:30",
@@ -711,34 +701,19 @@ const eventData = [
     "team": "TEAM HII"
   },
   {
-    "time": "2026/01/24 13:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
-    "time": "2026/01/24 18:30",
-    "theme": "《赫兹共振》",
-    "team": "SNH48-蒋舒婷"
-  },
-  {
-    "time": "2026/01/25 13:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "SNH48-芦馨怡"
-  },
-  {
-    "time": "2026/01/25 18:30",
-    "theme": "《Nice to meet you II》",
-    "team": "TEAM NII"
-  },
-  {
-    "time": "2026/01/24 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "TEAM E"
-  },
-  {
     "time": "2026/01/23 19:30",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
+  },
+  {
+    "time": "2026/1/23 19:30",
+    "theme": "《2025年度乐曜曲全阵容LIVE HOUSE》",
+    "team": "SNH48 GROUP"
+  },
+  {
+    "time": "2026/01/24 13:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
   },
   {
     "time": "2026/01/24 14:00",
@@ -747,8 +722,8 @@ const eventData = [
   },
   {
     "time": "2026/01/24 14:00",
-    "theme": "《我的初见计划》",
-    "team": "CKG48×CGT48"
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
   },
   {
     "time": "2026/01/24 14:00",
@@ -756,79 +731,34 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
-    "time": "2026/1/23 19:30",
-    "theme": "《2025年度乐曜曲全阵容LIVE HOUSE》",
-    "team": "SNH48 GROUP"
+    "time": "2026/01/24 14:00",
+    "theme": "《我的初见计划》",
+    "team": "CKG48×CGT48"
   },
   {
-    "time": "2026/01/25 18:00",
-    "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-王佳琪"
+    "time": "2026/01/24 18:30",
+    "theme": "《赫兹共振》",
+    "team": "SNH48-蒋舒婷"
   },
   {
-    "time": "2026/01/25 19:30",
-    "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-朱玥彤"
+    "time": "2026/01/24 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
   },
   {
-    "time": "2026/01/17 18:30",
-    "theme": "《回响（Calling when I’m gone）》",
-    "team": "SNH48"
-  },
-  {
-    "time": "2026/1/17 18:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "TEAM SII"
-  },
-  {
-    "time": "2026/01/17 19:00",
-    "theme": "《NEXT STATION》",
-    "team": "GNZ48-龙亦瑞"
-  },
-  {
-    "time": "2026/01/17 19:00",
+    "time": "2026/01/24 19:00",
     "theme": "《奇幻加冕礼》",
-    "team": "CKG48-TEAM K"
+    "team": "TEAM K"
   },
   {
-    "time": "2026/01/25 14:00",
-    "theme": "《Shining·C》",
-    "team": "CKG48-TEAM C"
-  },
-  {
-    "time": "2026/01/18 14:00",
-    "theme": "《Shining·C》",
-    "team": "CKG48-TEAM C"
-  },
-  {
-    "time": "2026/01/25 14:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/01/18 14:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/01/18 14:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2026/1/18 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "TEAM E"
-  },
-  {
-    "time": "2026/1/18 14:00",
-    "theme": "《未命名新途》",
+    "time": "2026/01/24 19:00",
+    "theme": "《幻镜》",
     "team": "TEAM CII"
   },
   {
-    "time": "2026/01/25 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
+    "time": "2026/01/25 13:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "SNH48-芦馨怡"
   },
   {
     "time": "2026/01/25 14:00",
@@ -837,18 +767,28 @@ const eventData = [
   },
   {
     "time": "2026/01/25 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/01/25 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/01/25 14:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
   },
   {
-    "time": "2026/1/17 19:00",
-    "theme": "《重生计划》",
-    "team": "TEAM C"
+    "time": "2026/01/25 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
   },
   {
-    "time": "2026/1/17 19:00",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
+    "time": "2026/01/25 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
   },
   {
     "time": "2026/01/28 19:30",
@@ -866,74 +806,24 @@ const eventData = [
     "team": "TEAM X"
   },
   {
-    "time": "2026/01/31 13:30",
-    "theme": "《INTO THE LIGHT》",
-    "team": "TEAM SII"
-  },
-  {
-    "time": "2026/01/31 18:30",
-    "theme": "《Nice to meet you II》",
-    "team": "TEAM NII"
-  },
-  {
-    "time": "2026/02/01 13:30",
-    "theme": "《Fire X》",
-    "team": "TEAM X"
-  },
-  {
     "time": "2026/01/30 19:30",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
   },
   {
-    "time": "2026/01/31 19:00",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "GNZ48-黄宣绮"
+    "time": "2026/01/31 13:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
   },
   {
-    "time": "2026/02/01 19:00",
+    "time": "2026/01/31 14:00",
     "theme": "《没有我的世界(uN_v3rse)》",
     "team": "TEAM NIII"
-  },
-  {
-    "time": "2026/01/31 19:00",
-    "theme": "《我的太阳》",
-    "team": "TEAM K"
-  },
-  {
-    "time": "2026/01/31 19:00",
-    "theme": "《手牵手》",
-    "team": "TEAM GII"
-  },
-  {
-    "time": "2026/02/01 18:30",
-    "theme": "《赫兹共振》",
-    "team": "TEAM HII"
-  },
-  {
-    "time": "2026/01/31 19:00",
-    "theme": "《瑶光之迹[2.0]》",
-    "team": "TEAM G"
-  },
-  {
-    "time": "2026/01/31 17:00",
-    "theme": "《第一人称》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/02/01 17:00",
-    "theme": "《第一人称》",
-    "team": "TEAM C"
   },
   {
     "time": "2026/01/31 14:00",
     "theme": "《遗忘的国度》",
     "team": "TEAM E"
-  },
-  {
-    "time": "2026/01/31 14:00",
-    "theme": "《没有我的世界(uN_v3rse)》",
-    "team": "TEAM NIII"
   },
   {
     "time": "2026/01/31 14:00",
@@ -946,119 +836,29 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
-    "time": "2026/02/01 18:00",
-    "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-郑照暄"
+    "time": "2026/01/31 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
   },
   {
-    "time": "2026/01/31 18:00",
-    "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-朱虹蓉,BEJ48-张梦慧"
-  },
-  {
-    "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲全阵容LIVE》",
-    "team": "SNH48"
-  },
-  {
-    "time": "2026/01/23 19:00",
-    "theme": "《乐曜曲全阵容LIVE HOUSE • 上海站》",
-    "team": "SNH48"
-  },
-  {
-    "time": "2026/02/07 18:30",
-    "theme": "《春晚特别公演第一场》",
-    "team": "SNH48-NX联合队"
-  },
-  {
-    "time": "2026/02/08 18:30",
-    "theme": "《春晚特别公演第二场》",
-    "team": "SNH48-SH联合队"
-  },
-  {
-    "time": "2026/02/06 19:30",
-    "theme": "《TEAM Z斗宿之诀[2.0]·第一百二十三场》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2026/02/08 17:00",
-    "theme": "《马上放假》全团联合公演",
-    "team": "GNZ48全团"
-  },
-  {
-    "time": "2026/02/06 19:00",
-    "theme": "《我的初见时刻》川渝预备生联合公演",
-    "team": "CKG48×CGT48预备生"
-  },
-  {
-    "time": "2026/02/07 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "TEAM B"
-  },
-  {
-    "time": "2026/02/08 14:00",
-    "theme": "《遗忘的国度》",
-    "team": "TEAM E"
-  },
-  {
-    "time": "2026/02/07 14:00",
-    "theme": "《TEAM G瑶光之迹[2.0]·第一百二十三场》",
+    "time": "2026/01/31 19:00",
+    "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
   },
   {
-    "time": "2026/01/31 19:30",
-    "theme": "《第一人称》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/02/01 19:30",
-    "theme": "《第一人称》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/02/07 19:30",
-    "theme": "《一路狂骉》",
-    "team": "CKG48"
-  },
-  {
-    "time": "2026/02/07 19:30",
-    "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-黄宣绮"
-  },
-  {
-    "time": "2026/02/01 19:30",
-    "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-马欣宇,BEJ48-吴睿莎Ailsa"
-  },
-  {
-    "time": "2026/02/01 19:30",
+    "time": "2026/01/31 19:00",
     "theme": "《我的太阳》",
     "team": "TEAM K"
   },
   {
-    "time": "2026/01/31 19:30",
-    "theme": "《我的太阳》",
-    "team": "TEAM K"
+    "time": "2026/01/31 19:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
   },
   {
-    "time": "2026/01/31 19:30",
-    "theme": "《LIVE FM.日落时分》",
-    "team": "BEJ48-周湘"
-  },
-  {
-    "time": "2026/02/07 19:00",
-    "theme": "《一路狂骉》",
-    "team": "TEAM K"
-  },
-  {
-    "time": "2026/02/01 14:00",
-    "theme": "《第一人称》",
-    "team": "TEAM C"
-  },
-  {
-    "time": "2026/02/01 14:00",
-    "theme": "《B·RISE 梦之门》",
-    "team": "BEJ48-金宛莹"
+    "time": "2026/02/01 13:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
   },
   {
     "time": "2026/02/01 14:00",
@@ -1067,13 +867,53 @@ const eventData = [
   },
   {
     "time": "2026/02/01 14:00",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/02/01 14:00",
     "theme": "《未命名新途》",
     "team": "TEAM CII"
   },
   {
-    "time": "2026/02/07 19:00",
-    "theme": "《今天也请穗穗念~》特殊公演",
+    "time": "2026/02/01 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "BEJ48-金宛莹"
+  },
+  {
+    "time": "2026/02/01 18:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/02/01 19:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
     "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/02/06 19:00",
+    "theme": "《我的初见时刻》川渝预备生联合公演",
+    "team": "CKG48×CGT48预备生"
+  },
+  {
+    "time": "2026/02/06 19:30",
+    "theme": "《TEAM Z斗宿之诀[2.0]·第一百二十三场》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/02/07 14:00",
+    "theme": "《TEAM G瑶光之迹[2.0]·第一百二十三场》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/02/07 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/02/07 18:30",
+    "theme": "《春晚特别公演第一场》",
+    "team": "SNH48-NX联合队"
   },
   {
     "time": "2026/02/07 19:00",
@@ -1086,6 +926,41 @@ const eventData = [
     "team": "CGT48全团"
   },
   {
+    "time": "2026/02/07 19:00",
+    "theme": "《今天也请穗穗念~》特殊公演",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/02/07 19:00",
+    "theme": "《一路狂骉》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/02/07 19:30",
+    "theme": "《LIVE FM.日落时分》",
+    "team": "BEJ48-黄宣绮"
+  },
+  {
+    "time": "2026/02/07 19:30",
+    "theme": "《一路狂骉》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/02/08 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/02/08 17:00",
+    "theme": "《马上放假》全团联合公演",
+    "team": "GNZ48全团"
+  },
+  {
+    "time": "2026/02/08 18:30",
+    "theme": "《春晚特别公演第二场》",
+    "team": "SNH48-SH联合队"
+  },
+  {
     "time": "2026/02/26 19:30",
     "theme": "《B•RISE 梦之门》",
     "team": "SNH48-新生队"
@@ -1096,6 +971,11 @@ const eventData = [
     "team": "TEAM HII"
   },
   {
+    "time": "2026/02/28 19:30",
+    "theme": "《声动星河》“双声闪耀”双人合作舞台专场演出",
+    "team": "SNH48"
+  },
+  {
     "time": "2026/03/01 13:30",
     "theme": "《Fire X》",
     "team": "TEAM X"
@@ -1104,10 +984,5 @@ const eventData = [
     "time": "2026/03/01 18:30",
     "theme": "《Nice to meet you II》",
     "team": "TEAM NII"
-  },
-  {
-    "time": "2026/02/28 19:30",
-    "theme": "《声动星河》“双声闪耀”双人合作舞台专场演出",
-    "team": "SNH48"
   }
 ];
