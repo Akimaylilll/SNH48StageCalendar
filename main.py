@@ -221,8 +221,7 @@ def request_openai(messages):
     completion = client.chat.completions.create(
       model=openai_model,
       messages=messages,
-      temperature=0.3,  # 降低随机性，提高一致性
-      response_format={"type": "json_object"}  # 确保响应为JSON格式
+      temperature=0.3  # 降低随机性，提高一致性
     )
     json_str = completion.choices[0].message.content
     if "```json" in json_str:
@@ -247,8 +246,8 @@ def update_data(result, file_path):
   data_json_clip = []
   data_json_rest = []
   for item in data_json:
-      time = parser.parse(item.get('time', ''))
-      if time in seen_times:
+      t = parser.parse(item.get('time', ''))
+      if t in seen_times:
           data_json_clip.append(item)
       else:
           data_json_rest.append(item)
@@ -571,7 +570,7 @@ def run (playwright: Playwright) -> None:
                       - `team`：按以下优先级确定：\n
                         a) 若原文有明确的`TEAM`名称（如`TEAM SII`），则直接使用。\n
                         b) 若为**毕业公演、个人演唱会、个人定制公演**，且原文提及成员姓名（如`@SNH48-韩家乐`），则格式为 **`团体名-成员名`**（例如：`SNH48-韩家乐`）。\n
-                        c) 否则，根据上下文推断为 **`团体名-描述`**（例如：`SNH48-新生队`）。\n
+                        c) 否则，根据上下文推断为 **`团体名`**（例如：`SNH48`）。\n
                     5. **时间处理逻辑**：\n   - 年份：默认使用**{ current_year }年**。\n
                       - **跨年规则**：如果当前月份是**12月**，且解析到的时间是**1月**（如`01/01`、`01/10`），则年份调整为**{ current_year + 1 }年**。当前月份为：{ current_month }月\n
                       - 格式：月份和日期需补零为两位（如`1/7` → `01/07`），时间需保持24小时制，小时和分钟补零为两位（如`19:30`、`09:03`）。\n\n
