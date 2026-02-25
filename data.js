@@ -1007,6 +1007,11 @@ const eventData = [
   },
   {
     "time": "2026/03/07 13:30",
+    "theme": "《Plan B》",
+    "team": "SNH48-刘洁"
+  },
+  {
+    "time": "2026/03/07 13:30",
     "theme": "《Plan B》毕业企划",
     "team": "SNH48-刘洁"
   },
@@ -1029,6 +1034,11 @@ const eventData = [
     "time": "2026/03/08 14:00",
     "theme": "《遗忘的国度》",
     "team": "BEJ48"
+  },
+  {
+    "time": "2026/03/14 19:00",
+    "theme": "《SNH48 GROUP 第十二届年度金曲大赏》",
+    "team": "SNH48"
   },
   {
     "time": "2026/03/14 19:00",
