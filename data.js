@@ -1071,6 +1071,16 @@ const eventData = [
     "team": "BEJ48"
   },
   {
+    "time": "2026/03/14 14:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/03/14 19:00",
+    "theme": "《SNH48 GROUP 第十二届年度金曲大赏演唱会》",
+    "team": "SNH48"
+  },
+  {
     "time": "2026/03/14 19:00",
     "theme": "《金曲大赏》",
     "team": "SNH48"
@@ -1094,6 +1104,11 @@ const eventData = [
     "time": "2026/03/14 19:00",
     "theme": "《年度金曲大赏》",
     "team": "SNH48"
+  },
+  {
+    "time": "2026/03/15 14:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]》",
+    "team": "TEAM Z"
   },
   {
     "time": "2026/03/21 19:00",
