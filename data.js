@@ -1101,6 +1101,11 @@ const eventData = [
     "team": "CGT48"
   },
   {
+    "time": "2026/03/14 15:00",
+    "theme": "《听！有个声音》MINI LIVE 2.0",
+    "team": "CKG48"
+  },
+  {
     "time": "2026/03/14 19:00",
     "theme": "《SNH48 GROUP 第十二届年度金曲大赏演唱会》",
     "team": "SNH48"
@@ -1134,6 +1139,11 @@ const eventData = [
     "time": "2026/03/14 19:00",
     "theme": "《SNH48 GROUP 第十二届年度金曲大赏》",
     "team": "SNH48"
+  },
+  {
+    "time": "2026/03/14 19:00",
+    "theme": "《BACK IN LOVE》2026白色情人节联合公演",
+    "team": "BEJ48"
   },
   {
     "time": "2026/03/14 19:00",
@@ -1177,12 +1187,12 @@ const eventData = [
   },
   {
     "time": "2026/03/21 13:30",
-    "theme": "《晞杨》毕业公演",
+    "theme": "《赵天杨晞杨毕业公演》",
     "team": "SNH48-赵天杨"
   },
   {
     "time": "2026/03/21 13:30",
-    "theme": "《赵天杨晞杨毕业公演》",
+    "theme": "《晞杨》毕业公演",
     "team": "SNH48-赵天杨"
   },
   {
@@ -1194,6 +1204,11 @@ const eventData = [
     "time": "2026/03/21 14:00",
     "theme": "《幻镜》",
     "team": "CGT48 TEAM CII"
+  },
+  {
+    "time": "2026/03/21 14:00",
+    "theme": "《BEJ48 TOP16答谢公演》",
+    "team": "BEJ48"
   },
   {
     "time": "2026/03/21 14:00",
@@ -1239,6 +1254,11 @@ const eventData = [
     "time": "2026/03/22 14:00",
     "theme": "《未命名新途》",
     "team": "CGT48 TEAM CII"
+  },
+  {
+    "time": "2026/03/22 14:00",
+    "theme": "《BEJ48 TOP16答谢公演》",
+    "team": "BEJ48"
   },
   {
     "time": "2026/03/22 14:00",
