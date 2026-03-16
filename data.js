@@ -1279,5 +1279,60 @@ const eventData = [
     "time": "2026/03/22 19:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
+  },
+  {
+    "time": "2026/03/27 19:30",
+    "theme": "《TEAM Z斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/03/28 14:00",
+    "theme": "《TEAM G瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/03/28 14:00",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/03/28 14:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/03/28 19:00",
+    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/03/28 19:00",
+    "theme": "《我的太阳》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/03/28 19:00",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/03/29 14:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/03/29 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/03/29 14:00",
+    "theme": "《自定义轨迹》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/03/29 19:00",
+    "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
   }
 ];
