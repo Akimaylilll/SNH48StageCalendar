@@ -1187,12 +1187,12 @@ const eventData = [
   },
   {
     "time": "2026/03/21 13:30",
-    "theme": "《晞杨》",
+    "theme": "《晞杨·毕业公演》",
     "team": "SNH48-赵天杨"
   },
   {
     "time": "2026/03/21 13:30",
-    "theme": "《晞杨·毕业公演》",
+    "theme": "《晞杨》",
     "team": "SNH48-赵天杨"
   },
   {
@@ -1312,6 +1312,11 @@ const eventData = [
   },
   {
     "time": "2026/03/28 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/03/28 14:00",
     "theme": "《第一人称》",
     "team": "TEAM C"
   },
@@ -1329,6 +1334,11 @@ const eventData = [
     "time": "2026/03/28 19:00",
     "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
     "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/03/28 19:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
   },
   {
     "time": "2026/03/28 19:00",
