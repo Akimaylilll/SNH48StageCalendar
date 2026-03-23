@@ -1449,5 +1449,120 @@ const eventData = [
     "time": "2026/03/29 19:00",
     "theme": "《TEAM NIII没有我的世界(uN_v3rse)》",
     "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/04/02 19:30",
+    "theme": "《B•RISE 梦之门》",
+    "team": "SNH48-新生队"
+  },
+  {
+    "time": "2026/04/03 19:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/04/03 19:30",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/04/04 13:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/04/04 14:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/04/04 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/04/04 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/04/04 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/04/04 19:00",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/04/04 19:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/04/05 13:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2026/04/05 14:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/04/05 14:00",
+    "theme": "《自定义轨迹》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/04/05 14:00",
+    "theme": "《POP\"拾\"陆》",
+    "team": "GNZ48"
+  },
+  {
+    "time": "2026/04/05 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/04/05 19:00",
+    "theme": "《心的旅程》",
+    "team": "TEAM H"
+  },
+  {
+    "time": "2026/04/05 19:00",
+    "theme": "《我的太阳》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/04/05 19:00",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/04/06 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/04/06 14:00",
+    "theme": "《K·48HZ》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/04/06 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/04/06 18:30",
+    "theme": "《声动星河》「终极歌决」",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/04/06 19:00",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
   }
 ];
