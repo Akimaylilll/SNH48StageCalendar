@@ -1337,6 +1337,11 @@ const eventData = [
   },
   {
     "time": "2026/03/28 13:30",
+    "theme": "《韩家乐爱乐之城毕业公演》",
+    "team": "SNH48-韩家乐"
+  },
+  {
+    "time": "2026/03/28 13:30",
     "theme": "《毕业公演》",
     "team": "SNH48-韩家乐"
   },
@@ -1348,11 +1353,6 @@ const eventData = [
   {
     "time": "2026/03/28 13:30",
     "theme": "《爱乐之城毕业公演》",
-    "team": "SNH48-韩家乐"
-  },
-  {
-    "time": "2026/03/28 13:30",
-    "theme": "《韩家乐爱乐之城毕业公演》",
     "team": "SNH48-韩家乐"
   },
   {
@@ -1502,13 +1502,8 @@ const eventData = [
   },
   {
     "time": "2026/04/04 14:00",
-    "theme": "《斗宿之诀[2.0]》",
-    "team": "TEAM Z"
-  },
-  {
-    "time": "2026/04/04 14:00",
-    "theme": "《未命名新途》",
-    "team": "TEAM CII"
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
   },
   {
     "time": "2026/04/04 14:00",
@@ -1567,18 +1562,13 @@ const eventData = [
   },
   {
     "time": "2026/04/05 14:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
   },
   {
     "time": "2026/04/05 14:00",
     "theme": "《Shining·C》",
     "team": "TEAM C"
-  },
-  {
-    "time": "2026/04/05 14:00",
-    "theme": "《自定义轨迹》",
-    "team": "TEAM GII"
   },
   {
     "time": "2026/04/05 14:00",
