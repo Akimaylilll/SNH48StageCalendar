@@ -1556,6 +1556,11 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
+    "time": "2026/04/04 19:30",
+    "theme": "《奇装异服》",
+    "team": "CKG48"
+  },
+  {
     "time": "2026/04/05 13:30",
     "theme": "《Nice to meet you II》",
     "team": "TEAM NII"
@@ -1589,6 +1594,11 @@ const eventData = [
     "time": "2026/04/05 14:00",
     "theme": "《POP\"拾\"陆》",
     "team": "GNZ48"
+  },
+  {
+    "time": "2026/04/05 18:00",
+    "theme": "《专场》",
+    "team": "GNZ48-赵文凤"
   },
   {
     "time": "2026/04/05 18:30",
@@ -1631,6 +1641,11 @@ const eventData = [
     "team": "GNZ48"
   },
   {
+    "time": "2026/04/05 19:30",
+    "theme": "《奇装异服》",
+    "team": "CKG48"
+  },
+  {
     "time": "2026/04/06 14:00",
     "theme": "《没有我的世界(uN_v3rse)》",
     "team": "TEAM NIII"
@@ -1679,6 +1694,16 @@ const eventData = [
     "time": "2026/04/06 19:00",
     "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
+  },
+  {
+    "time": "2026/04/06 19:30",
+    "theme": "《奇装异服》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/04/06 21:00",
+    "theme": "《专场》",
+    "team": "GNZ48-白佳媛"
   },
   {
     "time": "2026/05/01 00:00",
