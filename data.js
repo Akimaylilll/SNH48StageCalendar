@@ -1342,12 +1342,12 @@ const eventData = [
   },
   {
     "time": "2026/03/28 13:30",
-    "theme": "《爱乐之城》",
+    "theme": "《韩家乐爱乐之城毕业公演》",
     "team": "SNH48-韩家乐"
   },
   {
     "time": "2026/03/28 13:30",
-    "theme": "《韩家乐爱乐之城毕业公演》",
+    "theme": "《爱乐之城》",
     "team": "SNH48-韩家乐"
   },
   {
@@ -1704,6 +1704,26 @@ const eventData = [
     "time": "2026/04/06 21:00",
     "theme": "《专场》",
     "team": "GNZ48-白佳媛"
+  },
+  {
+    "time": "2026/04/11 13:30",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/04/12 00:00",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/04/18 13:30",
+    "theme": "《CKG48巡演》",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/04/19 00:00",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
   },
   {
     "time": "2026/05/01 00:00",
