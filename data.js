@@ -1416,6 +1416,11 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
+    "time": "2026/03/28 19:00",
+    "theme": "《我的太阳》",
+    "team": "CKG48 TEAM K"
+  },
+  {
     "time": "2026/03/28 19:30",
     "theme": "《白羊座生日公演》",
     "team": "CKG48"
@@ -1719,6 +1724,11 @@ const eventData = [
     "time": "2026/04/11 13:30",
     "theme": "《没有我的世界(uN_v3rse)》",
     "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/04/11 19:30",
+    "theme": "《个人巡演》",
+    "team": "SNH48-柏欣妤"
   },
   {
     "time": "2026/04/12 00:00",
