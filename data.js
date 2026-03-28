@@ -1486,6 +1486,11 @@ const eventData = [
     "team": "GNZ48"
   },
   {
+    "time": "2026/03/31 20:00",
+    "theme": "《地球一小时音乐会》",
+    "team": "SNH48"
+  },
+  {
     "time": "2026/04/02 19:30",
     "theme": "《B•RISE 梦之门》",
     "team": "SNH48"
