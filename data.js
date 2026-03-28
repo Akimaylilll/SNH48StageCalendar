@@ -381,6 +381,11 @@ const eventData = [
     "team": "CKG48"
   },
   {
+    "time": "2026/01/01 00:00",
+    "theme": "《重生计划》",
+    "team": "TEAM C"
+  },
+  {
     "time": "2026/01/01 14:00",
     "theme": "《自定义轨迹》睡衣派对主题公演",
     "team": "TEAM GII"
@@ -1424,6 +1429,11 @@ const eventData = [
     "time": "2026/03/28 19:30",
     "theme": "《白羊座生日公演》",
     "team": "CKG48"
+  },
+  {
+    "time": "2026/03/29 00:00",
+    "theme": "《Shining·C》",
+    "team": "TEAM C"
   },
   {
     "time": "2026/03/29 13:30",
