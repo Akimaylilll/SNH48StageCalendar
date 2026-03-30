@@ -1742,8 +1742,18 @@ const eventData = [
   },
   {
     "time": "2026/04/09 19:30",
+    "theme": "《偶像研究计划H组-心的旅程》",
+    "team": "GNZ48"
+  },
+  {
+    "time": "2026/04/09 19:30",
     "theme": "《心的旅程》",
     "team": "GNZ48"
+  },
+  {
+    "time": "2026/04/10 19:30",
+    "theme": "《TEAM Z斗宿之诀[2.0]》",
+    "team": "TEAM Z"
   },
   {
     "time": "2026/04/10 19:30",
@@ -1782,6 +1792,11 @@ const eventData = [
   },
   {
     "time": "2026/04/11 19:00",
+    "theme": "《TEAM G瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/04/11 19:00",
     "theme": "《瑶光之迹》",
     "team": "TEAM G"
   },
@@ -1816,6 +1831,16 @@ const eventData = [
     "team": "TEAM CII"
   },
   {
+    "time": "2026/04/12 13:30",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/04/12 14:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
     "time": "2026/04/12 14:00",
     "theme": "《斗宿之诀》",
     "team": "TEAM Z"
@@ -1833,11 +1858,16 @@ const eventData = [
   {
     "time": "2026/04/12 18:30",
     "theme": "《B•RISE 梦之门》",
+    "team": "SNH48-新生队"
+  },
+  {
+    "time": "2026/04/12 18:30",
+    "theme": "《B•RISE 梦之门》",
     "team": "SNH48"
   },
   {
     "time": "2026/04/12 19:00",
-    "theme": "《瑶光之迹》",
+    "theme": "《TEAM G瑶光之迹[2.0]》",
     "team": "TEAM G"
   },
   {
