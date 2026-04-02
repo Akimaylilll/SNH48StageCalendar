@@ -1521,6 +1521,11 @@ const eventData = [
     "team": "TEAM NIII"
   },
   {
+    "time": "2026/04/04 13:00",
+    "theme": "《见习偶像初见时刻》",
+    "team": "CGT48"
+  },
+  {
     "time": "2026/04/04 13:30",
     "theme": "《赫兹共振》",
     "team": "TEAM HII"
@@ -1662,8 +1667,8 @@ const eventData = [
   },
   {
     "time": "2026/04/05 19:00",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
+    "theme": "《心的旅程》",
+    "team": "GNZ48-H组"
   },
   {
     "time": "2026/04/05 19:00",
@@ -1812,12 +1817,12 @@ const eventData = [
   },
   {
     "time": "2026/04/11 19:30",
-    "theme": "《今天就是好心情》",
+    "theme": "《个人巡演》",
     "team": "SNH48-柏欣妤"
   },
   {
     "time": "2026/04/11 19:30",
-    "theme": "《个人巡演》",
+    "theme": "《今天就是好心情》",
     "team": "SNH48-柏欣妤"
   },
   {
