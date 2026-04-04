@@ -381,11 +381,6 @@ const eventData = [
     "team": "CKG48"
   },
   {
-    "time": "2026/01/01 00:00",
-    "theme": "《重生计划》",
-    "team": "TEAM C"
-  },
-  {
     "time": "2026/01/01 14:00",
     "theme": "《自定义轨迹》睡衣派对主题公演",
     "team": "TEAM GII"
@@ -1331,11 +1326,6 @@ const eventData = [
     "team": "CKG48 TEAM K"
   },
   {
-    "time": "2026/03/29 00:00",
-    "theme": "《Shining·C》",
-    "team": "TEAM C"
-  },
-  {
     "time": "2026/03/29 13:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII"
@@ -1531,11 +1521,6 @@ const eventData = [
     "team": "SNH48-柏欣妤"
   },
   {
-    "time": "2026/04/12 00:00",
-    "theme": "《幻镜》",
-    "team": "TEAM CII"
-  },
-  {
     "time": "2026/04/12 13:30",
     "theme": "《幻镜》",
     "team": "TEAM CII"
@@ -1559,15 +1544,5 @@ const eventData = [
     "time": "2026/04/18 19:00",
     "theme": "《Zephyr》",
     "team": "GNZ48-黄楚茵"
-  },
-  {
-    "time": "2026/04/19 00:00",
-    "theme": "《INTO THE LIGHT》",
-    "team": "TEAM SII"
-  },
-  {
-    "time": "2026/05/01 00:00",
-    "theme": "《破风手计划》",
-    "team": "BEJ48"
   }
 ];
