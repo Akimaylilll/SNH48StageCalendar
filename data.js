@@ -1512,7 +1512,7 @@ const eventData = [
   },
   {
     "time": "2026/04/11 19:30",
-    "theme": "《柏欣妤今天就是好心情个巡》",
+    "theme": "《个人巡演 · 广州站》",
     "team": "SNH48-柏欣妤"
   },
   {
@@ -1531,13 +1531,63 @@ const eventData = [
     "team": "SNH48"
   },
   {
+    "time": "2026/04/16 19:30",
+    "theme": "《心的旅程》",
+    "team": "GNZ48"
+  },
+  {
+    "time": "2026/04/17 19:00",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/04/17 19:30",
+    "theme": "《瑶光之迹[2.0]》",
+    "team": "TEAM G"
+  },
+  {
     "time": "2026/04/18 13:30",
     "theme": "《CKG48巡演》",
     "team": "CKG48"
   },
   {
+    "time": "2026/04/18 14:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/04/18 14:00",
+    "theme": "《未命名新途》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/04/18 19:00",
+    "theme": "《我的太阳》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/04/18 19:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
     "time": "2026/04/18 19:00",
     "theme": "《Zephyr》",
     "team": "GNZ48-黄楚茵"
+  },
+  {
+    "time": "2026/04/19 14:00",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/04/19 14:00",
+    "theme": "《没有我的世界(uN_v3rse)》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/04/19 19:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
   }
 ];
