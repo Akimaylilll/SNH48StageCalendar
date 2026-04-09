@@ -1531,6 +1531,11 @@ const eventData = [
     "team": "SNH48"
   },
   {
+    "time": "2026/04/12 20:05",
+    "theme": "《时光列车》",
+    "team": "BEJ48"
+  },
+  {
     "time": "2026/04/16 19:30",
     "theme": "《心的旅程》",
     "team": "GNZ48"
@@ -1589,5 +1594,10 @@ const eventData = [
     "time": "2026/04/19 19:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
+  },
+  {
+    "time": "2026/04/26 20:05",
+    "theme": "《时光列车》",
+    "team": "BEJ48"
   }
 ];
