@@ -41,7 +41,7 @@ jobs:
           # 将多个密钥写入 .env 文件，每行一个
           echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
           echo "OPENAI_API_BASE_URL=https://openrouter.ai/api/v1" >> .env
-          echo "OPENAI_MODEL=qwen/qwen3.6-plus:free" >> .env
+          echo "OPENAI_MODEL=xiaomi/mimo-v2-pro" >> .env
           echo "FEISHU_WEBHOOK_ID=${{ secrets.FEISHU_WEBHOOK_ID }}" >> .env
           echo "REQUIRED_KEYWORDS=TEAM NII,SNH" >> .env
 
