@@ -1621,6 +1621,11 @@ const eventData = [
     "team": "TEAM Z"
   },
   {
+    "time": "2026/04/26 14:00",
+    "theme": "《Glory Days》",
+    "team": "CKG48-王思予"
+  },
+  {
     "time": "2026/04/26 20:05",
     "theme": "《时光列车》",
     "team": "BEJ48"
