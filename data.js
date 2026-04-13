@@ -1632,7 +1632,7 @@ const eventData = [
   },
   {
     "time": "2026/04/23 19:30",
-    "theme": "《偶像研究计划H组-心的旅程·第四场》",
+    "theme": "《心的旅程》",
     "team": "GNZ48"
   },
   {
@@ -1658,12 +1658,22 @@ const eventData = [
   {
     "time": "2026/04/25 14:00",
     "theme": "《未命名新途》",
+    "team": "CGT48 TEAM CII"
+  },
+  {
+    "time": "2026/04/25 14:00",
+    "theme": "《未命名新途》",
     "team": "TEAM CII"
   },
   {
     "time": "2026/04/25 14:00",
     "theme": "《3652》",
     "team": "GNZ48-刘力菲"
+  },
+  {
+    "time": "2026/04/25 14:00",
+    "theme": "《第一人称》",
+    "team": "CKG48 TEAM C"
   },
   {
     "time": "2026/04/25 18:30",
@@ -1683,7 +1693,17 @@ const eventData = [
   {
     "time": "2026/04/25 19:00",
     "theme": "《自定义轨迹》",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/04/25 19:00",
+    "theme": "《自定义轨迹》",
     "team": "TEAM GII"
+  },
+  {
+    "time": "2026/04/25 19:00",
+    "theme": "《K·48HZ》",
+    "team": "CKG48 TEAM K"
   },
   {
     "time": "2026/04/26 13:30",
@@ -1694,6 +1714,11 @@ const eventData = [
     "time": "2026/04/26 14:00",
     "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
+  },
+  {
+    "time": "2026/04/26 14:00",
+    "theme": "《未命名新途》",
+    "team": "CGT48 TEAM CII"
   },
   {
     "time": "2026/04/26 14:00",
@@ -1712,7 +1737,7 @@ const eventData = [
   },
   {
     "time": "2026/04/26 19:00",
-    "theme": "《没有我的世界(uN_v3rse)千秋乐》",
+    "theme": "《没有我的世界(uN_v3rse)》",
     "team": "TEAM NIII"
   },
   {
