@@ -1637,6 +1637,11 @@ const eventData = [
   },
   {
     "time": "2026/04/24 19:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII"
+  },
+  {
+    "time": "2026/04/24 19:30",
     "theme": "《Fire X》",
     "team": "TEAM X"
   },
@@ -1672,6 +1677,11 @@ const eventData = [
   },
   {
     "time": "2026/04/25 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "BEJ48-聂渝景"
+  },
+  {
+    "time": "2026/04/25 14:00",
     "theme": "《第一人称》",
     "team": "CKG48 TEAM C"
   },
@@ -1699,6 +1709,11 @@ const eventData = [
     "time": "2026/04/25 19:00",
     "theme": "《自定义轨迹》",
     "team": "TEAM GII"
+  },
+  {
+    "time": "2026/04/25 19:00",
+    "theme": "《遗忘的国度》",
+    "team": "BEJ48-郭晓盈"
   },
   {
     "time": "2026/04/25 19:00",
