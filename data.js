@@ -1697,6 +1697,11 @@ const eventData = [
   },
   {
     "time": "2026/04/25 19:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/04/25 19:00",
     "theme": "《K·48HZ》",
     "team": "TEAM K"
   },
