@@ -1592,7 +1592,7 @@ const eventData = [
   },
   {
     "time": "2026/04/18 19:00",
-    "theme": "《Zephyr》",
+    "theme": "《Zephyr》主题生日公演",
     "team": "GNZ48-黄楚茵"
   },
   {
@@ -1799,6 +1799,16 @@ const eventData = [
     "time": "2026/04/26 20:05",
     "theme": "《时光列车》",
     "team": "BEJ48"
+  },
+  {
+    "time": "2026/05/01 19:00",
+    "theme": "《SPICY》性感主题公演",
+    "team": "CKG48"
+  },
+  {
+    "time": "2026/05/02 19:00",
+    "theme": "《Fearless》热血主题公演",
+    "team": "CKG48"
   },
   {
     "time": "2026/05/04 18:30",
