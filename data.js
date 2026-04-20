@@ -1802,7 +1802,7 @@ const eventData = [
   },
   {
     "time": "2026/05/01 14:00",
-    "theme": "《瑶光之迹2.0》",
+    "theme": "《瑶光之迹[2.0]》",
     "team": "TEAM G"
   },
   {
@@ -1852,7 +1852,7 @@ const eventData = [
   },
   {
     "time": "2026/05/02 14:00",
-    "theme": "《偶像研究计划H组-新星闪耀计划》",
+    "theme": "《新星闪耀计划》",
     "team": "GNZ48"
   },
   {
@@ -1927,7 +1927,7 @@ const eventData = [
   },
   {
     "time": "2026/05/04 18:30",
-    "theme": "《 1&1 Anyone》",
+    "theme": "《1&1 Anyone》",
     "team": "SNH48"
   },
   {
@@ -1952,7 +1952,7 @@ const eventData = [
   },
   {
     "time": "2026/05/05 14:00",
-    "theme": "《斗宿之诀2.0》",
+    "theme": "《斗宿之诀[2.0]》",
     "team": "TEAM Z"
   },
   {
@@ -1967,7 +1967,7 @@ const eventData = [
   },
   {
     "time": "2026/05/05 18:30",
-    "theme": "《 1&1 Anyone》",
+    "theme": "《1&1 Anyone》",
     "team": "SNH48"
   },
   {
