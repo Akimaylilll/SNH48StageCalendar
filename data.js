@@ -1816,6 +1816,11 @@ const eventData = [
     "team": "TEAM GII"
   },
   {
+    "time": "2026/05/01 14:00",
+    "theme": "《绽放的我》",
+    "team": "BEJ48"
+  },
+  {
     "time": "2026/05/01 18:30",
     "theme": "《心的旅程》",
     "team": "SNH48-新生队"
@@ -1856,6 +1861,11 @@ const eventData = [
     "team": "GNZ48"
   },
   {
+    "time": "2026/05/02 14:00",
+    "theme": "《无限的我》",
+    "team": "BEJ48"
+  },
+  {
     "time": "2026/05/02 18:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII"
@@ -1892,6 +1902,11 @@ const eventData = [
   },
   {
     "time": "2026/05/03 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/05/03 14:00",
     "theme": "《K·48HZ》",
     "team": "TEAM K"
   },
@@ -1904,6 +1919,11 @@ const eventData = [
     "time": "2026/05/03 19:00",
     "theme": "《拾忆：TEAM NIII》",
     "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/05/03 19:00",
+    "theme": "《新星闪耀计划》",
+    "team": "BEJ48"
   },
   {
     "time": "2026/05/03 19:00",
@@ -1924,6 +1944,11 @@ const eventData = [
     "time": "2026/05/04 14:00",
     "theme": "《手牵手》",
     "team": "TEAM GII"
+  },
+  {
+    "time": "2026/05/04 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "BEJ48-郭依晨"
   },
   {
     "time": "2026/05/04 18:30",
