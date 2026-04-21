@@ -1937,6 +1937,11 @@ const eventData = [
   },
   {
     "time": "2026/05/04 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/05/04 14:00",
     "theme": "《Shining·C》",
     "team": "TEAM C"
   },
@@ -1952,7 +1957,7 @@ const eventData = [
   },
   {
     "time": "2026/05/04 18:30",
-    "theme": "《1&1 Anyone》",
+    "theme": "《1&1 ANYONE》",
     "team": "SNH48"
   },
   {
@@ -1992,7 +1997,7 @@ const eventData = [
   },
   {
     "time": "2026/05/05 18:30",
-    "theme": "《1&1 Anyone》",
+    "theme": "《1&1 ANYONE》",
     "team": "SNH48"
   },
   {
