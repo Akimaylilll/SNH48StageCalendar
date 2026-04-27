@@ -1802,7 +1802,7 @@ const eventData = [
   },
   {
     "time": "2026/05/01 14:00",
-    "theme": "《瑶光之迹[2.0]》",
+    "theme": "《瑶光之迹》2.0",
     "team": "TEAM G"
   },
   {
@@ -1823,12 +1823,12 @@ const eventData = [
   {
     "time": "2026/05/01 18:30",
     "theme": "《心的旅程》",
-    "team": "SNH48"
+    "team": "SNH48-新生队"
   },
   {
     "time": "2026/05/01 18:30",
     "theme": "《心的旅程》",
-    "team": "SNH48-新生队"
+    "team": "SNH48"
   },
   {
     "time": "2026/05/01 18:30",
@@ -1864,6 +1864,11 @@ const eventData = [
     "time": "2026/05/02 14:00",
     "theme": "《幻镜》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/05/02 14:00",
+    "theme": "《偶像研究计划H组 × 「新星闪耀计划」》",
+    "team": "GNZ48"
   },
   {
     "time": "2026/05/02 14:00",
@@ -1927,7 +1932,7 @@ const eventData = [
   },
   {
     "time": "2026/05/03 19:00",
-    "theme": "《拾忆：TEAM NIII》",
+    "theme": "《拾忆：TEAM NIII·首演》",
     "team": "TEAM NIII"
   },
   {
@@ -1972,11 +1977,6 @@ const eventData = [
   },
   {
     "time": "2026/05/04 19:00",
-    "theme": "《我的太阳》",
-    "team": "TEAM K"
-  },
-  {
-    "time": "2026/05/04 19:00",
     "theme": "《幻镜》",
     "team": "TEAM CII"
   },
@@ -1992,7 +1992,7 @@ const eventData = [
   },
   {
     "time": "2026/05/05 14:00",
-    "theme": "《斗宿之诀[2.0]》",
+    "theme": "《斗宿之诀2.0》",
     "team": "TEAM Z"
   },
   {
@@ -2013,6 +2013,56 @@ const eventData = [
   {
     "time": "2026/05/05 19:00",
     "theme": "《拾忆：TEAM NIII》",
+    "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/05/08 19:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/05/08 19:30",
+    "theme": "《偶像研究计划H组-心的旅程·第五场》",
+    "team": "GNZ48"
+  },
+  {
+    "time": "2026/05/09 18:30",
+    "theme": "《『2026新星闪耀计划』“初芒新序”专场公演》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/05/09 19:30",
+    "theme": "《斗宿之诀[2.0]·第一百三十八场》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/05/10 13:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/05/10 14:00",
+    "theme": "《拾忆：TEAM G·首演》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/05/10 14:00",
+    "theme": "《手牵手》",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/05/10 14:00",
+    "theme": "《第一人称》",
+    "team": "CKG48 TEAM C"
+  },
+  {
+    "time": "2026/05/10 18:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/05/10 19:00",
+    "theme": "《拾忆：TEAM NIII·第三场》",
     "team": "TEAM NIII"
   }
 ];
