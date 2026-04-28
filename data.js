@@ -2052,6 +2052,11 @@ const eventData = [
   },
   {
     "time": "2026/05/10 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/05/10 14:00",
     "theme": "《第一人称》",
     "team": "TEAM C"
   },
@@ -2079,5 +2084,10 @@ const eventData = [
     "time": "2026/05/10 19:00",
     "theme": "《拾忆：TEAM NIII》",
     "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/05/10 19:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
   }
 ];
