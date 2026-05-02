@@ -2089,5 +2089,10 @@ const eventData = [
     "time": "2026/05/10 19:00",
     "theme": "《B·RISE 梦之门》",
     "team": "TEAM B"
+  },
+  {
+    "time": "2026/05/16 19:00",
+    "theme": "《淇・迹》",
+    "team": "GNZ48-叶舒淇"
   }
 ];
