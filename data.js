@@ -2093,6 +2093,11 @@ const eventData = [
   {
     "time": "2026/05/13 19:30",
     "theme": "《心的旅程》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/05/13 19:30",
+    "theme": "《心的旅程》",
     "team": "SNH48-新生队"
   },
   {
@@ -2102,12 +2107,17 @@ const eventData = [
   },
   {
     "time": "2026/05/14 19:30",
+    "theme": "《心的旅程》",
+    "team": "GNZ48"
+  },
+  {
+    "time": "2026/05/14 19:30",
     "theme": "《偶像研究计划H组-心的旅程·第六场》",
     "team": "GNZ48"
   },
   {
     "time": "2026/05/15 19:30",
-    "theme": "《拾忆：TEAM G·第二场》",
+    "theme": "《拾忆》",
     "team": "TEAM G"
   },
   {
@@ -2128,12 +2138,27 @@ const eventData = [
   {
     "time": "2026/05/16 14:00",
     "theme": "《幻镜》",
+    "team": "CGT48 TEAM CII"
+  },
+  {
+    "time": "2026/05/16 14:00",
+    "theme": "《幻镜》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/05/16 14:00",
+    "theme": "《我的太阳》",
+    "team": "CKG48 TEAM K"
   },
   {
     "time": "2026/05/16 18:30",
     "theme": "《茉莉雨》",
     "team": "SNH48-林舒晴"
+  },
+  {
+    "time": "2026/05/16 19:00",
+    "theme": "《手牵手》",
+    "team": "CGT48 TEAM GII"
   },
   {
     "time": "2026/05/16 19:00",
@@ -2157,13 +2182,13 @@ const eventData = [
   },
   {
     "time": "2026/05/17 14:00",
-    "theme": "《拾忆：TEAM NIII·第四场》",
+    "theme": "《拾忆》",
     "team": "TEAM NIII"
   },
   {
     "time": "2026/05/17 14:00",
     "theme": "《幻镜》",
-    "team": "TEAM CII"
+    "team": "CGT48 TEAM CII"
   },
   {
     "time": "2026/05/17 14:00",
@@ -2174,6 +2199,11 @@ const eventData = [
     "time": "2026/05/17 18:30",
     "theme": "《Fire X》",
     "team": "TEAM X"
+  },
+  {
+    "time": "2026/05/17 19:00",
+    "theme": "《斗宿之诀[2.0]》",
+    "team": "TEAM Z"
   },
   {
     "time": "2026/05/17 19:00",
