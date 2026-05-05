@@ -2147,6 +2147,11 @@ const eventData = [
   },
   {
     "time": "2026/05/16 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "BEJ48-吴睿莎Ailsa"
+  },
+  {
+    "time": "2026/05/16 14:00",
     "theme": "《我的太阳》",
     "team": "CKG48 TEAM K"
   },
@@ -2154,6 +2159,11 @@ const eventData = [
     "time": "2026/05/16 18:30",
     "theme": "《茉莉雨》",
     "team": "SNH48-林舒晴"
+  },
+  {
+    "time": "2026/05/16 19:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
   },
   {
     "time": "2026/05/16 19:00",
