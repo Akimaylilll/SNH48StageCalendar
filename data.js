@@ -2132,6 +2132,11 @@ const eventData = [
   },
   {
     "time": "2026/05/16 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
+  },
+  {
+    "time": "2026/05/16 14:00",
     "theme": "《我的太阳》",
     "team": "TEAM K"
   },
