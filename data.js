@@ -2042,6 +2042,11 @@ const eventData = [
   },
   {
     "time": "2026/05/09 19:30",
+    "theme": "《『2026新星闪耀计划』》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/05/09 19:30",
     "theme": "《初芒破局•剧场首秀突围战》",
     "team": "SNH48"
   },
@@ -2052,8 +2057,8 @@ const eventData = [
   },
   {
     "time": "2026/05/10 14:00",
-    "theme": "《拾忆：TEAM G》",
-    "team": "TEAM G"
+    "theme": "《拾忆》",
+    "team": "Team G"
   },
   {
     "time": "2026/05/10 14:00",
