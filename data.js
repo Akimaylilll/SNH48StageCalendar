@@ -2041,6 +2041,11 @@ const eventData = [
     "team": "TEAM Z"
   },
   {
+    "time": "2026/05/09 19:30",
+    "theme": "《初芒破局•剧场首秀突围战》",
+    "team": "SNH48"
+  },
+  {
     "time": "2026/05/10 13:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII"
