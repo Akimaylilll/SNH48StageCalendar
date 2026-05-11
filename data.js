@@ -2234,5 +2234,105 @@ const eventData = [
     "time": "2026/05/17 19:00",
     "theme": "《TEAM Z斗宿之诀[2.0]·第一百三十九场》",
     "team": "TEAM Z"
+  },
+  {
+    "time": "2026/05/20 19:30",
+    "theme": "《SNH48 GROUP『2026新星闪耀计划』第三阶段：锋芒尽绽•全能晋级赛》",
+    "team": "SNH48"
+  },
+  {
+    "time": "2026/05/20 19:30",
+    "theme": "《偶像研究计划H组-心的旅程·第七场》",
+    "team": "GNZ48"
+  },
+  {
+    "time": "2026/05/21 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/05/21 19:30",
+    "theme": "《TEAM Z斗宿之诀[2.0]·第一百四十场》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/05/22 19:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X"
+  },
+  {
+    "time": "2026/05/22 19:30",
+    "theme": "《拾忆：TEAM G·第三场》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/05/23 13:30",
+    "theme": "《赫兹共振》",
+    "team": "SNH48-梁怀方"
+  },
+  {
+    "time": "2026/05/23 14:00",
+    "theme": "《K·48HZ》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/05/23 14:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/05/23 14:00",
+    "theme": "《2025年度潜力新人TOP16答谢公演·广州站》",
+    "team": "GNZ48"
+  },
+  {
+    "time": "2026/05/23 18:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "SNH48-田姝丽"
+  },
+  {
+    "time": "2026/05/23 19:00",
+    "theme": "《TEAM Z斗宿之诀[2.0]·第一百四十一场》",
+    "team": "TEAM Z"
+  },
+  {
+    "time": "2026/05/23 19:00",
+    "theme": "《第一人称》",
+    "team": "TEAM C"
+  },
+  {
+    "time": "2026/05/23 19:00",
+    "theme": "《幻镜》",
+    "team": "TEAM CII"
+  },
+  {
+    "time": "2026/05/24 13:30",
+    "theme": "《Nice to meet you II》",
+    "team": "SNH48-柏欣妤"
+  },
+  {
+    "time": "2026/05/24 14:00",
+    "theme": "《拾忆：TEAM G·第四场》",
+    "team": "TEAM G"
+  },
+  {
+    "time": "2026/05/24 14:00",
+    "theme": "《我的太阳》",
+    "team": "TEAM K"
+  },
+  {
+    "time": "2026/05/24 14:00",
+    "theme": "《手牵手》",
+    "team": "TEAM GII"
+  },
+  {
+    "time": "2026/05/24 18:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII"
+  },
+  {
+    "time": "2026/05/24 19:00",
+    "theme": "《拾忆：TEAM NIII·第五场》",
+    "team": "TEAM NIII"
   }
 ];
