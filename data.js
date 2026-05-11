@@ -2237,7 +2237,7 @@ const eventData = [
   },
   {
     "time": "2026/05/20 19:30",
-    "theme": "《SNH48 GROUP『2026新星闪耀计划』第三阶段：锋芒尽绽•全能晋级赛》",
+    "theme": "《『2026新星闪耀计划』第三阶段：锋芒尽绽•全能晋级赛》",
     "team": "SNH48"
   },
   {
@@ -2252,7 +2252,7 @@ const eventData = [
   },
   {
     "time": "2026/05/21 19:30",
-    "theme": "《TEAM Z斗宿之诀[2.0]·第一百四十场》",
+    "theme": "《斗宿之诀[2.0]·第一百四十场》",
     "team": "TEAM Z"
   },
   {
@@ -2267,6 +2267,11 @@ const eventData = [
   },
   {
     "time": "2026/05/23 13:30",
+    "theme": "《赫兹共振》生日公演",
+    "team": "TEAM HII"
+  },
+  {
+    "time": "2026/05/23 13:30",
     "theme": "《赫兹共振》",
     "team": "SNH48-梁怀方"
   },
@@ -2274,6 +2279,11 @@ const eventData = [
     "time": "2026/05/23 14:00",
     "theme": "《K·48HZ》",
     "team": "TEAM K"
+  },
+  {
+    "time": "2026/05/23 14:00",
+    "theme": "《手牵手》·第十六场",
+    "team": "CGT48 TEAM GII"
   },
   {
     "time": "2026/05/23 14:00",
@@ -2286,13 +2296,23 @@ const eventData = [
     "team": "GNZ48"
   },
   {
+    "time": "2026/05/23 14:00",
+    "theme": "《K·48HZ》·第二十二场",
+    "team": "CKG48 TEAM K"
+  },
+  {
+    "time": "2026/05/23 18:30",
+    "theme": "《INTO THE LIGHT》季度MVP公演",
+    "team": "TEAM SII"
+  },
+  {
     "time": "2026/05/23 18:30",
     "theme": "《INTO THE LIGHT》",
     "team": "SNH48-田姝丽"
   },
   {
     "time": "2026/05/23 19:00",
-    "theme": "《TEAM Z斗宿之诀[2.0]·第一百四十一场》",
+    "theme": "《斗宿之诀[2.0]·第一百四十一场》",
     "team": "TEAM Z"
   },
   {
@@ -2302,8 +2322,23 @@ const eventData = [
   },
   {
     "time": "2026/05/23 19:00",
+    "theme": "《幻镜》·第十七场",
+    "team": "CGT48 TEAM CII"
+  },
+  {
+    "time": "2026/05/23 19:00",
     "theme": "《幻镜》",
     "team": "TEAM CII"
+  },
+  {
+    "time": "2026/05/23 19:00",
+    "theme": "《第一人称》·第十一场",
+    "team": "CKG48 TEAM C"
+  },
+  {
+    "time": "2026/05/24 13:30",
+    "theme": "《Nice to meet you II》季度MVP公演",
+    "team": "TEAM NII"
   },
   {
     "time": "2026/05/24 13:30",
@@ -2322,8 +2357,23 @@ const eventData = [
   },
   {
     "time": "2026/05/24 14:00",
+    "theme": "《手牵手》·第十七场",
+    "team": "CGT48 TEAM GII"
+  },
+  {
+    "time": "2026/05/24 14:00",
     "theme": "《手牵手》",
     "team": "TEAM GII"
+  },
+  {
+    "time": "2026/05/24 14:00",
+    "theme": "《我的太阳》·第十一场",
+    "team": "CKG48 TEAM K"
+  },
+  {
+    "time": "2026/05/24 18:30",
+    "theme": "《INTO THE LIGHT》四月乐曜曲首演",
+    "team": "TEAM SII"
   },
   {
     "time": "2026/05/24 18:30",
