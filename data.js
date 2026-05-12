@@ -2267,8 +2267,13 @@ const eventData = [
   },
   {
     "time": "2026/05/23 13:30",
-    "theme": "《赫兹共振》生日公演",
+    "theme": "《赫兹共振》",
     "team": "TEAM HII"
+  },
+  {
+    "time": "2026/05/23 13:30",
+    "theme": "《生日公演》",
+    "team": "SNH48-梁怀方"
   },
   {
     "time": "2026/05/23 13:30",
@@ -2302,8 +2307,13 @@ const eventData = [
   },
   {
     "time": "2026/05/23 18:30",
-    "theme": "《INTO THE LIGHT》季度MVP公演",
+    "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII"
+  },
+  {
+    "time": "2026/05/23 18:30",
+    "theme": "《季度MVP公演》",
+    "team": "SNH48-田姝丽"
   },
   {
     "time": "2026/05/23 18:30",
@@ -2337,8 +2347,13 @@ const eventData = [
   },
   {
     "time": "2026/05/24 13:30",
-    "theme": "《Nice to meet you II》季度MVP公演",
+    "theme": "《Nice to meet you II》",
     "team": "TEAM NII"
+  },
+  {
+    "time": "2026/05/24 13:30",
+    "theme": "《季度MVP公演》",
+    "team": "SNH48-柏欣妤"
   },
   {
     "time": "2026/05/24 13:30",
@@ -2374,6 +2389,11 @@ const eventData = [
     "time": "2026/05/24 18:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII"
+  },
+  {
+    "time": "2026/05/24 18:30",
+    "theme": "《四月乐曜曲首演》",
+    "team": "SNH48"
   },
   {
     "time": "2026/05/24 19:00",
