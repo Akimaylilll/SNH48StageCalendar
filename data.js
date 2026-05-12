@@ -2372,11 +2372,6 @@ const eventData = [
   },
   {
     "time": "2026/05/24 18:30",
-    "theme": "《INTO THE LIGHT》四月乐曜曲首演",
-    "team": "TEAM SII"
-  },
-  {
-    "time": "2026/05/24 18:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII"
   },
