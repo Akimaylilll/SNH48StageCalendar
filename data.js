@@ -2282,6 +2282,11 @@ const eventData = [
   },
   {
     "time": "2026/05/23 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
+    "time": "2026/05/23 14:00",
     "theme": "《K·48HZ》",
     "team": "TEAM K"
   },
@@ -2324,6 +2329,11 @@ const eventData = [
     "time": "2026/05/23 19:00",
     "theme": "《斗宿之诀[2.0]·第一百四十一场》",
     "team": "TEAM Z"
+  },
+  {
+    "time": "2026/05/23 19:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B"
   },
   {
     "time": "2026/05/23 19:00",
