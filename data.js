@@ -2197,7 +2197,7 @@ const eventData = [
   },
   {
     "time": "2026/05/16 19:00",
-    "theme": "《SPICY》",
+    "theme": "《Spicy》",
     "team": "CKG48"
   },
   {
@@ -2217,7 +2217,7 @@ const eventData = [
   },
   {
     "time": "2026/05/17 14:00",
-    "theme": "《Fearless》",
+    "theme": "《FEARLESS》",
     "team": "CKG48"
   },
   {
@@ -2409,5 +2409,10 @@ const eventData = [
     "time": "2026/05/24 19:00",
     "theme": "《拾忆：TEAM NIII·第五场》",
     "team": "TEAM NIII"
+  },
+  {
+    "time": "2026/05/30 19:00",
+    "theme": "《无声默契》",
+    "team": "SNH48"
   }
 ];
