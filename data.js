@@ -2413,6 +2413,11 @@ const eventData = [
   {
     "time": "2026/05/30 19:00",
     "theme": "《无声默契》",
+    "team": "SNH48 GROUP"
+  },
+  {
+    "time": "2026/05/30 19:00",
+    "theme": "《无声默契》",
     "team": "SNH48"
   }
 ];
