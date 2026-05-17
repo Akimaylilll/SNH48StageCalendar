@@ -2419,5 +2419,15 @@ const eventData = [
     "time": "2026/05/30 19:00",
     "theme": "《无声默契》",
     "team": "SNH48"
+  },
+  {
+    "time": "2026/05/30 19:00",
+    "theme": "《Dawn·天光之际》",
+    "team": "CGT48"
+  },
+  {
+    "time": "2026/05/31 14:00",
+    "theme": "《Dawn·黎明之后》",
+    "team": "CGT48"
   }
 ];
