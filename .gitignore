@@ -1,1 +1,27 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+*.db
+
+# Environment files
 .env
+.env.local
+
+*.log
+*.ipynb
+
+ruff.toml

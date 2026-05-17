@@ -1,7 +1,6 @@
 from playwright.sync_api import Playwright, sync_playwright
 from openai import OpenAI
 from dotenv import load_dotenv
-from dateutil import parser
 import time
 import json
 import os
@@ -9,8 +8,9 @@ import logging
 import requests
 from datetime import datetime
 from functools import cmp_to_key
+from brain import Brain
 
-load_dotenv() 
+load_dotenv()
 
 log_level = os.getenv("LOG_LEVEL", "INFO")
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -235,73 +235,73 @@ def request_openai(messages):
     logger.error(f"OpenAI API调用失败: {e}")
     return None
 
-def update_data(result, file_path):
-  data_json = read_json_from_file(file_path)
-  if not data_json:
-    logger.warning("data.js文件为空或不存在")
-    return None
-  data_json = json.loads(data_json)
-  result_json = json.loads(result)
-  seen_times = {parser.parse(item.get('time', '')) for item in result_json}
-  data_json_clip = []
-  data_json_rest = []
-  for item in data_json:
-      t = parser.parse(item.get('time', ''))
-      if t in seen_times:
-          data_json_clip.append(item)
-      else:
-          data_json_rest.append(item)
-  result_json.extend(data_json_clip)
-  result_json = [{**item, 'time_zh': format_time_str_zh(item['time'])} 
-                  for item in result_json]
-  messages = [
-    {
-      "role": "system",
-      "content": """你是一个专业的数据去重助手，专门对演出信息进行智能去重处理。请严格按照以下规则处理输入数据，并只输出严格的JSON格式，不包含任何其他文字。\n\n
-                  **去重规则：**\n
-                    1. **主题规范化**：对所有`theme`字段进行标准化处理：\n
-                      - 如果主题不包含书名号《》，则自动添加《》\n 
-                      - 如果主题已包含书名号，保持原样\n
-                      - 示例：\"B•RISE 梦之门\" → \"《B•RISE 梦之门》\"，\"《Fire X》\"保持不变\n\n
-                    2. **场次划分规则**（用于判断是否同一场次）：\n
-                      - **午场**：12:00 至 17:00 之间的演出（包含12:00，不包含17:00）\n
-                      - **晚场**：17:00 至 22:00 之间的演出（包含17:00，不包含22:00）\n
-                      - **其他场次**：不在上述时间段内的演出，按实际时间单独计算场次\n\n
-                    3. **重复判断标准**：两条记录被视为重复需同时满足以下条件：\n
-                      a) **日期相同**：从`time`字段提取的日期部分（YYYY/MM/DD）相同\n
-                      b) **场次相同**：根据上述场次划分规则，两条记录属于同一场次\n
-                      c) **标准化主题相同**：经过上述规范化处理后的`theme`相同\n
-                      d) **团队相同**：`team`字段内容相同（忽略大小写差异）\n\n
-                      e) **同一主题相同**：当 team 与 time（场次）相同时，提取 theme 核心词进行相似度比对（如相似度 ≥80% 或包含相同主体词），视为同一主题。\n\n
-                    4. **非重复情况**：以下情况不视为重复，应全部保留：\n
-                      - 日期不同的相同主题（如2025/01/07和2025/01/08都有《同一主题》）\n
-                      - 主题相同但团队不同（如《同一主题》由TEAM SII和TEAM NII分别演出）\n
-                      - 团队相同但主题不同\n\n
-                    5. **去重处理逻辑**：\n
-                      - 按输入顺序遍历所有记录\n
-                      - 当发现重复记录时，保留首次出现的记录，移除后续重复记录\n
-                      - 保持非重复记录的原始顺序\n\n
-                  **输出要求：**\n- 输出必须是有效的JSON数组格式\n
-                    - 包含去重后的所有记录，保持原始结构\n- 每条记录保持原始的`time`、`theme`、`team`三个字段\n
-                    - `theme`字段保持规范化后的形式（带书名号）\n
-                    - 不包含任何解释性文字、注释或格式标记"""
-    },
-    {
-      "role": "user",
-      "content": f"请对以下演出信息进行去重处理，严格遵守上述规则，只输出去重后的JSON数组：\n\n { json.dumps(result_json, ensure_ascii=False) }"
-    }
-  ]
-  filter_result_data = request_openai(messages)
-  filter_result_data_json = json.loads(filter_result_data)
-  data_json_rest.extend(filter_result_data_json)
-  data_json_rest.sort(key=cmp_to_key(sort_custom_key))
-  data_json_all = [
-      {key: value for key, value in d.items() if key != 'time_zh'}
-      for d in data_json_rest
-  ]
-  write_to_file(json.dumps(data_json_all, ensure_ascii=False), file_path)
-  logger.info(f"\n数据已成功更新到data.js文件，新增{len(data_json) - len(data_json_rest)}条记录")
-  logger.info(f"总共有{len(data_json_rest)}条记录")
+
+def update_data(result, file_path, brain=None):
+    data_json = read_json_from_file(file_path)
+    if not data_json:
+        logger.warning("data.js文件为空或不存在")
+        return None
+    data_json = json.loads(data_json)
+    result_json = json.loads(result)
+
+    # 使用brain进行智能过滤和去重
+    if brain:
+        # 过滤非公演信息
+        result_json = brain.filter_events(result_json)
+        logger.info(f"过滤后剩余 {len(result_json)} 条记录")
+
+        # 规范化主题和团队
+        for item in result_json:
+            item["theme"] = brain.normalize_theme(item.get("theme", ""))
+            item["team"] = brain.normalize_team(item.get("team", ""))
+
+    # 获取当前日期
+    from datetime import datetime
+
+    current_date = datetime.now().strftime("%Y/%m/%d")
+
+    # 从data.js中筛选当前日期之后的数据
+    future_data = []
+    past_data = []
+    for item in data_json:
+        item_date = (
+            item.get("time", "").split(" ")[0]
+            if " " in item.get("time", "")
+            else item.get("time", "")
+        )
+        if item_date >= current_date:
+            future_data.append(item)
+        else:
+            past_data.append(item)
+
+    logger.info(f"data.js中当前日期({current_date})之后的数据: {len(future_data)}条")
+    logger.info(f"data.js中当前日期之前的数据: {len(past_data)}条")
+
+    # 将新提取的数据与当前日期之后的数据进行去重
+    if brain:
+        # 合并新数据和未来数据
+        combined = future_data + result_json
+        # 去重
+        deduplicated = brain.deduplicate_events(combined)
+        logger.info(f"去重后剩余 {len(deduplicated)} 条记录")
+
+        # 计算新增的记录数
+        new_count = len(deduplicated) - len(future_data)
+        if new_count < 0:
+            new_count = 0
+    else:
+        # 如果没有brain，直接合并
+        deduplicated = future_data + result_json
+        new_count = len(result_json)
+
+    # 合并所有数据：过去的数据 + 去重后的未来数据
+    all_data = past_data + deduplicated
+    all_data.sort(key=cmp_to_key(sort_custom_key))
+
+    write_to_file(json.dumps(all_data, ensure_ascii=False), file_path)
+    logger.info(f"\n数据已成功更新到data.js文件，新增{new_count}条记录")
+    logger.info(f"总共有{len(all_data)}条记录")
+
 
 def get_weibo_mblog_by_playwright(playwright: Playwright, url: str) -> list:
   # 创建浏览器
@@ -344,7 +344,7 @@ def get_weibo_mblog_by_playwright(playwright: Playwright, url: str) -> list:
   page.close()
   content.close()
   browser.close()
-  if mymblog_statuses_flag == False:
+  if not mymblog_statuses_flag:
     return None
   return blog_list
 
@@ -393,7 +393,7 @@ def get_weibo_mblog_by_playwright_use_phone(playwright: Playwright, url: str) ->
   page.close()
   content.close()
   browser.close()
-  if mymblog_statuses_flag == False:
+  if not mymblog_statuses_flag:
     return None
   return blog_list
 
@@ -489,6 +489,7 @@ def send_feishu_card_content(json_data):
 
 # 创建浏览器
 def run (playwright: Playwright) -> None:
+  brain = Brain()
   try:
     mblogs = []
     for url in weibo_urls:
@@ -551,64 +552,15 @@ def run (playwright: Playwright) -> None:
     if not texts:
       logger.warning("没有收集到任何文本内容")
       return
-    current_year = time.localtime(time.time()).tm_year
-    current_month = time.localtime(time.time()).tm_mon + 1
+    # 使用brain进行提取+学习+数据合并去重（一次完成）
+    result_json = brain.learn_from_texts(texts, request_openai, data_file="data.js")
+    if not result_json:
+          logger.error("未能从AI获取有效结果")
+          return
 
-    content = [
-      {
-        "role": "system",
-        "content": """你是一个专业的数据提取助手，专门从文本中提取SNH48及其姐妹团体（GNZ48、BEJ48、CKG48、SHY48、CGT48）的公演、演唱会和运动会的时间信息。
-                    你的唯一任务是输出严格的JSON数组格式，不包含任何其他文字、解释或格式标记。"""
-      },
-      {
-        "role": "user",
-        "content": f"""请从以下文本中提取所有购票信息，并整理为严格的JSON数组格式。\n\n
-                    **提取规则：**\n
-                    1. **范围限制**：仅提取**公演、演唱会**的信息。见面会、握手会、足球赛、直播间、路演、持续性竞赛、MINI LIVE、直播、云公演、电视综艺等其他活动一律忽略。\n
-                    2. **团体限制**：仅处理以下团体：SNH48、GNZ48、BEJ48、CKG48、SHY48、CGT48。其他任何邀请演出均不统计。\n
-                    3. **输出格式**：输出必须是一个JSON数组，每个对象包含且仅包含三个字段：`time`、`theme`、`team`。\n
-                    4. **字段规范**：\n   - `time`：格式必须为 **`YYYY/MM/DD HH:MM`**。\n
-                      - `theme`：提取完整的演出主题名称，需保留书名号（如《XXX》）。\n
-                      - `team`：按以下优先级确定：\n
-                        a) 若原文有明确的`TEAM`名称（如`TEAM SII`），则直接使用。\n
-                        b) 若为**毕业公演、个人演唱会、个人定制公演**，且原文提及成员姓名（如`@SNH48-韩家乐`），则格式为 **`团体名-成员名`**（例如：`SNH48-韩家乐`）。\n
-                        c) 否则，根据上下文推断为 **`团体名`**（例如：`SNH48`）。\n
-                    5. **时间处理逻辑**：\n   - 年份：默认使用**{ current_year }年**。\n
-                      - **跨年规则**：如果当前月份是**12月**，且解析到的时间是**1月**（如`01/01`、`01/10`），则年份调整为**{ current_year + 1 }年**。当前月份为：{ current_month }月\n
-                      - 格式：月份和日期需补零为两位（如`1/7` → `01/07`），时间需保持24小时制，小时和分钟补零为两位（如`19:30`、`09:03`），如果只有日期没有时间直接忽略整条信息，时间不能标记为00:00。\n\n
-                    ** 示例输入：
-                      1/7（三）19:30《B•RISE 梦之门》新生公演
-                      1/8（四）19:30 TEAM X焕新公演《Fire X》
-
-                      ## 示例输出：
-                      [
-                        {{
-                          "time": "2026/01/07 19:30",
-                          "theme": "《B•RISE 梦之门》",
-                          "team": "SNH48-新生队"
-                        }},
-                        {{
-                          "time": "2026/01/08 19:30",
-                          "theme": "《Fire X》",
-                          "team": "TEAM X"
-                        }}
-                      ]
-                    **待处理文本：**\n 
-                    { texts }\n\n
-                    请根据上述规则提取并输出JSON数组。"""
-      }
-    ]
-    logger.info(f"发送给AI的文本长度: {len(json.dumps(content, ensure_ascii=False))}")
-    result = request_openai(content)
-    logger.debug(f"AI返回结果: {result}")
-    if not result or len(json.loads(result)) == 0:
-      logger.error("未能从AI获取有效结果")
-      return
-
-    update_data(result, "data.js")
+    logger.debug(f"提取+学习+合并结果: {len(result_json)} 条")
     
-    result_json = json.loads(result)
-    result_json.sort(key=lambda x: datetime.strptime(x['time'], '%Y/%m/%d %H:%M'))
+    result_json.sort(key=lambda x: datetime.strptime(x["time"], "%Y/%m/%d %H:%M"))
     send_feishu_card_content(result_json)
 
   except Exception as e:
