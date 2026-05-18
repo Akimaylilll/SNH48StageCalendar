@@ -317,6 +317,7 @@ def get_weibo_mblog_by_playwright(playwright: Playwright, url: str) -> list:
       if "/ajax/statuses/mymblog" in response.url:
         logger.debug(f"捕获到响应 URL: {response.url}")
         logger.debug(f"状态码: {response.status}")
+        page.evaluate("() => window['mymblog_statuses_flag'] = true")
         if response.status != 200:
           logger.warning(f"/ajax/statuses/mymblog 接口请求失败，状态码: {response.status}")
           page.evaluate("() => window['mymblog_statuses_flag'] = false")
@@ -363,6 +364,7 @@ def get_weibo_mblog_by_playwright_use_phone(playwright: Playwright, url: str) ->
       if "m.weibo.cn/api/container/getIndex" in response.url:
         logger.debug(f"捕获到响应 URL: {response.url}")
         logger.debug(f"状态码: {response.status}")
+        page.evaluate("() => window['mymblog_statuses_flag'] = true")
         if response.status != 200:
           logger.warning(f"m.weibo.cn/api/container/getIndex 接口请求失败，状态码: {response.status}")
           page.evaluate("() => window['mymblog_statuses_flag'] = false")
