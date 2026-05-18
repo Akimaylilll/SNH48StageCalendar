@@ -54,6 +54,7 @@ jobs:
         with:
           files: |
             data.js
+            memory.json
 
       - name: Commit
         if: steps.verify-changed-files.outputs.files_changed == 'true'
