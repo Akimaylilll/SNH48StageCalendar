@@ -2236,6 +2236,12 @@ const eventData = [
     "team": "GNZ48"
   },
   {
+    "time": "2026/05/20 19:30",
+    "theme": "《锋芒尽绽•全能晋级赛SNH48专场》",
+    "team": "SNH48",
+    "type": "new_star"
+  },
+  {
     "time": "2026/05/21 19:30",
     "theme": "《赫兹共振》",
     "team": "TEAM HII"
@@ -2372,6 +2378,12 @@ const eventData = [
     "type": "regular"
   },
   {
+    "time": "2026/05/30 14:00",
+    "theme": "《B·RISE 梦之门》",
+    "team": "TEAM B",
+    "type": "regular"
+  },
+  {
     "time": "2026/05/30 18:30",
     "theme": "《赫兹共振》",
     "team": "TEAM HII",
@@ -2399,6 +2411,12 @@ const eventData = [
     "type": "concert"
   },
   {
+    "time": "2026/05/30 19:00",
+    "theme": "《同频巡演》",
+    "team": "SNH48-由淼/BEJ48-周湘",
+    "type": "concert"
+  },
+  {
     "time": "2026/05/31 13:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII",
@@ -2413,6 +2431,12 @@ const eventData = [
     "time": "2026/05/31 14:00",
     "theme": "《拾忆》",
     "team": "TEAM G",
+    "type": "regular"
+  },
+  {
+    "time": "2026/05/31 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E",
     "type": "regular"
   },
   {
