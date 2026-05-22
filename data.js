@@ -2337,6 +2337,11 @@ const eventData = [
     "team": "TEAM SII"
   },
   {
+    "time": "2026/05/24 18:30",
+    "theme": "《看春春欲晚》",
+    "team": "SNH48"
+  },
+  {
     "time": "2026/05/24 19:00",
     "theme": "《拾忆：TEAM NIII·第五场》",
     "team": "TEAM NIII"
@@ -2444,5 +2449,10 @@ const eventData = [
     "theme": "《Fire X》",
     "team": "TEAM X",
     "type": "regular"
+  },
+  {
+    "time": "2026/06/19 18:00",
+    "theme": "《让世界充满爱❤️ 走进汨罗2026端午节大型群星演唱会》",
+    "team": "SNH48"
   }
 ];
