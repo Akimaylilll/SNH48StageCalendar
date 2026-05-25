@@ -2451,6 +2451,102 @@ const eventData = [
     "type": "regular"
   },
   {
+    "time": "2026/06/03 19:30",
+    "theme": "《心的旅程》",
+    "team": "SNH48",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/04 19:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/04 19:30",
+    "theme": "《拾忆》",
+    "team": "TEAM G",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/05 19:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/05 19:30",
+    "theme": "《拾忆》",
+    "team": "TEAM NIII",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/06 13:30",
+    "theme": "《赫兹共振》",
+    "team": "TEAM HII",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/06 14:00",
+    "theme": "《斗宿之诀》",
+    "team": "TEAM Z",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/06 14:00",
+    "theme": "《Fearless》",
+    "team": "CKG48",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/06 18:30",
+    "theme": "《Fire X》",
+    "team": "TEAM X",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/06 19:00",
+    "theme": "《拾忆》",
+    "team": "TEAM G",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/06 19:00",
+    "theme": "《第一人称》",
+    "team": "TEAM C",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/07 13:30",
+    "theme": "《INTO THE LIGHT》",
+    "team": "TEAM SII",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/07 14:00",
+    "theme": "《拾忆》",
+    "team": "TEAM NIII",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/07 14:00",
+    "theme": "《花火》",
+    "team": "TEAM K",
+    "type": "special"
+  },
+  {
+    "time": "2026/06/07 18:30",
+    "theme": "《Nice to meet you II》",
+    "team": "TEAM NII",
+    "type": "regular"
+  },
+  {
+    "time": "2026/06/07 19:00",
+    "theme": "《斗宿之诀》",
+    "team": "TEAM Z",
+    "type": "regular"
+  },
+  {
     "time": "2026/06/19 18:00",
     "theme": "《让世界充满爱❤️ 走进汨罗2026端午节大型群星演唱会》",
     "team": "SNH48"
