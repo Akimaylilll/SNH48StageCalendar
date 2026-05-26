@@ -2395,6 +2395,11 @@ const eventData = [
     "type": "regular"
   },
   {
+    "time": "2026/05/30 18:30",
+    "theme": "《暮色蝉响》岸边音乐节",
+    "team": "SNH48"
+  },
+  {
     "time": "2026/05/30 19:00",
     "theme": "《无声默契》",
     "team": "SNH48 GROUP"
@@ -2499,6 +2504,11 @@ const eventData = [
     "type": "regular"
   },
   {
+    "time": "2026/06/06 14:00",
+    "theme": "《遗忘的国度》",
+    "team": "TEAM E"
+  },
+  {
     "time": "2026/06/06 18:30",
     "theme": "《Fire X》",
     "team": "TEAM X",
@@ -2515,6 +2525,11 @@ const eventData = [
     "theme": "《第一人称》",
     "team": "TEAM C",
     "type": "regular"
+  },
+  {
+    "time": "2026/06/06 19:00",
+    "theme": "《B•RISE 梦之门》",
+    "team": "TEAM B"
   },
   {
     "time": "2026/06/07 13:30",
