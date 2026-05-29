@@ -2377,6 +2377,12 @@ const eventData = [
     "type": "regular"
   },
   {
+    "time": "2026/05/29 19:30",
+    "theme": "《破晓》",
+    "team": "CGT48",
+    "type": "special"
+  },
+  {
     "time": "2026/05/30 13:30",
     "theme": "《Nice to meet you II》",
     "team": "TEAM NII",
@@ -2427,6 +2433,12 @@ const eventData = [
     "type": "concert"
   },
   {
+    "time": "2026/05/30 19:00",
+    "theme": "《SPICY》",
+    "team": "CKG48",
+    "type": "regular"
+  },
+  {
     "time": "2026/05/31 13:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII",
@@ -2447,6 +2459,12 @@ const eventData = [
     "time": "2026/05/31 14:00",
     "theme": "《遗忘的国度》",
     "team": "TEAM E",
+    "type": "regular"
+  },
+  {
+    "time": "2026/05/31 14:00",
+    "theme": "《Fearless》",
+    "team": "CKG48",
     "type": "regular"
   },
   {
@@ -2560,6 +2578,12 @@ const eventData = [
     "theme": "《斗宿之诀》",
     "team": "TEAM Z",
     "type": "regular"
+  },
+  {
+    "time": "2026/06/12 19:30",
+    "theme": "《1&1 ANYONE》",
+    "team": "SNH48",
+    "type": "special"
   },
   {
     "time": "2026/06/19 18:00",
