@@ -2439,6 +2439,12 @@ const eventData = [
     "type": "regular"
   },
   {
+    "time": "2026/05/30 19:00",
+    "theme": "《同频》双人巡演",
+    "team": "SNH48-BEJ48",
+    "type": "concert"
+  },
+  {
     "time": "2026/05/31 13:30",
     "theme": "《INTO THE LIGHT》",
     "team": "TEAM SII",
